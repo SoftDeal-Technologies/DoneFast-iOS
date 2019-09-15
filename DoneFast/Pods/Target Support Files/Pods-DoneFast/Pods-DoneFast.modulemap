@@ -1,0 +1,6 @@
+framework module Pods_DoneFast {
+  umbrella header "Pods-DoneFast-umbrella.h"
+
+  export *
+  module * { export * }
+}
