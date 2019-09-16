@@ -82,7 +82,6 @@ class CustomerPropertyListVC: UIViewController {
       let customerJobHistory = segue.destination as? CustomerJobHistoryVC
       customerJobHistory?.customerLoginDetails = self.customerLoginDetails
     }
-    
   }
 }
 

@@ -45,6 +45,14 @@ class EditUserProfileVC: UIViewController {
     super.viewWillAppear(animated)
     self.populateData()
   }
+  @IBAction func saveClicked(_ sender: Any)
+  {
+    self.callWebService()
+  }
+  @IBAction func backClicked(_ sender: Any)
+  {
+    self.navigationController?.popViewController(animated: true)
+  }
   func populateData()
   {
     custIdValueLabel.text = loggedInUserDetails?.userID
@@ -68,6 +76,11 @@ class EditUserProfileVC: UIViewController {
      emailIdLabel.text = loggedInUserDetails?.customerEmail
      firstNameTxtField.text = loggedInUserDetails?.customerFirstName
 //     custProfilePicImageView: UIImageView!
+    if let customerPhoto = loggedInUserDetails?.customerPhoto {
+      custProfilePicImageView.downloaded(from: URL(string: customerPhoto)!)
+      custProfilePicImageView.layer.cornerRadius = (custProfilePicImageView.frame.size.width/2)
+    }
+    
   }
   
   func callWebService()

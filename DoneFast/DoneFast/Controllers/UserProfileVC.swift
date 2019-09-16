@@ -91,7 +91,8 @@ class UserProfileVC: UIViewController
     custIdValueLabel.text = loggedInUser.userID
 //    custTypeValueLabel.text = loggedInUser.customerCardType
     firstNameLabel.text = loggedInUser.customerFirstName
-//    custProfilePicImageView
+    custProfilePicImageView.downloaded(from: URL(string: loggedInUser.customerPhoto!)!)
+    custProfilePicImageView.layer.cornerRadius = (custProfilePicImageView.frame.size.width/2)
   }
   func callWebService()
   {
@@ -115,7 +116,6 @@ extension UserProfileVC:WebServiceDelegate
       //if tempErrorCode == "1"
       if message == "Success"
       {
-        
         if let customerArray = jsonData!["customer"]?.arrayValue
         {
           if customerArray.count > 0

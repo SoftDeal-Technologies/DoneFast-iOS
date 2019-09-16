@@ -71,20 +71,22 @@ extension SubCategoryServiceVC:UITableViewDelegate,UITableViewDataSource
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
-    if self.popOverType == PopOverType.ServiceSubCategory
-    {
-      let serviceSubCategory = (serviceListArray[indexPath.row] as? ServiceSubCatogary)!
-      self.delegate?.selectedSubCategory(selectedSubCategory: serviceSubCategory)
+//    self.dismiss(animated: true, completion:nil)
+    self.dismiss(animated: true) {
+      if self.popOverType == PopOverType.ServiceSubCategory
+      {
+        let serviceSubCategory = (self.serviceListArray[indexPath.row] as? ServiceSubCatogary)!
+        self.delegate?.selectedSubCategory(selectedSubCategory: serviceSubCategory)
+      }
+      else if self.popOverType == PopOverType.PropertyDesign
+      {
+        //      let tempReqdict = serviceListArray[indexPath.row]
+        self.delegate?.selectedSubCategory(selectedSubCategory: indexPath.row as AnyObject)
+      }
+      else if self.popOverType == PopOverType.EditOrDeleteProperty
+      {
+        self.delegate?.selectedSubCategory(selectedSubCategory: indexPath.row as AnyObject)
+      }
     }
-    else if self.popOverType == PopOverType.PropertyDesign
-    {
-//      let tempReqdict = serviceListArray[indexPath.row]
-      self.delegate?.selectedSubCategory(selectedSubCategory: indexPath.row as AnyObject)
-    }
-    else if self.popOverType == PopOverType.EditOrDeleteProperty
-    {
-      self.delegate?.selectedSubCategory(selectedSubCategory: indexPath.row as AnyObject)
-    }
-    self.dismiss(animated: true, completion:nil)
   }
 }

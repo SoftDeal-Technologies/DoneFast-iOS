@@ -25,6 +25,8 @@ class RequestDetailsVC: UIViewController {
   @IBOutlet weak var photoBtn5: UIButton!
   @IBOutlet weak var photoBtn6: UIButton!
   @IBOutlet weak var subCategoryBtn: UIButton!
+  @IBOutlet weak var subCatSelectArrowBtn: UIButton!
+  @IBOutlet weak var chooseServiceLabel: UILabel!
   @IBOutlet weak var notesTextField: UITextField!
   var customerLoginDetails:UserLoginDetails? = nil
   var propertyId:String?
@@ -49,6 +51,12 @@ class RequestDetailsVC: UIViewController {
     if self.selectedService == 2
     {
       self.callWebService(webServiceType: .SERVICE_SUB_CATEGORY)
+    }
+    else
+    {
+      subCategoryBtn.isHidden = true
+      chooseServiceLabel.isHidden = true
+      subCatSelectArrowBtn.isHidden = true
     }
   }
   
@@ -103,10 +111,10 @@ class RequestDetailsVC: UIViewController {
     {
       guard let propertyId = self.propertyId else { return }
       guard let userId = UserLoginDetails.shared.userID else { return }
-      let imageData = UIImage(named: "washer")!
-      let imageData1 = UIImage(named: "donefast_logo_1")!
-      let imageParameters = ["image1","image2",]
-      let imageDataParameters = [imageData,imageData1]
+      let imageData = photoBtn1.imageView?.image
+//      let imageData1 = UIImage(named: "donefast_logo_1")!
+      let imageParameters = ["image1"]
+      let imageDataParameters = [imageData]
       let notes = notesTextField.text
       var subCategoryId = ""
       
@@ -118,7 +126,7 @@ class RequestDetailsVC: UIViewController {
         }
       }
       let parameters = ["customer_id": userId,  "property_id": propertyId,"service_id": self.selectedService,"service_subid": subCategoryId,"service_notes": notes!] as [String : Any]
-      WebServices.sharedWebServices.uploadusingUrlSessionNormalDataWithImage(webServiceParameters: parameters as [String : Any], methodType: .POST, webServiceType: .JOB_REQUEST, token: tokenStr, imagesString: imageParameters, imageDataArray: imageDataParameters)
+      WebServices.sharedWebServices.uploadusingUrlSessionNormalDataWithImage(webServiceParameters: parameters as [String : Any], methodType: .POST, webServiceType: .JOB_REQUEST, token: tokenStr, imagesString: imageParameters, imageDataArray: imageDataParameters as! [UIImage])
     }
     else
     {
@@ -221,8 +229,10 @@ extension RequestDetailsVC:ServiceSubCategoryDelegate
 {
   func selectedSubCategory(selectedSubCategory: AnyObject)
   {
-    self.subCategoryBtn.setTitle(selectedSubCategory.name, for: .normal)
-    self.selectedSubCategory = (selectedSubCategory as! ServiceSubCatogary)
+    let tempSelectedCategory = selectedSubCategory as? ServiceSubCatogary
+    print(tempSelectedCategory!.name as Any)
+    self.subCategoryBtn.setTitle(tempSelectedCategory!.name, for: .normal)
+    self.selectedSubCategory = tempSelectedCategory
   }
 }
 

@@ -67,13 +67,13 @@ extension CenterViewController: SidePanelViewControllerDelegate
       }
       customerJobHistoryVC.delegate = self.delegate
       self.navigationController!.pushViewController(customerJobHistoryVC, animated: false)
-//    case 0:
-//      guard let customerListVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CustomerPropertyListVC") as? CustomerPropertyListVC
-//        else
-//      {
-//        return
-//      }
-//      self.navigationController!.pushViewController(customerListVC, animated: false)
+    case 4:
+      guard let userProfileVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "UserProfileVC") as? UserProfileVC
+        else
+      {
+        return
+      }
+      self.navigationController!.pushViewController(userProfileVC, animated: false)
     default:
       print("\(selectedRow)")
     }

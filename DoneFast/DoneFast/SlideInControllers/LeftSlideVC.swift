@@ -13,6 +13,8 @@ class LeftSlideVC: UIViewController {
   @IBOutlet weak var customerListTableView: UITableView!
   @IBOutlet weak var customerNameButton: UIButton!
   @IBOutlet weak var customerEmailButton: UIButton!
+  @IBOutlet weak var customerNameLabel: UILabel!
+  @IBOutlet weak var customerEmailLabel: UILabel!
   @IBOutlet weak var customerProfileImageView: UIImageView!
   
   var delegate: SidePanelViewControllerDelegate?
@@ -21,11 +23,15 @@ class LeftSlideVC: UIViewController {
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-      customerNameButton.setTitle(UserLoginDetails.shared.userName, for: .normal)
-      customerEmailButton.setTitle(UserLoginDetails.shared.userEmail, for: .normal)
+//      customerNameButton.setTitle(UserLoginDetails.shared.userName, for: .normal)
+//      customerEmailButton.setTitle(UserLoginDetails.shared.userEmail, for: .normal)
+      customerNameLabel.text = UserLoginDetails.shared.userName
+      customerEmailLabel.text = UserLoginDetails.shared.userEmail
+      customerProfileImageView.layer.cornerRadius = (customerProfileImageView.frame.size.width/2)
       if let profileImageUrl = UserLoginDetails.shared.userProfileImage
       {
-        self.downloadImage(from: URL(string: profileImageUrl)!)
+//        self.downloadImage(from: URL(string: profileImageUrl)!)
+        self.customerProfileImageView.downloaded(from: URL(string: profileImageUrl)!)
       }
     }
   
@@ -55,7 +61,13 @@ class LeftSlideVC: UIViewController {
   
   @IBAction func viewUserProfileClicked(_ sender: Any)
   {
-    
+    delegate?.didSelectRow(selectedRow: 4) // 0 to 3 for tabular data
+//    guard let userProfileVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "UserProfileVC") as? UserProfileVC
+//      else
+//    {
+//      return
+//    }
+//    self.navigationController!.pushViewController(userProfileVC, animated: false)
   }
   /*
     // MARK: - Navigation
@@ -72,7 +84,7 @@ extension LeftSlideVC:UITableViewDelegate
 {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
   {
-    delegate?.didSelectRow(selectedRow: indexPath.row)
+    delegate?.didSelectRow(selectedRow: indexPath.row) // 4 for user profile
     tableView.deselectRow(at: indexPath, animated: true)
   }
 }
@@ -111,6 +123,28 @@ extension LeftSlideVC:UITableViewDataSource
 }
 
 
+extension UIImageView
+{
+  func downloaded(from url: URL, contentMode mode: UIView.ContentMode = .scaleToFill) {  // for swift 4.2 syntax just use ===> mode: UIView.ContentMode
+    contentMode = mode
+    URLSession.shared.dataTask(with: url) { data, response, error in
+      guard
+        let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
+        let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
+        let data = data, error == nil,
+        let image = UIImage(data: data)
+        else { return }
+      DispatchQueue.main.async() {
+        self.image = image
+      }
+      }.resume()
+  }
+  func downloaded(from link: String, contentMode mode: UIView.ContentMode = .scaleToFill)
+  {  // for swift 4.2 syntax just use ===> mode: UIView.ContentMode
+    guard let url = URL(string: link) else { return }
+    downloaded(from: url, contentMode: mode)
+  }
+}
 
 protocol SidePanelViewControllerDelegate
 {

@@ -112,7 +112,7 @@ class LoginViewController: UIViewController,WebServiceDelegate,UITextFieldDelega
   
   @IBAction func newRegClicked(_ sender: Any)
   {
-    self.performSegue(withIdentifier: "ToGoogleMapView", sender: self) //ToSelectOption
+    self.performSegue(withIdentifier: "ToSelectOption", sender: self) //ToGoogleMapView
   }
   
   @IBAction func forgotPasswordClicked(_ sender: Any)

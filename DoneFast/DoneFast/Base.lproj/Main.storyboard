@@ -2130,7 +2130,7 @@ If you have any questions about these Terms or the Services, please contact Glob
                                 <rect key="frame" x="0.0" y="121" width="414" height="615"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ds-WL-Mj3">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="546"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="670"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  DETAILS  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxx-4X-PDG">
                                                 <rect key="frame" x="15" y="20" width="83.333333333333329" height="20.333333333333329"/>
@@ -2146,101 +2146,48 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="doy-KF-ALF">
-                                                <rect key="frame" x="129.66666666666669" y="109" width="154.66666666666669" height="96"/>
+                                                <rect key="frame" x="129.66666666666669" y="109" width="154.66666666666669" height="235"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rcd-eS-mbi">
-                                                        <rect key="frame" x="45.333333333333343" y="0.0" width="64" height="64"/>
-                                                        <state key="normal" backgroundImage="ic_add_images"/>
+                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rcd-eS-mbi">
+                                                        <rect key="frame" x="45.333333333333343" y="0.0" width="64" height="203"/>
+                                                        <state key="normal" image="ic_add_images"/>
                                                         <connections>
                                                             <action selector="selectPhotosClicked:" destination="Fvx-hA-jN7" eventType="touchUpInside" id="lbU-tM-nHT"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add photos as required." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wjV-Y6-FCH">
-                                                        <rect key="frame" x="0.0" y="79" width="154.66666666666666" height="17"/>
+                                                        <rect key="frame" x="0.0" y="218" width="154.66666666666666" height="17"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Choose Service  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ILr-71-1TX" userLabel="Choose Service">
-                                                <rect key="frame" x="15" y="245" width="137.66666666666666" height="20.333333333333314"/>
-                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  NOTES  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9kM-tT-mDk">
-                                                <rect key="frame" x="15" y="335.33333333333331" width="72.666666666666671" height="20.333333333333314"/>
-                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c5u-iO-Bb1">
-                                                <rect key="frame" x="15" y="375.66666666666669" width="384" height="40"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="222-jh-R91"/>
-                                                </constraints>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <outlet property="delegate" destination="Fvx-hA-jN7" id="FQT-do-neV"/>
-                                                </connections>
-                                            </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHO-7p-nUJ">
-                                                <rect key="frame" x="15" y="285.33333333333331" width="163" height="30"/>
-                                                <state key="normal" title="Painting and decorating">
-                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="subCategoryServiceClicked:" destination="Fvx-hA-jN7" eventType="touchUpInside" id="oxv-ph-HZO"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRz-S8-A8z">
-                                                <rect key="frame" x="355" y="285.33333333333331" width="44" height="30"/>
-                                                <state key="normal" title="Select">
-                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nuy-nq-yW5">
-                                                <rect key="frame" x="15" y="465.66666666666663" width="384" height="50"/>
-                                                <color key="backgroundColor" red="0.21176470589999999" green="0.25882352939999997" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="fpb-eS-Kda"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                <state key="normal" title="SUBMIT"/>
-                                                <connections>
-                                                    <action selector="submitClicked:" destination="Fvx-hA-jN7" eventType="touchUpInside" id="RLp-3m-PU3"/>
-                                                </connections>
-                                            </button>
                                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YAp-Sr-v4C" userLabel="Images View">
                                                 <rect key="frame" x="15" y="104" width="384" height="240"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="k0v-I7-Ya1">
-                                                        <rect key="frame" x="0.0" y="10" width="384" height="138"/>
+                                                        <rect key="frame" x="0.0" y="10" width="384" height="150"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Oj3-cb-0Ia">
-                                                                <rect key="frame" x="0.0" y="0.0" width="384" height="64"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="384" height="70"/>
                                                                 <subviews>
                                                                     <button opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZP-hy-CvT">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="121.33333333333333" height="64"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="121.33333333333333" height="70"/>
                                                                         <state key="normal" image="ic_add_images"/>
                                                                         <connections>
                                                                             <action selector="selectPhotosClicked:" destination="Fvx-hA-jN7" eventType="touchUpInside" id="4qU-Q2-8qe"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="2" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQR-4Z-gEh">
-                                                                        <rect key="frame" x="131.33333333333334" y="0.0" width="121.33333333333334" height="64"/>
+                                                                        <rect key="frame" x="131.33333333333334" y="0.0" width="121.33333333333334" height="70"/>
                                                                         <state key="normal" image="ic_add_images"/>
                                                                         <connections>
                                                                             <action selector="selectPhotosClicked:" destination="Fvx-hA-jN7" eventType="touchUpInside" id="fdf-fx-GqQ"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="3" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0I9-ik-q3A">
-                                                                        <rect key="frame" x="262.66666666666669" y="0.0" width="121.33333333333331" height="64"/>
+                                                                        <rect key="frame" x="262.66666666666669" y="0.0" width="121.33333333333331" height="70"/>
                                                                         <state key="normal" image="ic_add_images"/>
                                                                         <connections>
                                                                             <action selector="selectPhotosClicked:" destination="Fvx-hA-jN7" eventType="touchUpInside" id="0fj-uh-5bC"/>
@@ -2249,24 +2196,24 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ccz-TA-vp9">
-                                                                <rect key="frame" x="0.0" y="74" width="384" height="64"/>
+                                                                <rect key="frame" x="0.0" y="80" width="384" height="70"/>
                                                                 <subviews>
                                                                     <button opaque="NO" tag="4" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAJ-Qm-gwt">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="121.33333333333333" height="64"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="121.33333333333333" height="70"/>
                                                                         <state key="normal" image="ic_add_images"/>
                                                                         <connections>
                                                                             <action selector="selectPhotosClicked:" destination="Fvx-hA-jN7" eventType="touchUpInside" id="BRD-jX-OUt"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="5" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UmJ-dX-3aS">
-                                                                        <rect key="frame" x="131.33333333333334" y="0.0" width="121.33333333333334" height="64"/>
+                                                                        <rect key="frame" x="131.33333333333334" y="0.0" width="121.33333333333334" height="70"/>
                                                                         <state key="normal" image="ic_add_images"/>
                                                                         <connections>
                                                                             <action selector="selectPhotosClicked:" destination="Fvx-hA-jN7" eventType="touchUpInside" id="Yza-Vb-vda"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="6" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqd-M9-HfN">
-                                                                        <rect key="frame" x="262.66666666666669" y="0.0" width="121.33333333333331" height="64"/>
+                                                                        <rect key="frame" x="262.66666666666669" y="0.0" width="121.33333333333331" height="70"/>
                                                                         <state key="normal" image="ic_add_images"/>
                                                                         <connections>
                                                                             <action selector="selectPhotosClicked:" destination="Fvx-hA-jN7" eventType="touchUpInside" id="krp-WE-RJV"/>
@@ -2277,8 +2224,11 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                         </subviews>
                                                     </stackView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLF-kw-2L3">
-                                                        <rect key="frame" x="10" y="163" width="118" height="52"/>
+                                                        <rect key="frame" x="10" y="175" width="118" height="40"/>
                                                         <color key="backgroundColor" red="0.97647058819999999" green="0.5450980392" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="kVa-Sq-6Pv"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <state key="normal" title="  Clear Images  "/>
                                                     </button>
@@ -2289,7 +2239,7 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="iW7-O4-QnQ" firstAttribute="top" secondItem="bLF-kw-2L3" secondAttribute="bottom" constant="8" id="94L-rV-gGQ"/>
                                                     <constraint firstItem="bLF-kw-2L3" firstAttribute="leading" secondItem="YAp-Sr-v4C" secondAttribute="leading" constant="10" id="FVh-VK-wCx"/>
@@ -2303,6 +2253,62 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bLF-kw-2L3" secondAttribute="trailing" constant="20" symbolic="YES" id="lQf-5B-w06"/>
                                                 </constraints>
                                             </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Choose Service  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ILr-71-1TX" userLabel="Choose Service">
+                                                <rect key="frame" x="15" y="384" width="137.66666666666666" height="20.333333333333314"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  NOTES  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9kM-tT-mDk">
+                                                <rect key="frame" x="15" y="474.33333333333337" width="72.666666666666671" height="20.333333333333314"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHO-7p-nUJ">
+                                                <rect key="frame" x="15" y="424.33333333333337" width="163" height="30"/>
+                                                <state key="normal" title="Painting and decorating">
+                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="subCategoryServiceClicked:" destination="Fvx-hA-jN7" eventType="touchUpInside" id="oxv-ph-HZO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRz-S8-A8z">
+                                                <rect key="frame" x="355" y="424.33333333333337" width="44" height="30"/>
+                                                <state key="normal" title="Select">
+                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="subCategoryServiceClicked:" destination="Fvx-hA-jN7" eventType="touchUpInside" id="yoS-kl-Lov"/>
+                                                </connections>
+                                            </button>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c5u-iO-Bb1">
+                                                <rect key="frame" x="15" y="514.66666666666663" width="384" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="222-jh-R91"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="Fvx-hA-jN7" id="FQT-do-neV"/>
+                                                </connections>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nuy-nq-yW5">
+                                                <rect key="frame" x="15" y="594.66666666666663" width="384" height="50"/>
+                                                <color key="backgroundColor" red="0.21176470589999999" green="0.25882352939999997" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="fpb-eS-Kda"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <state key="normal" title="SUBMIT"/>
+                                                <connections>
+                                                    <action selector="submitClicked:" destination="Fvx-hA-jN7" eventType="touchUpInside" id="RLp-3m-PU3"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -2319,17 +2325,18 @@ If you have any questions about these Terms or the Services, please contact Glob
                                             <constraint firstItem="YAp-Sr-v4C" firstAttribute="top" secondItem="a2g-y3-i2C" secondAttribute="bottom" constant="15" id="OaO-4m-p1q"/>
                                             <constraint firstItem="9kM-tT-mDk" firstAttribute="top" secondItem="CHO-7p-nUJ" secondAttribute="bottom" constant="20" id="QYy-xZ-4Ms"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ILr-71-1TX" secondAttribute="trailing" constant="20" symbolic="YES" id="TdV-rM-D8x"/>
-                                            <constraint firstItem="nuy-nq-yW5" firstAttribute="top" secondItem="c5u-iO-Bb1" secondAttribute="bottom" constant="50" id="Vfl-s8-AwV"/>
+                                            <constraint firstItem="nuy-nq-yW5" firstAttribute="top" secondItem="c5u-iO-Bb1" secondAttribute="bottom" constant="40" id="Vfl-s8-AwV"/>
                                             <constraint firstItem="9kM-tT-mDk" firstAttribute="leading" secondItem="gxx-4X-PDG" secondAttribute="leading" id="VgT-QU-5Jc"/>
                                             <constraint firstItem="doy-KF-ALF" firstAttribute="top" secondItem="a2g-y3-i2C" secondAttribute="bottom" constant="20" id="XJr-Id-GRi"/>
                                             <constraint firstItem="ILr-71-1TX" firstAttribute="leading" secondItem="gxx-4X-PDG" secondAttribute="leading" id="Zdo-m7-HEG"/>
                                             <constraint firstItem="ILr-71-1TX" firstAttribute="top" secondItem="doy-KF-ALF" secondAttribute="bottom" constant="40" id="bH5-4U-rV7"/>
                                             <constraint firstItem="CHO-7p-nUJ" firstAttribute="top" secondItem="ILr-71-1TX" secondAttribute="bottom" constant="20" id="cK7-hB-I6m"/>
                                             <constraint firstItem="gxx-4X-PDG" firstAttribute="leading" secondItem="0Ds-WL-Mj3" secondAttribute="leading" constant="15" id="dAc-PG-3qH"/>
-                                            <constraint firstAttribute="height" constant="546" id="dte-tZ-0f4"/>
+                                            <constraint firstAttribute="height" constant="670" id="dte-tZ-0f4"/>
                                             <constraint firstItem="nuy-nq-yW5" firstAttribute="leading" secondItem="a2g-y3-i2C" secondAttribute="leading" id="hpU-RK-RWr"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="9kM-tT-mDk" secondAttribute="trailing" constant="20" symbolic="YES" id="n23-lN-jdh"/>
                                             <constraint firstItem="YAp-Sr-v4C" firstAttribute="leading" secondItem="a2g-y3-i2C" secondAttribute="leading" id="owO-kA-EMA"/>
+                                            <constraint firstItem="ILr-71-1TX" firstAttribute="top" secondItem="YAp-Sr-v4C" secondAttribute="bottom" constant="40" id="ppJ-j3-PWP"/>
                                             <constraint firstItem="dRz-S8-A8z" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="CHO-7p-nUJ" secondAttribute="trailing" constant="8" symbolic="YES" id="q9q-hO-v0T"/>
                                             <constraint firstItem="gxx-4X-PDG" firstAttribute="top" secondItem="0Ds-WL-Mj3" secondAttribute="top" constant="20" id="syY-bV-7Go"/>
                                             <constraint firstAttribute="trailing" secondItem="a2g-y3-i2C" secondAttribute="trailing" constant="15" id="tWl-PW-pTl"/>
@@ -2369,6 +2376,7 @@ If you have any questions about these Terms or the Services, please contact Glob
                         <viewLayoutGuide key="safeArea" id="m2V-tE-ve0"/>
                     </view>
                     <connections>
+                        <outlet property="chooseServiceLabel" destination="ILr-71-1TX" id="Ibj-Qd-MWY"/>
                         <outlet property="notesTextField" destination="c5u-iO-Bb1" id="hxr-gU-VJd"/>
                         <outlet property="photoBtn1" destination="pZP-hy-CvT" id="txS-xP-sc2"/>
                         <outlet property="photoBtn2" destination="jQR-4Z-gEh" id="r64-yx-wiK"/>
@@ -2378,6 +2386,7 @@ If you have any questions about these Terms or the Services, please contact Glob
                         <outlet property="photoBtn6" destination="rqd-M9-HfN" id="5Lq-wa-7M6"/>
                         <outlet property="propertyImagesView" destination="YAp-Sr-v4C" id="Vhu-jn-Y2f"/>
                         <outlet property="selectImageStackView" destination="doy-KF-ALF" id="3z1-ak-lVF"/>
+                        <outlet property="subCatSelectArrowBtn" destination="dRz-S8-A8z" id="tH6-gY-tQv"/>
                         <outlet property="subCategoryBtn" destination="CHO-7p-nUJ" id="b4Y-J0-lCp"/>
                         <outlet property="tapGestureOnImageSelect" destination="Wv6-iq-ESD" id="iwR-rI-fmH"/>
                     </connections>
@@ -2426,7 +2435,11 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_add_icon" translatesAutoresizingMaskIntoConstraints="NO" id="73y-gV-QaP">
-                                                        <rect key="frame" x="160.66666666666666" y="60.333333333333343" width="93" height="90"/>
+                                                        <rect key="frame" x="162" y="60.333333333333343" width="90" height="90"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="90" id="7YS-aj-237"/>
+                                                            <constraint firstAttribute="width" constant="90" id="khW-Zg-ati"/>
+                                                        </constraints>
                                                     </imageView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="gHt-Wz-Gnk">
                                                         <rect key="frame" x="15" y="170.33333333333334" width="384" height="49.666666666666657"/>
@@ -2986,7 +2999,11 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_add_icon" translatesAutoresizingMaskIntoConstraints="NO" id="ahO-Yk-CjK">
-                                                        <rect key="frame" x="160.66666666666666" y="60.333333333333343" width="93" height="90"/>
+                                                        <rect key="frame" x="162" y="60.333333333333343" width="90" height="90"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="90" id="mhg-Qf-Ath"/>
+                                                            <constraint firstAttribute="height" constant="90" id="ntO-58-9Pz"/>
+                                                        </constraints>
                                                     </imageView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="aev-LH-Wmh">
                                                         <rect key="frame" x="15" y="170.33333333333334" width="384" height="20.333333333333343"/>
@@ -3009,6 +3026,9 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                                 <state key="normal" title="          BACK          ">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="backClicked:" destination="fgJ-g2-EVx" eventType="touchUpInside" id="amD-2d-uEi"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKr-9o-nm2">
                                                                 <rect key="frame" x="121" y="0.0" width="118" height="40"/>
@@ -3017,6 +3037,9 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                                 <state key="normal" title="          SAVE          ">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="saveClicked:" destination="fgJ-g2-EVx" eventType="touchUpInside" id="v1n-5y-Ga3"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
@@ -3474,6 +3497,7 @@ If you have any questions about these Terms or the Services, please contact Glob
                         <outlet property="cardNumberTxtField" destination="Agk-Y1-lCN" id="r6s-Cg-nsJ"/>
                         <outlet property="cityTxtField" destination="hpy-iq-056" id="lU2-OC-GGm"/>
                         <outlet property="custIdValueLabel" destination="bQt-xB-uuh" id="CJ1-Do-L4B"/>
+                        <outlet property="custProfilePicImageView" destination="ahO-Yk-CjK" id="ffY-cn-rfP"/>
                         <outlet property="custTypeValueLabel" destination="R3a-Wd-dst" id="VYq-S1-LR4"/>
                         <outlet property="emailIdLabel" destination="0z7-aK-ydM" id="Umh-sO-dSk"/>
                         <outlet property="firstNameTxtField" destination="WCl-aY-zb0" id="xpQ-qL-QAi"/>
@@ -4091,19 +4115,36 @@ If you have any questions about these Terms or the Services, please contact Glob
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S5k-FV-TFy">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="moM-4A-f73">
-                                        <rect key="frame" x="15" y="10" width="100" height="100"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="moM-4A-f73">
+                                        <rect key="frame" x="15" y="15" width="90" height="90"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="D96-Uc-omF"/>
-                                            <constraint firstAttribute="height" constant="100" id="K6T-AJ-eb7"/>
+                                            <constraint firstAttribute="width" constant="90" id="D96-Uc-omF"/>
+                                            <constraint firstAttribute="height" constant="90" id="K6T-AJ-eb7"/>
                                         </constraints>
                                     </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="h6m-K2-huF">
+                                        <rect key="frame" x="10" y="120" width="394" height="62"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PUt-l5-KmX">
+                                                <rect key="frame" x="0.0" y="0.0" width="394" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uOm-5F-JrR">
+                                                <rect key="frame" x="0.0" y="32" width="394" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="16b-62-2LN">
-                                        <rect key="frame" x="10" y="130" width="394" height="62"/>
+                                        <rect key="frame" x="10" y="120" width="394" height="62"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P45-3M-fLa">
                                                 <rect key="frame" x="0.0" y="0.0" width="394" height="30"/>
-                                                <state key="normal" title="Name">
+                                                <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -4112,7 +4153,7 @@ If you have any questions about these Terms or the Services, please contact Glob
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UeA-Tr-R5f">
                                                 <rect key="frame" x="0.0" y="32" width="394" height="30"/>
-                                                <state key="normal" title="Email">
+                                                <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -4124,12 +4165,16 @@ If you have any questions about these Terms or the Services, please contact Glob
                                 </subviews>
                                 <color key="backgroundColor" red="0.21176470589999999" green="0.25882352939999997" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="16b-62-2LN" firstAttribute="bottom" secondItem="h6m-K2-huF" secondAttribute="bottom" id="0ax-wZ-KYA"/>
                                     <constraint firstItem="16b-62-2LN" firstAttribute="leading" secondItem="S5k-FV-TFy" secondAttribute="leading" constant="10" id="4Hv-0w-4uC"/>
                                     <constraint firstItem="moM-4A-f73" firstAttribute="leading" secondItem="S5k-FV-TFy" secondAttribute="leading" constant="15" id="AjU-FK-cCl"/>
-                                    <constraint firstItem="moM-4A-f73" firstAttribute="top" secondItem="S5k-FV-TFy" secondAttribute="top" constant="10" id="GRn-oc-Hb9"/>
+                                    <constraint firstItem="16b-62-2LN" firstAttribute="top" secondItem="h6m-K2-huF" secondAttribute="top" id="FD0-yJ-rA2"/>
+                                    <constraint firstItem="moM-4A-f73" firstAttribute="top" secondItem="S5k-FV-TFy" secondAttribute="top" constant="15" id="GRn-oc-Hb9"/>
                                     <constraint firstAttribute="trailing" secondItem="16b-62-2LN" secondAttribute="trailing" constant="10" id="SdE-eq-8v0"/>
+                                    <constraint firstItem="16b-62-2LN" firstAttribute="trailing" secondItem="h6m-K2-huF" secondAttribute="trailing" id="XI4-hD-qMt"/>
+                                    <constraint firstItem="16b-62-2LN" firstAttribute="leading" secondItem="h6m-K2-huF" secondAttribute="leading" id="cR9-R9-jD4"/>
                                     <constraint firstAttribute="height" constant="200" id="hoB-IX-ZWZ"/>
-                                    <constraint firstItem="16b-62-2LN" firstAttribute="top" secondItem="moM-4A-f73" secondAttribute="bottom" constant="20" id="jX8-O7-Qkw"/>
+                                    <constraint firstItem="16b-62-2LN" firstAttribute="top" secondItem="moM-4A-f73" secondAttribute="bottom" constant="15" id="jX8-O7-Qkw"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bdc-op-4eL">
@@ -4155,8 +4200,10 @@ If you have any questions about these Terms or the Services, please contact Glob
                     </view>
                     <connections>
                         <outlet property="customerEmailButton" destination="UeA-Tr-R5f" id="JnO-RP-wRl"/>
+                        <outlet property="customerEmailLabel" destination="uOm-5F-JrR" id="Mcg-ef-2vD"/>
                         <outlet property="customerListTableView" destination="bdc-op-4eL" id="puE-dq-sUf"/>
                         <outlet property="customerNameButton" destination="P45-3M-fLa" id="ufM-Ep-XMb"/>
+                        <outlet property="customerNameLabel" destination="PUt-l5-KmX" id="MCZ-An-4RR"/>
                         <outlet property="customerProfileImageView" destination="moM-4A-f73" id="XeK-L6-a7t"/>
                     </connections>
                 </viewController>
