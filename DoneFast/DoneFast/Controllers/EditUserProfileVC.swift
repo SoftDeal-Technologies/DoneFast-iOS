@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class EditUserProfileVC: UIViewController {
 
@@ -75,10 +76,13 @@ class EditUserProfileVC: UIViewController {
      lastNameTxtField.text = loggedInUserDetails?.customerLastName
      emailIdLabel.text = loggedInUserDetails?.customerEmail
      firstNameTxtField.text = loggedInUserDetails?.customerFirstName
-//     custProfilePicImageView: UIImageView!
-    if let customerPhoto = loggedInUserDetails?.customerPhoto {
-      custProfilePicImageView.downloaded(from: URL(string: customerPhoto)!)
-      custProfilePicImageView.layer.cornerRadius = (custProfilePicImageView.frame.size.width/2)
+    if let customerPhoto = loggedInUserDetails?.customerPhoto
+    {
+      if customerPhoto.count > 0
+      {
+        custProfilePicImageView.downloaded(from: URL(string: customerPhoto)!)
+        custProfilePicImageView.layer.cornerRadius = (custProfilePicImageView.frame.size.width/2)
+      }
     }
     
   }
@@ -88,9 +92,9 @@ class EditUserProfileVC: UIViewController {
     guard let userId = UserLoginDetails.shared.userID else { return }
     guard let tokenStr = UserLoginDetails.shared.token else { return }
     WebServices.sharedWebServices.delegate = self
-    if let firstName = firstNameTxtField.text,let lastName = lastNameTxtField.text,let phoneNumber = phoneNoTxtField.text,let address = addressTxtField.text,let city = cityTxtField.text,let state = stateTxtField.text,let zipCode = zipCodeTxtField.text,let billingAddress = billingAddressTxtField.text,let billingCity = billingCityTxtField.text,let billingState = billingStateTxtField.text,let billingZipCode = zipCodeBillingTxtField.text,let creditCardType = cardTypeLabel.text,let creditCardNumber = cardNumberTxtField.text,let creditCardExp = cardExpTxtField.text,let creditCardCVV = cardCVVTxtField.text
+    if let firstName = firstNameTxtField.text,let lastName = lastNameTxtField.text,let phoneNumber = phoneNoTxtField.text,let address = addressTxtField.text,let city = cityTxtField.text,let state = stateTxtField.text,let zipCode = zipCodeTxtField.text,let billingAddress = billingAddressTxtField.text,let billingCity = billingCityTxtField.text,let billingState = billingStateTxtField.text,let billingZipCode = zipCodeBillingTxtField.text,let creditCardNumber = cardNumberTxtField.text,let creditCardExp = cardExpTxtField.text,let creditCardCVV = cardCVVTxtField.text, let cardHolderName = cardHolderNameTxtField.text
     {
-      let parameters = ["userID": userId,"firstName":firstName,"lastName":lastName,"phoneNumber":phoneNumber,"address":address,"city":city,"state":state,"zipCode":zipCode,"billingAddress":billingAddress,"billingCity":billingCity,"billingState":billingState,"billingZipCode":billingZipCode,"creditCardType":creditCardType,  "creditCardNumber":creditCardNumber,"creditCardName":creditCardType,"creditCardExp":creditCardExp,"creditCardCVV":creditCardCVV]
+      let parameters = ["userID": userId,"firstName":firstName,"lastName":lastName,"phoneNumber":phoneNumber,"address":address,"city":city,"state":state,"zipCode":zipCode,"billingAddress":billingAddress,"billingCity":billingCity,"billingState":billingState,"billingZipCode":billingZipCode,"creditCardType":"VISA",  "creditCardNumber":creditCardNumber,"creditCardName":cardHolderName,"creditCardExp":creditCardExp,"creditCardCVV":creditCardCVV]
       let imageStringArray = ["customerPhoto"]
       let imageDataArray = [custProfilePicImageView.image]
       WebServices.sharedWebServices.uploadusingUrlSessionNormalDataWithImage(webServiceParameters: parameters, methodType: .POST, webServiceType: .CUSTOMER_UPDATE_PROFILE, token: tokenStr, imagesString: imageStringArray, imageDataArray: imageDataArray as! [UIImage])
@@ -104,7 +108,25 @@ extension EditUserProfileVC:WebServiceDelegate
 {
   func successResponse(responseString: String, webServiceType: WebServiceType)
   {
-    
+    if let jsonStr = try? JSON(parseJSON: responseString)
+    {
+      //        let  tempErrorCode = jsonStr["status"].stringValue
+      let jsonData = jsonStr["data"].dictionary
+      let message = jsonData!["message"]!.string
+      //if tempErrorCode == "1"
+      if message == "Successfully update your profile"
+      {
+        
+        DispatchQueue.main.async {
+          let alertController = UIAlertController(title: message, message: "", preferredStyle: .alert)
+          alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+            self.navigationController?.popViewController(animated: true)
+          }))
+          self.present(alertController, animated: true, completion: nil)
+          
+        }
+      }
+    }
   }
   
   func failerResponse(responseData: Data, webServiceType: WebServiceType)

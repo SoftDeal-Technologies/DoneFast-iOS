@@ -2458,51 +2458,49 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                             </label>
                                                         </subviews>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OhH-Q0-GBm">
-                                                        <rect key="frame" x="90" y="230" width="234" height="40"/>
-                                                        <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MdN-HT-y1Y">
-                                                                <rect key="frame" x="0.0" y="0.0" width="121" height="40"/>
-                                                                <color key="backgroundColor" red="0.97647058819999999" green="0.5450980392" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                                                <state key="normal" title="          BACK          ">
-                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                </state>
-                                                                <connections>
-                                                                    <action selector="backClicked:" destination="NID-jL-MJP" eventType="touchUpInside" id="HpH-sn-dZj"/>
-                                                                </connections>
-                                                            </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8yJ-cu-SF2">
-                                                                <rect key="frame" x="121" y="0.0" width="113" height="40"/>
-                                                                <color key="backgroundColor" red="0.97647058819999999" green="0.5450980392" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                                                <state key="normal" title="          EDIT          ">
-                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                </state>
-                                                                <connections>
-                                                                    <action selector="editClicked:" destination="NID-jL-MJP" eventType="touchUpInside" id="Frv-6w-yyt"/>
-                                                                </connections>
-                                                            </button>
-                                                        </subviews>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="40" id="kvA-cG-nmZ"/>
-                                                        </constraints>
-                                                    </stackView>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.28814268112182617" green="0.34224838018417358" blue="0.6679719090461731" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstItem="Ez6-nc-Ith" firstAttribute="centerX" secondItem="QF4-IV-Wvl" secondAttribute="centerX" id="272-IF-dZB"/>
                                                     <constraint firstItem="73y-gV-QaP" firstAttribute="centerX" secondItem="QF4-IV-Wvl" secondAttribute="centerX" id="EMl-wa-1Je"/>
-                                                    <constraint firstItem="OhH-Q0-GBm" firstAttribute="centerX" secondItem="QF4-IV-Wvl" secondAttribute="centerX" id="Fxe-uf-Dho"/>
                                                     <constraint firstItem="Ez6-nc-Ith" firstAttribute="top" secondItem="QF4-IV-Wvl" secondAttribute="top" constant="10" id="gfh-Do-Rfq"/>
                                                     <constraint firstItem="gHt-Wz-Gnk" firstAttribute="top" secondItem="73y-gV-QaP" secondAttribute="bottom" constant="20" id="hRQ-6t-gap"/>
                                                     <constraint firstItem="gHt-Wz-Gnk" firstAttribute="leading" secondItem="QF4-IV-Wvl" secondAttribute="leading" constant="15" id="hny-Uv-kuL"/>
                                                     <constraint firstAttribute="trailing" secondItem="gHt-Wz-Gnk" secondAttribute="trailing" constant="15" id="vSf-gh-C74"/>
                                                     <constraint firstItem="73y-gV-QaP" firstAttribute="top" secondItem="Ez6-nc-Ith" secondAttribute="bottom" constant="30" id="w04-dX-5eB"/>
                                                     <constraint firstAttribute="height" constant="250" id="wPN-Lb-vyk"/>
-                                                    <constraint firstItem="OhH-Q0-GBm" firstAttribute="top" secondItem="gHt-Wz-Gnk" secondAttribute="bottom" constant="10" id="wPg-l0-WuN"/>
                                                 </constraints>
                                             </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OhH-Q0-GBm">
+                                                <rect key="frame" x="90" y="229" width="234" height="40"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MdN-HT-y1Y">
+                                                        <rect key="frame" x="0.0" y="0.0" width="121" height="40"/>
+                                                        <color key="backgroundColor" red="0.97647058819999999" green="0.5450980392" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                        <state key="normal" title="          BACK          ">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="backClicked:" destination="NID-jL-MJP" eventType="touchUpInside" id="HpH-sn-dZj"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8yJ-cu-SF2">
+                                                        <rect key="frame" x="121" y="0.0" width="113" height="40"/>
+                                                        <color key="backgroundColor" red="0.97647058819999999" green="0.5450980392" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                        <state key="normal" title="          EDIT          ">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="editClicked:" destination="NID-jL-MJP" eventType="touchUpInside" id="Frv-6w-yyt"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="kvA-cG-nmZ"/>
+                                                </constraints>
+                                            </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Customer Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qkq-lB-QGA">
                                                 <rect key="frame" x="15" y="300" width="384" height="23"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
@@ -2844,12 +2842,14 @@ If you have any questions about these Terms or the Services, please contact Glob
                                             <constraint firstItem="Kgy-0m-Vwm" firstAttribute="trailing" secondItem="Qkq-lB-QGA" secondAttribute="trailing" id="0jy-et-PNL"/>
                                             <constraint firstItem="1EY-g6-EXI" firstAttribute="leading" secondItem="Pmn-Mx-xt8" secondAttribute="leading" id="1FD-C0-evB"/>
                                             <constraint firstItem="Kgy-0m-Vwm" firstAttribute="leading" secondItem="Qkq-lB-QGA" secondAttribute="leading" id="1k6-Uj-03N"/>
+                                            <constraint firstItem="OhH-Q0-GBm" firstAttribute="centerX" secondItem="sow-pQ-iIZ" secondAttribute="centerX" id="262-7m-9h0"/>
                                             <constraint firstItem="Eqe-T9-uHC" firstAttribute="top" secondItem="Kgy-0m-Vwm" secondAttribute="bottom" constant="15" id="29U-FQ-80V"/>
                                             <constraint firstItem="vVG-1S-DWI" firstAttribute="trailing" secondItem="Qkq-lB-QGA" secondAttribute="trailing" id="3L6-J8-rAB"/>
                                             <constraint firstAttribute="trailing" secondItem="QF4-IV-Wvl" secondAttribute="trailing" id="3MH-Uk-zRJ"/>
                                             <constraint firstItem="xIy-JN-mu3" firstAttribute="trailing" secondItem="Qkq-lB-QGA" secondAttribute="trailing" id="3dA-zx-FJA"/>
                                             <constraint firstItem="Kgy-0m-Vwm" firstAttribute="top" secondItem="VlC-Px-WLh" secondAttribute="bottom" constant="15" id="3eG-0Z-gdS"/>
                                             <constraint firstItem="Qkq-lB-QGA" firstAttribute="top" secondItem="QF4-IV-Wvl" secondAttribute="bottom" constant="50" id="4wD-sf-I26"/>
+                                            <constraint firstItem="OhH-Q0-GBm" firstAttribute="top" secondItem="QF4-IV-Wvl" secondAttribute="bottom" constant="-21" id="5X9-CS-nTw"/>
                                             <constraint firstItem="Eqe-T9-uHC" firstAttribute="trailing" secondItem="Qkq-lB-QGA" secondAttribute="trailing" id="5iR-gh-3Y6"/>
                                             <constraint firstItem="Lgs-M0-7j0" firstAttribute="top" secondItem="nJV-jq-qTx" secondAttribute="bottom" constant="20" id="7OH-5N-RwL"/>
                                             <constraint firstItem="Eqe-T9-uHC" firstAttribute="leading" secondItem="Qkq-lB-QGA" secondAttribute="leading" id="8KW-XG-MVc"/>

@@ -91,8 +91,15 @@ class UserProfileVC: UIViewController
     custIdValueLabel.text = loggedInUser.userID
 //    custTypeValueLabel.text = loggedInUser.customerCardType
     firstNameLabel.text = loggedInUser.customerFirstName
-    custProfilePicImageView.downloaded(from: URL(string: loggedInUser.customerPhoto!)!)
-    custProfilePicImageView.layer.cornerRadius = (custProfilePicImageView.frame.size.width/2)
+    if let customerPhoto = loggedInUser.customerPhoto
+    {
+      if customerPhoto.count > 0
+      {
+        custProfilePicImageView.downloaded(from: URL(string: loggedInUser.customerPhoto!)!)
+        custProfilePicImageView.layer.cornerRadius = (custProfilePicImageView.frame.size.width/2)
+      }
+    }
+    
   }
   func callWebService()
   {

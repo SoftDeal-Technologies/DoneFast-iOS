@@ -31,7 +31,10 @@ class LeftSlideVC: UIViewController {
       if let profileImageUrl = UserLoginDetails.shared.userProfileImage
       {
 //        self.downloadImage(from: URL(string: profileImageUrl)!)
-        self.customerProfileImageView.downloaded(from: URL(string: profileImageUrl)!)
+        if profileImageUrl.count > 0
+        {
+          self.customerProfileImageView.downloaded(from: URL(string: profileImageUrl)!)
+        }
       }
     }
   
