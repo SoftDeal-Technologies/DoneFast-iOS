@@ -18,6 +18,7 @@
 		143166AC232D2DB4007A2098 /* EditCustomerPropertyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143166AB232D2DB4007A2098 /* EditCustomerPropertyVC.swift */; };
 		143166B1232D797B007A2098 /* LeftSlideVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143166B0232D797B007A2098 /* LeftSlideVC.swift */; };
 		14472DE7230F2B35004D9D5B /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14472DE6230F2B35004D9D5B /* UserProfileVC.swift */; };
+		144923902334DD840061EAB8 /* CustomerDetailJobHistoryComleted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1449238F2334DD840061EAB8 /* CustomerDetailJobHistoryComleted.swift */; };
 		1453343B2312E99A0036AB28 /* EditUserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453343A2312E99A0036AB28 /* EditUserProfileVC.swift */; };
 		14654331231EFC9D005D24A5 /* SubCategoryServiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14654330231EFC9D005D24A5 /* SubCategoryServiceVC.swift */; };
 		14654333231F02E3005D24A5 /* ServiceSubCatogary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14654332231F02E3005D24A5 /* ServiceSubCatogary.swift */; };
@@ -74,6 +75,7 @@
 		143166AB232D2DB4007A2098 /* EditCustomerPropertyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCustomerPropertyVC.swift; sourceTree = "<group>"; };
 		143166B0232D797B007A2098 /* LeftSlideVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftSlideVC.swift; sourceTree = "<group>"; };
 		14472DE6230F2B35004D9D5B /* UserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVC.swift; sourceTree = "<group>"; };
+		1449238F2334DD840061EAB8 /* CustomerDetailJobHistoryComleted.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerDetailJobHistoryComleted.swift; sourceTree = "<group>"; };
 		1453343A2312E99A0036AB28 /* EditUserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserProfileVC.swift; sourceTree = "<group>"; };
 		14654330231EFC9D005D24A5 /* SubCategoryServiceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCategoryServiceVC.swift; sourceTree = "<group>"; };
 		14654332231F02E3005D24A5 /* ServiceSubCatogary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSubCatogary.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				14472DE6230F2B35004D9D5B /* UserProfileVC.swift */,
 				1453343A2312E99A0036AB28 /* EditUserProfileVC.swift */,
 				1495F5B7231464BB006022F4 /* CustomerDetailJobHistoryVC.swift */,
+				1449238F2334DD840061EAB8 /* CustomerDetailJobHistoryComleted.swift */,
 				141C0B3D231DB61B00A45488 /* CustomerJobHistoryVC.swift */,
 				14654330231EFC9D005D24A5 /* SubCategoryServiceVC.swift */,
 				14A7ABEB2323C79A00005E42 /* GoogleMapVC.swift */,
@@ -461,6 +464,7 @@
 				143166B1232D797B007A2098 /* LeftSlideVC.swift in Sources */,
 				1418E18B23009A73005324A6 /* NewCustomerViewController.swift in Sources */,
 				1418E18F23009AC2005324A6 /* CardPaymentViewController.swift in Sources */,
+				144923902334DD840061EAB8 /* CustomerDetailJobHistoryComleted.swift in Sources */,
 				14922837230DDB3800BD747F /* CustomerPropertyTableCell.swift in Sources */,
 				142AE0632308949600493AA2 /* CustomerDetails.swift in Sources */,
 				1495F5B623145D80006022F4 /* CustomerJobHistoryTableCell.swift in Sources */,

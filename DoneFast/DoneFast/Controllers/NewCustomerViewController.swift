@@ -22,18 +22,38 @@ class NewCustomerViewController: UIViewController,UITextFieldDelegate {
   @IBOutlet weak var passwordTxtField: UITextField!
   @IBOutlet weak var confirmPasswordTxtField: UITextField!
   @IBOutlet weak var bgScrollView: UIScrollView!
+  var checkMarkPrivacyPolicy = false
   
+  @IBOutlet weak var checkBoxBtn: UIButton!
   var customerDetail:CustomerDetails!
   
-  override func viewDidLoad() {
-        super.viewDidLoad()
-        bgScrollView.frame = CGRect(x: 0, y: 179, width: self.view.frame.size.width, height: self.view.frame.size.height-179)
-        // Do any additional setup after loading the view.
-    }
+  override func viewDidLoad()
+  {
+    super.viewDidLoad()
+    bgScrollView.frame = CGRect(x: 0, y: 179, width: self.view.frame.size.width, height: self.view.frame.size.height-179)
+    // Do any additional setup after loading the view.
+  }
     
   @IBAction func viewTermsConditionsClicked(_ sender: Any)
   {
     self.performSegue(withIdentifier: "ToTermsConditionsView", sender: self)
+  }
+  
+  @IBAction func checkBoxClicked(_ sender: Any)
+  {
+    if checkMarkPrivacyPolicy
+    {
+      let image = UIImage(named:"baseline_check_box_outline_blank_black")
+      
+      checkMarkPrivacyPolicy = false
+      checkBoxBtn.setImage(image, for: .normal)
+    }
+    else
+    {
+      let image = UIImage(named:"baseline_check_box_black")
+      checkMarkPrivacyPolicy = true
+      checkBoxBtn.setImage(image, for: .normal)
+    }
   }
   
   @IBAction func nextClicked(_ sender: Any)
@@ -49,21 +69,31 @@ class NewCustomerViewController: UIViewController,UITextFieldDelegate {
     guard let phone = phoneTxtField.text else { return }
     guard let zipCode = zipCodeTxtField.text else { return }
     
-    if firstName.count > 0 && lastName.count > 0 && emailId.count > 0 && state.count > 0 && address.count > 0 && city.count > 0 && password.count > 0 && confirmPassword.count > 0
+    if checkMarkPrivacyPolicy == true
     {
-      customerDetail = CustomerDetails(firstName: firstName, lastName: lastName, emailId: emailId, state: state, address:address, city: city, password: password, confirmPassword: confirmPassword, phone: phone, zipCode: zipCode)
-      
-      self.performSegue(withIdentifier: "ToCardPaymentView", sender: self)
+      if firstName.count > 0 && lastName.count > 0 && emailId.count > 0 && state.count > 0 && address.count > 0 && city.count > 0 && password.count > 0 && confirmPassword.count > 0
+      {
+        customerDetail = CustomerDetails(firstName: firstName, lastName: lastName, emailId: emailId, state: state, address:address, city: city, password: password, confirmPassword: confirmPassword, phone: phone, zipCode: zipCode)
+        
+        self.performSegue(withIdentifier: "ToCardPaymentView", sender: self)
+      }
+      else
+      {
+        let alertController:UIAlertController = UIAlertController(title: "", message: "Please enter all fields for new registration.", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alertController, animated: true, completion: nil)
+      }
     }
     else
     {
-      let alertController:UIAlertController = UIAlertController(title: "", message: "Please enter all fields for new registration.", preferredStyle: .alert)
+      let alertController:UIAlertController = UIAlertController(title: "", message: "Please check terms & conditions.", preferredStyle: .alert)
       alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
       self.present(alertController, animated: true, completion: nil)
     }
   }
   
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+  {
     if segue.identifier == "ToCardPaymentView"
     {
       let destController = segue.destination as! CardPaymentViewController

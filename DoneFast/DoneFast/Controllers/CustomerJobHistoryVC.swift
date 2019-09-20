@@ -56,6 +56,13 @@ class CustomerJobHistoryVC: UIViewController {
       customerDetailJobHistoryVC?.customerRequest = self.selectedCustomerRequest
       customerDetailJobHistoryVC?.delegate = self.delegate
     }
+    else if segue.identifier == "ToCustomerJobCompletedDetail"
+    {
+      let customerDetailJobHistoryVC = segue.destination as? CustomerDetailJobHistoryCompleted
+      customerDetailJobHistoryVC?.customerLoginDetails = self.customerLoginDetails
+      customerDetailJobHistoryVC?.customerRequest = self.selectedCustomerRequest
+      customerDetailJobHistoryVC?.delegate = self.delegate
+    }
   }
   
 }
@@ -66,7 +73,15 @@ extension CustomerJobHistoryVC:UITableViewDelegate
   {
     tableView.deselectRow(at: indexPath, animated: true) //ToCustomerDetail ,ToAddCustomerProperty
     self.selectedCustomerRequest = self.jobRequestListArray[indexPath.row]
-    self.performSegue(withIdentifier: "ToCustomerJobDetail", sender: self)
+    if self.selectedCustomerRequest?.priceQuoteStatus == "Price Quote Accepted" || self.selectedCustomerRequest?.priceQuoteStatus == "Price Quote Assigned" || self.selectedCustomerRequest?.priceQuoteStatus == "Pending"
+    {
+      self.performSegue(withIdentifier: "ToCustomerJobDetail", sender: self)
+    }
+    else
+    {
+      self.performSegue(withIdentifier: "ToCustomerJobCompletedDetail", sender: self)
+    }
+    
   }
 }
 
