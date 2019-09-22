@@ -52,6 +52,7 @@ class CardPaymentViewController: UIViewController,WebServiceDelegate,SignatureDe
   @IBOutlet weak var digitalSignImageView: UIImageView!
   
   var customerDetails:CustomerDetails?
+  var customerBillingDetails:CustomerBillingDetails?
   var signatureImage:UIImage!
   
   override func viewDidLoad() {
@@ -101,6 +102,10 @@ class CardPaymentViewController: UIViewController,WebServiceDelegate,SignatureDe
         guard let city = customerDetails?.city else {return}
         guard let state = customerDetails?.state else {return}
         guard let zipCode = customerDetails?.zipCode else {return}
+        guard let billAddress = customerBillingDetails?.address else {return}
+        guard let billCity = customerBillingDetails?.city else {return}
+        guard let billState = customerBillingDetails?.state else {return}
+        guard let billZipCode = customerBillingDetails?.zipCode else {return}
         
 //        print(firstname)
         print(customerDetails?.firstName! as Any)
@@ -111,7 +116,7 @@ class CardPaymentViewController: UIViewController,WebServiceDelegate,SignatureDe
         let imageParameters = ["customerSignature"]
         let imageDataParameters = [signatureImage]
         
-        let customerRegParameters = ["userType":"Customer","firstName":firstname,"lastName":lastName,"emailId":emailId,  "password":password,"phoneNumber":phone,"address":address,"city":city,"state":state,  "zipCode":zipCode,"billingAddress":"Aspen St",  "billingCity":"San Antonio",  "billingState":"TX",  "billingZipCode":"78006","creditCardType":"Visa","creditCardNumber":cardNumber,"creditCardName":name,  "creditCardExp":expiryMonthYear,"creditCardCVV":cvv,"deviceType":"Android","deviceToken":"APA91bFoi3lMMre9G3XzR1LrF4ZT82_15MsMdEICogXSLB8-MrdkRuRQFwNI5u8Dh0cI90ABD3BOKnxkEla8cGdisbDHl5cVIkZah5QUhSAxzx4Roa7b4xy9tvx9iNSYw-eXBYYd8k1XKf8Q_Qq1X9-x-U-Y79vdPq"] //"billingAddress":"Aspen St",  "billingCity":"San Antonio",  "billingState":"TX",  "billingZipCode":"78006",
+        let customerRegParameters = ["userType":"Customer","firstName":firstname,"lastName":lastName,"emailId":emailId,  "password":password,"phoneNumber":phone,"address":address,"city":city,"state":state,  "zipCode":zipCode,"billingAddress":billAddress,  "billingCity":billCity,  "billingState":billState,  "billingZipCode":billZipCode,"creditCardType":"Visa","creditCardNumber":cardNumber,"creditCardName":name,  "creditCardExp":expiryMonthYear,"creditCardCVV":cvv,"deviceType":"Android","deviceToken":"APA91bFoi3lMMre9G3XzR1LrF4ZT82_15MsMdEICogXSLB8-MrdkRuRQFwNI5u8Dh0cI90ABD3BOKnxkEla8cGdisbDHl5cVIkZah5QUhSAxzx4Roa7b4xy9tvx9iNSYw-eXBYYd8k1XKf8Q_Qq1X9-x-U-Y79vdPq"] //"billingAddress":"Aspen St",  "billingCity":"San Antonio",  "billingState":"TX",  "billingZipCode":"78006",
         WebServices.sharedWebServices.uploadusingUrlSessionNormalDataWithImage(webServiceParameters: customerRegParameters as [String : Any], methodType: .POST, webServiceType: .NEW_CUSTOMER_REGISTRATION, token: "",imagesString:imageParameters,imageDataArray:imageDataParameters as! [UIImage])
       }
       else

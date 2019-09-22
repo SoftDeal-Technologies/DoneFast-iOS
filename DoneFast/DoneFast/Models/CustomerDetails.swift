@@ -35,3 +35,19 @@ class CustomerDetails: NSObject {
   }
 
 }
+
+class CustomerBillingDetails: NSObject {
+  var state:String?
+  var address:String?
+  var city:String?
+  var zipCode:String?
+  
+  init(state:String,address:String,city:String,zipCode:String)
+  {
+    self.state = state
+    self.city = city
+    self.zipCode = zipCode
+    self.address = address
+  }
+  
+}

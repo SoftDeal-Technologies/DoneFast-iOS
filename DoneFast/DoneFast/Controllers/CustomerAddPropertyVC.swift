@@ -194,7 +194,9 @@ extension CustomerAddPropertyVC:WebServiceDelegate
           //            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: ))
           alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
 //            self.navigateToListCustomerProperty()
-            self.navigationController?.popViewController(animated: true)
+            DispatchQueue.main.async {
+              self.navigationController?.popViewController(animated: true)
+            }
           }))
           DispatchQueue.main.async {
             self.present(alertController, animated: true, completion: nil)

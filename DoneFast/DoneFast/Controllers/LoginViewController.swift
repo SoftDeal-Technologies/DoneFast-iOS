@@ -78,10 +78,22 @@ class LoginViewController: UIViewController,WebServiceDelegate,UITextFieldDelega
             UserLoginDetails.shared.userName = userId["userName"].stringValue
             UserLoginDetails.shared.userPermission = userId["userPermission"].stringValue
             UserLoginDetails.shared.userProfileImage = userId["userProfileImage"].stringValue
+            
+            UserDefaults.standard.set(userId["loginType"].stringValue, forKey: "loginType")
+            UserDefaults.standard.set(userId["userEmail"].stringValue, forKey: "userEmail")
+            UserDefaults.standard.set(userId["userID"].stringValue, forKey: "userID")
+            UserDefaults.standard.set(userId["userName"].stringValue, forKey: "userName")
+            UserDefaults.standard.set(userId["userPermission"].stringValue, forKey: "userPermission")
+            UserDefaults.standard.set(userId["userProfileImage"].stringValue, forKey: "userProfileImage")
+            UserDefaults.standard.synchronize()
+            
+            
           }
           if message == "You have successfully logged in."
           {
             UserLoginDetails.shared.token = userData!["token"]!.stringValue
+            UserDefaults.standard.set(userData!["token"]!.stringValue, forKey: "token")
+            UserDefaults.standard.synchronize()
 //            self.userLoggedInDetails = tempUserDetails
             DispatchQueue.main.async {
 //              self.performSegue(withIdentifier: "CustomerListVC", sender: self)

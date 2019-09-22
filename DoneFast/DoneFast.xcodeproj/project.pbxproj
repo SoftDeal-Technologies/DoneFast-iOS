@@ -24,6 +24,7 @@
 		14654333231F02E3005D24A5 /* ServiceSubCatogary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14654332231F02E3005D24A5 /* ServiceSubCatogary.swift */; };
 		14692813230735FB00E0E24E /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14692812230735FB00E0E24E /* WebServices.swift */; };
 		146BAFC9232435CA00A894DA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 146BAFC8232435CA00A894DA /* CoreLocation.framework */; };
+		146DD96B2336B88900A2EC59 /* BillingAddressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146DD96A2336B88900A2EC59 /* BillingAddressVC.swift */; };
 		1472187A23204BE900439EF8 /* LoggedInUserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1472187923204BE900439EF8 /* LoggedInUserDetails.swift */; };
 		1486EC172318542900954243 /* PropertyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1486EC162318542900954243 /* PropertyList.swift */; };
 		1486EC192318550B00954243 /* UserLoginDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1486EC182318550B00954243 /* UserLoginDetails.swift */; };
@@ -81,6 +82,7 @@
 		14654332231F02E3005D24A5 /* ServiceSubCatogary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceSubCatogary.swift; sourceTree = "<group>"; };
 		14692812230735FB00E0E24E /* WebServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
 		146BAFC8232435CA00A894DA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		146DD96A2336B88900A2EC59 /* BillingAddressVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingAddressVC.swift; sourceTree = "<group>"; };
 		1472187923204BE900439EF8 /* LoggedInUserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInUserDetails.swift; sourceTree = "<group>"; };
 		1486EC162318542900954243 /* PropertyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyList.swift; sourceTree = "<group>"; };
 		1486EC182318550B00954243 /* UserLoginDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginDetails.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 				14DDBECE22FE02A60040FF21 /* RegistrationOptionViewController.swift */,
 				1418E18823009A4E005324A6 /* TermsConditionsViewController.swift */,
 				1418E18A23009A73005324A6 /* NewCustomerViewController.swift */,
+				146DD96A2336B88900A2EC59 /* BillingAddressVC.swift */,
 				1418E18C23009A94005324A6 /* DigitalSignatureViewController.swift */,
 				1418E18E23009AC2005324A6 /* CardPaymentViewController.swift */,
 				1430C4A5230B29FE002FEBC2 /* CustomerAddPropertyVC.swift */,
@@ -475,6 +478,7 @@
 				1492283A230DE1B800BD747F /* RequestDetailsVC.swift in Sources */,
 				143166AC232D2DB4007A2098 /* EditCustomerPropertyVC.swift in Sources */,
 				14E25AFA22FCAA710045C908 /* AppDelegate.swift in Sources */,
+				146DD96B2336B88900A2EC59 /* BillingAddressVC.swift in Sources */,
 				143166AA232CF7E7007A2098 /* CustomerRequestPriceQuote.swift in Sources */,
 				1495F5B8231464BB006022F4 /* CustomerDetailJobHistoryVC.swift in Sources */,
 				14CB9E90230C56A700540B87 /* CustomerPropertyDetailVC.swift in Sources */,

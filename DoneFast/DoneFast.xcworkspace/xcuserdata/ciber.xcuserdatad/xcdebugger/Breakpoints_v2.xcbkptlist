@@ -185,38 +185,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "DoneFast/Controllers/CardPaymentViewController.swift"
-            timestampString = "589149179.671909"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
-            landmarkName = "successResponse(responseString:webServiceType:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DoneFast/Controllers/CardPaymentViewController.swift"
-            timestampString = "589149179.672155"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
-            landmarkName = "submitClicked(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "DoneFast/Models/WebServices.swift"
             timestampString = "590706723.409677"
             startingColumnNumber = "9223372036854775807"
@@ -240,22 +208,6 @@
             startingLineNumber = "91"
             endingLineNumber = "91"
             landmarkName = "uploadusingUrlSessionNormalDataWithImage(webServiceParameters:methodType:webServiceType:token:imagesString:imageDataArray:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DoneFast/Controllers/SelectServiceVC.swift"
-            timestampString = "590264263.77206"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "leftPanelClicked(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -346,7 +298,7 @@
                   moduleName = "DoneFast"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ciber/Documents/DoneFast/GitCode/DoneFast-iOS/DoneFast/DoneFast/SlideInControllers/LeftSlideVC.swift"
-                  timestampString = "590706723.665082"
+                  timestampString = "590858532.640337"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "145"
@@ -361,7 +313,7 @@
                   moduleName = "DoneFast"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ciber/Documents/DoneFast/GitCode/DoneFast-iOS/DoneFast/DoneFast/SlideInControllers/LeftSlideVC.swift"
-                  timestampString = "590706723.6685539"
+                  timestampString = "590858532.642059"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "147"
@@ -458,11 +410,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DoneFast/Controllers/CustomerDetailJobHistoryVC.swift"
-            timestampString = "590706723.409971"
+            timestampString = "590743516.069803"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "199"
-            endingLineNumber = "199"
+            startingLineNumber = "201"
+            endingLineNumber = "201"
             landmarkName = "successResponse(responseString:webServiceType:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -474,11 +426,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DoneFast/Controllers/CustomerDetailJobHistoryVC.swift"
-            timestampString = "590706723.410026"
+            timestampString = "590743516.0698659"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "192"
-            endingLineNumber = "192"
+            startingLineNumber = "194"
+            endingLineNumber = "194"
             landmarkName = "successResponse(responseString:webServiceType:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -490,13 +442,61 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DoneFast/Controllers/CustomerDetailJobHistoryVC.swift"
-            timestampString = "590706723.410076"
+            timestampString = "590743516.069913"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "71"
             endingLineNumber = "71"
             landmarkName = "acceptClicked(_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DoneFast/Models/WebServices.swift"
+            timestampString = "590791681.0058711"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "uploadusingUrlSessionNormalDataWithImage(webServiceParameters:methodType:webServiceType:token:imagesString:imageDataArray:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DoneFast.WebServices.uploadusingUrlSessionNormalDataWithImage(webServiceParameters: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, methodType: DoneFast.MethodType, webServiceType: DoneFast.WebServiceType, token: Swift.String, imagesString: Swift.Array&lt;Swift.String&gt;, imageDataArray: Swift.Array&lt;__C.UIImage&gt;) -&gt; ()"
+                  moduleName = "DoneFast"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ciber/Documents/DoneFast/GitCode/DoneFast-iOS/DoneFast/DoneFast/Models/WebServices.swift"
+                  timestampString = "590858532.666963"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "89"
+                  endingLineNumber = "89"
+                  offsetFromSymbolStart = "10214">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[4] = Value Promoted from Box&gt; of closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in DoneFast.WebServices.uploadusingUrlSessionNormalDataWithImage(webServiceParameters: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, methodType: DoneFast.MethodType, webServiceType: DoneFast.WebServiceType, token: Swift.String, imagesString: Swift.Array&lt;Swift.String&gt;, imageDataArray: Swift.Array&lt;__C.UIImage&gt;) -&gt; ()"
+                  moduleName = "DoneFast"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ciber/Documents/DoneFast/GitCode/DoneFast-iOS/DoneFast/DoneFast/Models/WebServices.swift"
+                  timestampString = "590858532.6683691"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "272">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -152,7 +152,7 @@ extension CustomerDetailJobHistoryVC:WebServiceDelegate
               self.propertyTitleLabel.text = customerReqPriceQuote.propertyTitle
               self.propertyLocationLabel.text = customerReqPriceQuote.propertyLocation
               
-              if customerReqPriceQuote.priceQuoteStatus == "Price Quote Accepted" || customerReqPriceQuote.priceQuoteStatus == "Price Quote Assigned"
+              if customerReqPriceQuote.priceQuoteStatus == "Price Quote Accepted" || customerReqPriceQuote.priceQuoteStatus == "Price Quote Assigned" // || customerReqPriceQuote.priceQuoteStatus == "Price Quote Cancelled"
               {
                 self.topSeparaterViewConstraint.constant = 300
                 self.totalStackView.isHidden = true
@@ -163,6 +163,8 @@ extension CustomerDetailJobHistoryVC:WebServiceDelegate
                 {
                   self.titleLabel.text = "ORDER DETAILS"
                   //                self.backBtn.isHidden = true
+                  self.acceptBtn.isHidden = true
+                  self.cancelBtn.isHidden = true
                 }
                 else
                 {

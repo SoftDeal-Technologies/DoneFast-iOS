@@ -43,14 +43,14 @@ class NewCustomerViewController: UIViewController,UITextFieldDelegate {
   {
     if checkMarkPrivacyPolicy
     {
-      let image = UIImage(named:"baseline_check_box_outline_blank_black")
+      let image = UIImage(named:check_box_blank_black)
       
       checkMarkPrivacyPolicy = false
       checkBoxBtn.setImage(image, for: .normal)
     }
     else
     {
-      let image = UIImage(named:"baseline_check_box_black")
+      let image = UIImage(named:check_box_black)
       checkMarkPrivacyPolicy = true
       checkBoxBtn.setImage(image, for: .normal)
     }
@@ -75,7 +75,7 @@ class NewCustomerViewController: UIViewController,UITextFieldDelegate {
       {
         customerDetail = CustomerDetails(firstName: firstName, lastName: lastName, emailId: emailId, state: state, address:address, city: city, password: password, confirmPassword: confirmPassword, phone: phone, zipCode: zipCode)
         
-        self.performSegue(withIdentifier: "ToCardPaymentView", sender: self)
+        self.performSegue(withIdentifier: "ToBillingAddressView", sender: self)
       }
       else
       {
@@ -94,12 +94,11 @@ class NewCustomerViewController: UIViewController,UITextFieldDelegate {
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?)
   {
-    if segue.identifier == "ToCardPaymentView"
+    if segue.identifier == "ToBillingAddressView"
     {
-      let destController = segue.destination as! CardPaymentViewController
-      destController.customerDetails = self.customerDetail
+      let destController = segue.destination as! BillingAddressVC
+      destController.customerDetail = self.customerDetail
     }
-    
   }
   func textFieldShouldReturn(_ textField: UITextField) -> Bool // called when 'return' key
   {
