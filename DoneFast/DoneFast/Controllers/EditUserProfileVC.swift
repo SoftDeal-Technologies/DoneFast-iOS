@@ -9,7 +9,7 @@
 import UIKit
 import SwiftyJSON
 
-class EditUserProfileVC: UIViewController {
+class EditUserProfileVC: UIViewController,UITextFieldDelegate {
 
   var loggedInUserDetails:LoggedInUserDetails?
   var customerLoginDetails:UserLoginDetails? = nil
@@ -34,7 +34,9 @@ class EditUserProfileVC: UIViewController {
   @IBOutlet weak var emailIdLabel: UILabel!
   @IBOutlet weak var firstNameTxtField: UITextField!
   @IBOutlet weak var custProfilePicImageView: UIImageView!
-  
+  @IBOutlet weak var custProfilePicBtn: UIButton!
+  var imagePickerController = UIImagePickerController()
+
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -46,6 +48,19 @@ class EditUserProfileVC: UIViewController {
     super.viewWillAppear(animated)
     self.populateData()
   }
+  @IBAction func profileImageClicked(_ sender: Any)
+  {
+    imagePickerController.delegate = self
+    imagePickerController.allowsEditing = false
+    imagePickerController.sourceType = .photoLibrary
+    self.navigationController?.present(imagePickerController, animated: true, completion: nil)
+  }
+  
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    textField.resignFirstResponder()
+    return true
+  }
+  
   @IBAction func saveClicked(_ sender: Any)
   {
     self.callWebService()
@@ -132,5 +147,21 @@ extension EditUserProfileVC:WebServiceDelegate
   func failerResponse(responseData: Data, webServiceType: WebServiceType)
   {
     
+  }
+}
+
+extension EditUserProfileVC: UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIGestureRecognizerDelegate
+{
+  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+    {
+      custProfilePicImageView.image = pickedImage
+    }
+    dismiss(animated: true, completion: nil)
+  }
+  
+  func imagePickerControllerDidCancel(_ picker: UIImagePickerController)
+  {
+    dismiss(animated: true, completion: nil)
   }
 }

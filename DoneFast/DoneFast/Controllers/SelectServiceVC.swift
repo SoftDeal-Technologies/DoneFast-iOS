@@ -43,15 +43,19 @@ class SelectServiceVC: UIViewController {
     {
       cleaningBtn.backgroundColor = UIColor.blue
       handymanBtn.backgroundColor = UIColor.clear
+      homeInspectionBtn.backgroundColor = UIColor.clear
     }
     else if senderBtn?.tag == 2
     {
       cleaningBtn.backgroundColor = UIColor.clear
       handymanBtn.backgroundColor = UIColor.blue
+      homeInspectionBtn.backgroundColor = UIColor.clear
     }
     else
     {
-      
+      cleaningBtn.backgroundColor = UIColor.clear
+      homeInspectionBtn.backgroundColor = UIColor.blue
+      handymanBtn.backgroundColor = UIColor.clear
     }
   }
   

@@ -50,7 +50,6 @@
 		14E25B0422FCAA730045C908 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14E25B0222FCAA730045C908 /* LaunchScreen.storyboard */; };
 		14E25B0F22FCAA730045C908 /* DoneFastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E25B0E22FCAA730045C908 /* DoneFastTests.swift */; };
 		477647087DD2E761BF8A5226 /* Pods_DoneFastTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0512DDF2068100B4CC140D63 /* Pods_DoneFastTests.framework */; };
-		C07D7A0C6701B4EA44569E34 /* Pods_DoneFast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA29979A4DBE18E67DBCA75 /* Pods_DoneFast.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,7 +123,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				146BAFC9232435CA00A894DA /* CoreLocation.framework in Frameworks */,
-				C07D7A0C6701B4EA44569E34 /* Pods_DoneFast.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -660,16 +658,19 @@
 			baseConfigurationReference = 87B465E697770997D9B97D1A /* Pods-DoneFast.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Y5ZLW355FG;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Fred Peyton (3YZP59G735)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = N25GLHQFH7;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = DoneFast/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ciber.testapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.homeprotection.donefast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = DoneFastDevProfile;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -680,16 +681,19 @@
 			baseConfigurationReference = 181D8BE6606C56639388AC9E /* Pods-DoneFast.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Y5ZLW355FG;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Fred Peyton (3YZP59G735)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = N25GLHQFH7;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = DoneFast/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ciber.testapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.homeprotection.donefast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = DoneFastDevProfile;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

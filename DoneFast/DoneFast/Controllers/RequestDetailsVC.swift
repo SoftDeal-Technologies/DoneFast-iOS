@@ -34,6 +34,7 @@ class RequestDetailsVC: UIViewController {
   var serviceSubCategoryList:[ServiceSubCatogary] = []
   var selectedSubCategory:ServiceSubCatogary?
   var delegate: CenterViewControllerDelegate?
+  var clickedImageSelection = -1
   
   @IBOutlet weak var selectImageStackView: UIStackView!
   var imagePickerController = UIImagePickerController()
@@ -60,7 +61,22 @@ class RequestDetailsVC: UIViewController {
     }
   }
   
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    textField.resignFirstResponder()
+    return true
+  }
+  
   // MARK: Button actions
+  @IBAction func clearImagesClicked(_ sender: Any)
+  {
+    photoBtn1.setImage(UIImage(named: "ic_add_images"), for: .normal)
+    photoBtn2.setImage(UIImage(named: "ic_add_images"), for: .normal)
+    photoBtn3.setImage(UIImage(named: "ic_add_images"), for: .normal)
+    photoBtn4.setImage(UIImage(named: "ic_add_images"), for: .normal)
+    photoBtn5.setImage(UIImage(named: "ic_add_images"), for: .normal)
+    photoBtn6.setImage(UIImage(named: "ic_add_images"), for: .normal)
+    clickedImageSelection = -1
+  }
   @IBAction func leftPanelClicked(_ sender: Any)
   {
     delegate?.toggleLeftPanel()
@@ -100,6 +116,8 @@ class RequestDetailsVC: UIViewController {
     imagePickerController.delegate = self
     imagePickerController.allowsEditing = false
     imagePickerController.sourceType = .photoLibrary
+    let senderBtn = sender as? UIButton
+    self.clickedImageSelection = senderBtn!.tag
     self.navigationController?.present(imagePickerController, animated: true, completion: nil)
   }
   
@@ -111,11 +129,18 @@ class RequestDetailsVC: UIViewController {
     {
       guard let propertyId = self.propertyId else { return }
       guard let userId = UserLoginDetails.shared.userID else { return }
+      
+      if clickedImageSelection == -1
+      {
+        let alertController = UIAlertController(title: "", message: "Please select photo of property.", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alertController, animated: true, completion: nil)
+        return
+      }
       let imageData = photoBtn1.imageView?.image
-//      let imageData1 = UIImage(named: "donefast_logo_1")!
       let imageParameters = ["image1"]
       let imageDataParameters = [imageData]
-      let notes = notesTextField.text
+      let notes = notesTextField.text ?? ""
       var subCategoryId = ""
       
       if selectedService == 2
@@ -125,7 +150,9 @@ class RequestDetailsVC: UIViewController {
           subCategoryId = tempSubCategoryId
         }
       }
-      let parameters = ["customer_id": userId,  "property_id": propertyId,"service_id": self.selectedService,"service_subid": subCategoryId,"service_notes": notes!] as [String : Any]
+      subCategoryId = ""
+      
+      let parameters = ["customer_id": userId,  "property_id": propertyId,"service_id": self.selectedService,"service_subid": subCategoryId,"service_notes": notes] as [String : Any]
       WebServices.sharedWebServices.uploadusingUrlSessionNormalDataWithImage(webServiceParameters: parameters as [String : Any], methodType: .POST, webServiceType: .JOB_REQUEST, token: tokenStr, imagesString: imageParameters, imageDataArray: imageDataParameters as! [UIImage])
     }
     else
@@ -202,8 +229,38 @@ extension RequestDetailsVC: UIImagePickerControllerDelegate,UINavigationControll
 {
   func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
     if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-      photoBtn1.contentMode = .scaleAspectFit
-      photoBtn1.setImage(pickedImage, for: .normal)
+      
+      
+      switch (self.clickedImageSelection)
+      {
+      case 1:
+        photoBtn1.contentMode = .scaleAspectFit
+        photoBtn1.setImage(pickedImage, for: .normal)
+        break
+      case 2:
+        photoBtn2.contentMode = .scaleAspectFit
+        photoBtn2.setImage(pickedImage, for: .normal)
+        break
+      case 6:
+        photoBtn6.contentMode = .scaleAspectFit
+        photoBtn6.setImage(pickedImage, for: .normal)
+        break
+      case 3:
+        photoBtn3.contentMode = .scaleAspectFit
+        photoBtn3.setImage(pickedImage, for: .normal)
+        break
+      case 4:
+        photoBtn4.contentMode = .scaleAspectFit
+        photoBtn4.setImage(pickedImage, for: .normal)
+        break
+      case 5:
+        photoBtn5.contentMode = .scaleAspectFit
+        photoBtn5.setImage(pickedImage, for: .normal)
+        break
+      default:
+        break
+      }
+      
       self.propertyImagesView.isHidden = false
 //      self.selectImageStackView.isHidden = true
       self.selectImageStackView.isHidden = true

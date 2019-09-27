@@ -76,7 +76,7 @@ class CustomerPropertyDetailVC: UIViewController {
     popController?.popOverType = .EditOrDeleteProperty
     popController?.serviceListArray = ["Edit","Delete"] as [AnyObject]
     // set up the popover presentation controller
-    popController?.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.right
+    popController?.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.up
     popController?.popoverPresentationController?.delegate = self
     popController?.delegate = self
     popController?.popoverPresentationController?.sourceView = (sender as! UIView) // button

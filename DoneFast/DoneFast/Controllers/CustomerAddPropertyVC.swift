@@ -67,7 +67,10 @@ class CustomerAddPropertyVC: UIViewController,UITextFieldDelegate {
   {
     self.navigationController?.popViewController(animated: true)
   }
-  
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    textField.resignFirstResponder()
+    return true
+  }
   @IBAction func submitClicked(_ sender: Any)
   {
     guard let userId =  UserLoginDetails.shared.userID else { return }

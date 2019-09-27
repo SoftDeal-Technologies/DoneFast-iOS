@@ -75,6 +75,11 @@ class BillingAddressVC: UIViewController {
     
   }
   
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    textField.resignFirstResponder()
+    return true
+  }
+  
   override func prepare(for segue: UIStoryboardSegue, sender: Any?)
   {
     if segue.identifier == "ToCardPaymentView"

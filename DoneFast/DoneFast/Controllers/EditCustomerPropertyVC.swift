@@ -9,7 +9,7 @@
 import UIKit
 import SwiftyJSON
 
-class EditCustomerPropertyVC: UIViewController
+class EditCustomerPropertyVC: UIViewController,UITextFieldDelegate
 {
   var customerLoginDetails:UserLoginDetails? = nil
   var propertyList:PropertyList? = nil
@@ -18,6 +18,8 @@ class EditCustomerPropertyVC: UIViewController
   @IBOutlet weak var propertyTypeBtn: UIButton!
   @IBOutlet weak var emailTxtField: UITextField!
   @IBOutlet weak var phoneNoTxtField: UITextField!
+  var selectedPropertyDesign:Int?
+  var requestListArray:[[String:Any]] = []
   
   override func viewDidLoad()
   {
@@ -31,12 +33,36 @@ class EditCustomerPropertyVC: UIViewController
     emailTxtField.text = propertyList?.propertyEmailId
     phoneNoTxtField.text = propertyList?.propertyPhoneNumber
     propertyDesBtn.setTitle(propertyList?.propertyTitle, for: .normal)
-    propertyTypeBtn.setTitle(propertyList?.propertyType, for: .normal)
+    
+    guard let propertyType = propertyList?.propertyType else { return }
+    propertyTypeBtn.setTitle(propertyType, for: .normal)
+    
+    let loginParameters = ["propertyType": propertyType]
+    guard let tokenStr = UserLoginDetails.shared.token else { return }
+    WebServices.sharedWebServices.delegate = self
+    WebServices.sharedWebServices.uploadusingUrlSessionNormalData(webServiceParameters: loginParameters as [String : Any], methodType: .POST, webServiceType: .PROPERTY_TYPE, token: tokenStr)
+  }
+  
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    textField.resignFirstResponder()
+    return true
   }
   
   @IBAction func propertyDesClicked(_ sender: Any)
   {
-    
+    let popController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SubCategoryServiceVC") as? SubCategoryServiceVC
+    // set the presentation style
+    popController!.modalPresentationStyle = UIModalPresentationStyle.popover
+    popController?.popOverType = .PropertyDesign
+    popController?.serviceListArray = self.requestListArray as [AnyObject]
+    // set up the popover presentation controller
+    popController?.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.up
+    popController?.popoverPresentationController?.delegate = self
+    popController?.delegate = self
+    popController?.popoverPresentationController?.sourceView = (sender as! UIView) // button
+    popController?.popoverPresentationController?.sourceRect = (sender as AnyObject).bounds
+    // present the popover
+    self.present(popController!, animated: true, completion: nil)
   }
   
   @IBAction func backClicked(_ sender: Any)
@@ -50,7 +76,7 @@ class EditCustomerPropertyVC: UIViewController
     {
       if propertyName.count > 0 && emailId.count > 0 && phoneNo.count > 0
       {
-        if let propertyId = propertyList?.propertyID, let propertyDesign = propertyList?.propertyTitle
+        if let propertyId = propertyList?.propertyID, let propertyDesign = propertyDesBtn.titleLabel?.text
         {
           let parameters = ["propertyID":propertyId,"propertyDesign":propertyDesign,"propertyEmailId":emailId, "propertyPhoneNumber":phoneNo,"propertyCustomerName":propertyName]
             guard let tokenStr = UserLoginDetails.shared.token else { return }
@@ -80,16 +106,42 @@ extension EditCustomerPropertyVC:WebServiceDelegate
 {
   func successResponse(responseString: String, webServiceType: WebServiceType)
   {
-    if let jsonStr = try? JSON(parseJSON: responseString)
+    if  webServiceType == .PROPERTY_TYPE
     {
-      //        let  tempErrorCode = jsonStr["status"].stringValue
-      let jsonData = jsonStr["data"].dictionary
-      let message = jsonData!["message"]!.string
-      //if tempErrorCode == "1"
-      if message == "Property Updated Successfully"
+      if let jsonStr = try? JSON(parseJSON: responseString)
       {
-        DispatchQueue.main.async {
-          self.navigationController?.popViewController(animated: true)
+        let  tempErrorCode = jsonStr["status"].stringValue
+        
+        if tempErrorCode == "1"
+        {
+          let propertyData = jsonStr["data"].dictionary
+          let propertyList = propertyData!["requestList"]!.arrayValue
+          if propertyList.count > 0
+          {
+            for tempDict in propertyList
+            {
+              var newDict = [String: Any]()
+              newDict["name"] = tempDict["name"].stringValue
+              newDict["id"] = tempDict["id"].stringValue
+              self.requestListArray.append(newDict)
+            }
+          }
+        }
+      }
+    }
+    else if webServiceType == .EDIT_CUSTOMER_PROPERTY
+    {
+      if let jsonStr = try? JSON(parseJSON: responseString)
+      {
+        //        let  tempErrorCode = jsonStr["status"].stringValue
+        let jsonData = jsonStr["data"].dictionary
+        let message = jsonData!["message"]!.string
+        //if tempErrorCode == "1"
+        if message == "Property Updated Successfully"
+        {
+          DispatchQueue.main.async {
+            self.navigationController?.popViewController(animated: true)
+          }
         }
       }
     }
@@ -98,5 +150,24 @@ extension EditCustomerPropertyVC:WebServiceDelegate
   func failerResponse(responseData: Data, webServiceType: WebServiceType)
   {
     
+  }
+}
+
+extension EditCustomerPropertyVC:UIPopoverPresentationControllerDelegate
+{
+  func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
+    // return UIModalPresentationStyle.FullScreen
+    return UIModalPresentationStyle.none
+  }
+}
+
+extension EditCustomerPropertyVC:ServiceSubCategoryDelegate
+{
+  func selectedSubCategory(selectedSubCategory: AnyObject)
+  {
+    selectedPropertyDesign = selectedSubCategory as? Int
+    let tempDesign = self.requestListArray[selectedPropertyDesign!]
+//    self.propertyDesBtn.text = (tempDesign["name"] as! String)
+    self.propertyDesBtn.setTitle((tempDesign["name"] as! String), for: .normal)
   }
 }
