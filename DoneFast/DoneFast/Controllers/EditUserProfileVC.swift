@@ -11,6 +11,7 @@ import SwiftyJSON
 
 class EditUserProfileVC: UIViewController,UITextFieldDelegate {
 
+  var activityIndicator:UIActivityIndicatorView?
   var loggedInUserDetails:LoggedInUserDetails?
   var customerLoginDetails:UserLoginDetails? = nil
   @IBOutlet weak var custIdValueLabel: UILabel!
@@ -37,11 +38,16 @@ class EditUserProfileVC: UIViewController,UITextFieldDelegate {
   @IBOutlet weak var custProfilePicBtn: UIButton!
   var imagePickerController = UIImagePickerController()
 
-    override func viewDidLoad()
-    {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
+  override func viewDidLoad()
+  {
+    super.viewDidLoad()
+    // Do any additional setup after loading the view.
+    activityIndicator = UIActivityIndicatorView(frame: CGRect(x: self.view.frame.size.width/2, y: self.view.frame.size.height/2, width: 37, height: 37))
+    activityIndicator?.style = .whiteLarge
+    activityIndicator?.hidesWhenStopped = true
+    activityIndicator?.isHidden = true
+    self.view.addSubview(activityIndicator!)
+  }
   
   override func viewWillAppear(_ animated: Bool)
   {
@@ -112,6 +118,9 @@ class EditUserProfileVC: UIViewController,UITextFieldDelegate {
       let parameters = ["userID": userId,"firstName":firstName,"lastName":lastName,"phoneNumber":phoneNumber,"address":address,"city":city,"state":state,"zipCode":zipCode,"billingAddress":billingAddress,"billingCity":billingCity,"billingState":billingState,"billingZipCode":billingZipCode,"creditCardType":"VISA",  "creditCardNumber":creditCardNumber,"creditCardName":cardHolderName,"creditCardExp":creditCardExp,"creditCardCVV":creditCardCVV]
       let imageStringArray = ["customerPhoto"]
       let imageDataArray = [custProfilePicImageView.image]
+      self.view.isUserInteractionEnabled = false
+      activityIndicator?.isHidden = false
+      activityIndicator?.startAnimating()
       WebServices.sharedWebServices.uploadusingUrlSessionNormalDataWithImage(webServiceParameters: parameters, methodType: .POST, webServiceType: .CUSTOMER_UPDATE_PROFILE, token: tokenStr, imagesString: imageStringArray, imageDataArray: imageDataArray as! [UIImage])
       //(webServiceParameters: parameters, methodType: .POST, webServiceType: .CUSTOMER_UPDATE_PROFILE, token: tokenStr)
     }
@@ -123,6 +132,11 @@ extension EditUserProfileVC:WebServiceDelegate
 {
   func successResponse(responseString: String, webServiceType: WebServiceType)
   {
+    DispatchQueue.main.async {
+      self.view.isUserInteractionEnabled = true
+      self.activityIndicator?.stopAnimating()
+      self.activityIndicator?.isHidden = true
+    }
     if let jsonStr = try? JSON(parseJSON: responseString)
     {
       //        let  tempErrorCode = jsonStr["status"].stringValue
@@ -146,7 +160,11 @@ extension EditUserProfileVC:WebServiceDelegate
   
   func failerResponse(responseData: Data, webServiceType: WebServiceType)
   {
-    
+    DispatchQueue.main.async {
+      self.view.isUserInteractionEnabled = true
+      self.activityIndicator?.stopAnimating()
+      self.activityIndicator?.isHidden = true
+    }
   }
 }
 

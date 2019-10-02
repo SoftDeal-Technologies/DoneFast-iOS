@@ -29,13 +29,18 @@ class CustomerDetailJobHistoryCompleted: UIViewController {
   @IBOutlet weak var propertyIdLable: UILabel!
   @IBOutlet weak var propertyTitleLabel: UILabel!
   @IBOutlet weak var propertyAddressLabel: UILabel!
-  
+  var activityIndicator:UIActivityIndicatorView?
   
   var delegate: CenterViewControllerDelegate?
 
   override func viewDidLoad()
   {
-      super.viewDidLoad()
+    super.viewDidLoad()
+    activityIndicator = UIActivityIndicatorView(frame: CGRect(x: self.view.frame.size.width/2, y: self.view.frame.size.height/2, width: 37, height: 37))
+    activityIndicator?.style = .whiteLarge
+    activityIndicator?.hidesWhenStopped = true
+    activityIndicator?.isHidden = true
+    self.view.addSubview(activityIndicator!)
       // Do any additional setup after loading the view.
   }
     
@@ -62,6 +67,9 @@ class CustomerDetailJobHistoryCompleted: UIViewController {
     let parameters = ["customer_id": userId,"request_id":requestId]
     guard let tokenStr = UserLoginDetails.shared.token else { return }
     WebServices.sharedWebServices.delegate = self
+    self.view.isUserInteractionEnabled = false
+    activityIndicator?.isHidden = false
+    activityIndicator?.startAnimating()
     WebServices.sharedWebServices.uploadusingUrlSessionNormalData(webServiceParameters: parameters, methodType: .POST, webServiceType: .VIEW_PRICE_QUOTE, token: tokenStr)
   }
     /*
@@ -79,7 +87,11 @@ extension CustomerDetailJobHistoryCompleted:WebServiceDelegate
 {
   func successResponse(responseString: String, webServiceType: WebServiceType) {
     //List of Requests
-    
+    DispatchQueue.main.async {
+      self.view.isUserInteractionEnabled = true
+      self.activityIndicator?.stopAnimating()
+      self.activityIndicator?.isHidden = true
+    }
     if let jsonStr = try? JSON(parseJSON: responseString)
     {
       let  tempErrorCode = jsonStr["status"].stringValue
@@ -130,6 +142,10 @@ extension CustomerDetailJobHistoryCompleted:WebServiceDelegate
   }
   
   func failerResponse(responseData: Data, webServiceType: WebServiceType) {
-    
+    DispatchQueue.main.async {
+      self.view.isUserInteractionEnabled = true
+      self.activityIndicator?.stopAnimating()
+      self.activityIndicator?.isHidden = true
+    }
   }
 }

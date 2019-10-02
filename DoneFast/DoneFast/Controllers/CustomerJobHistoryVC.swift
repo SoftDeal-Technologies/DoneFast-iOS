@@ -14,12 +14,18 @@ class CustomerJobHistoryVC: UIViewController {
   var jobRequestListArray:[CustomerRequest] = []
   var selectedCustomerRequest:CustomerRequest? = nil
   var delegate: CenterViewControllerDelegate?
+  var activityIndicator:UIActivityIndicatorView?
   
   @IBOutlet weak var jobRequestTableView: UITableView!
   
   override func viewDidLoad()
   {
-      super.viewDidLoad()
+    super.viewDidLoad()
+    activityIndicator = UIActivityIndicatorView(frame: CGRect(x: self.view.frame.size.width/2, y: self.view.frame.size.height/2, width: 37, height: 37))
+    activityIndicator?.style = .whiteLarge
+    activityIndicator?.hidesWhenStopped = true
+    activityIndicator?.isHidden = true
+    self.view.addSubview(activityIndicator!)
       // Do any additional setup after loading the view.
   }
   
@@ -40,6 +46,9 @@ class CustomerJobHistoryVC: UIViewController {
     let loginParameters = ["customer_id": userId]
     guard let tokenStr = UserLoginDetails.shared.token else { return }
     WebServices.sharedWebServices.delegate = self
+    activityIndicator?.isHidden = false
+    activityIndicator?.startAnimating()
+    self.view.isUserInteractionEnabled = false
     WebServices.sharedWebServices.uploadusingUrlSessionNormalData(webServiceParameters: loginParameters, methodType: .POST, webServiceType: .CUSTOMER_REQUESTS, token: tokenStr)
   }
     // MARK: - Navigation
@@ -127,7 +136,11 @@ extension CustomerJobHistoryVC:WebServiceDelegate
 {
   func successResponse(responseString: String, webServiceType: WebServiceType) {
     //List of Requests
-    
+    DispatchQueue.main.async {
+      self.view.isUserInteractionEnabled = true
+      self.activityIndicator?.stopAnimating()
+      self.activityIndicator?.isHidden = true
+    }
     if let jsonStr = try? JSON(parseJSON: responseString)
     {
       let  tempErrorCode = jsonStr["status"].stringValue
@@ -164,6 +177,10 @@ extension CustomerJobHistoryVC:WebServiceDelegate
   }
   
   func failerResponse(responseData: Data, webServiceType: WebServiceType) {
-    
+    DispatchQueue.main.async {
+      self.view.isUserInteractionEnabled = true
+      self.activityIndicator?.stopAnimating()
+      self.activityIndicator?.isHidden = true
+    }
   }
 }

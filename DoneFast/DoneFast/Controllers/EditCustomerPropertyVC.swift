@@ -20,10 +20,16 @@ class EditCustomerPropertyVC: UIViewController,UITextFieldDelegate
   @IBOutlet weak var phoneNoTxtField: UITextField!
   var selectedPropertyDesign:Int?
   var requestListArray:[[String:Any]] = []
+  var activityIndicator:UIActivityIndicatorView?
   
   override func viewDidLoad()
   {
-        super.viewDidLoad()
+    super.viewDidLoad()
+    activityIndicator = UIActivityIndicatorView(frame: CGRect(x: self.view.frame.size.width/2, y: self.view.frame.size.height/2, width: 37, height: 37))
+    activityIndicator?.style = .whiteLarge
+    activityIndicator?.hidesWhenStopped = true
+    activityIndicator?.isHidden = true
+    self.view.addSubview(activityIndicator!)
         // Do any additional setup after loading the view.
   }
   
@@ -40,6 +46,9 @@ class EditCustomerPropertyVC: UIViewController,UITextFieldDelegate
     let loginParameters = ["propertyType": propertyType]
     guard let tokenStr = UserLoginDetails.shared.token else { return }
     WebServices.sharedWebServices.delegate = self
+    self.view.isUserInteractionEnabled = false
+    activityIndicator?.isHidden = false
+    activityIndicator?.startAnimating()
     WebServices.sharedWebServices.uploadusingUrlSessionNormalData(webServiceParameters: loginParameters as [String : Any], methodType: .POST, webServiceType: .PROPERTY_TYPE, token: tokenStr)
   }
   
@@ -81,6 +90,7 @@ class EditCustomerPropertyVC: UIViewController,UITextFieldDelegate
           let parameters = ["propertyID":propertyId,"propertyDesign":propertyDesign,"propertyEmailId":emailId, "propertyPhoneNumber":phoneNo,"propertyCustomerName":propertyName]
             guard let tokenStr = UserLoginDetails.shared.token else { return }
             WebServices.sharedWebServices.delegate = self
+            self.view.isUserInteractionEnabled = false
             WebServices.sharedWebServices.uploadusingUrlSessionNormalData(webServiceParameters: parameters as [String : Any], methodType: .POST, webServiceType: .EDIT_CUSTOMER_PROPERTY, token: tokenStr)
         }
       }
@@ -106,6 +116,11 @@ extension EditCustomerPropertyVC:WebServiceDelegate
 {
   func successResponse(responseString: String, webServiceType: WebServiceType)
   {
+    DispatchQueue.main.async {
+      self.view.isUserInteractionEnabled = true
+      self.activityIndicator?.stopAnimating()
+      self.activityIndicator?.isHidden = true
+    }
     if  webServiceType == .PROPERTY_TYPE
     {
       if let jsonStr = try? JSON(parseJSON: responseString)
@@ -149,7 +164,11 @@ extension EditCustomerPropertyVC:WebServiceDelegate
   
   func failerResponse(responseData: Data, webServiceType: WebServiceType)
   {
-    
+    DispatchQueue.main.async {
+      self.view.isUserInteractionEnabled = true
+      self.activityIndicator?.stopAnimating()
+      self.activityIndicator?.isHidden = true
+    }
   }
 }
 

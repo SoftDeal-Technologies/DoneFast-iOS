@@ -15,6 +15,7 @@ class CustomerAddPropertyVC: UIViewController,UITextFieldDelegate {
   var requestListArray:[[String:Any]] = []
   var selectedProperty = ""
   var selectedPropertyDesign:Int?
+  var activityIndicator:UIActivityIndicatorView?
   
   @IBOutlet weak var singlePropBtn: UIButton!
   @IBOutlet weak var multiPropBtn: UIButton!
@@ -31,6 +32,11 @@ class CustomerAddPropertyVC: UIViewController,UITextFieldDelegate {
   override func viewDidLoad()
   {
       super.viewDidLoad()
+    activityIndicator = UIActivityIndicatorView(frame: CGRect(x: self.view.frame.size.width/2, y: self.view.frame.size.height/2, width: 37, height: 37))
+    activityIndicator?.style = .whiteLarge
+    activityIndicator?.hidesWhenStopped = true
+    activityIndicator?.isHidden = true
+    self.view.addSubview(activityIndicator!)
   }
   
   @IBAction func propertyTypeClicked(_ sender: Any)
@@ -56,9 +62,11 @@ class CustomerAddPropertyVC: UIViewController,UITextFieldDelegate {
       default:
         print("nothing")
     }
-    
     let loginParameters = ["propertyType": selectedProperty]
     guard let tokenStr = UserLoginDetails.shared.token else { return }
+    self.view.isUserInteractionEnabled = false
+    activityIndicator?.isHidden = false
+    activityIndicator?.startAnimating()
     WebServices.sharedWebServices.delegate = self
     WebServices.sharedWebServices.uploadusingUrlSessionNormalData(webServiceParameters: loginParameters, methodType: .POST, webServiceType: .PROPERTY_TYPE, token: tokenStr)
   }
@@ -80,6 +88,9 @@ class CustomerAddPropertyVC: UIViewController,UITextFieldDelegate {
       {
         let parameters = ["userID":userId,"propertyType":selectedProperty,"propertyDesign":propertyDesign,"propertyEmailId":propertyEmailId, "propertyPhoneNumber":propertyPhoneNumber,"propertyAddress":propertyAddress,"propertyCity":propertyCity,"propertyState":propertyState, "propertyZipCode":propertyZipCode,"propertyLocation":"44.968046,-94.420307"]
         guard let tokenStr = UserLoginDetails.shared.token else { return }
+        self.view.isUserInteractionEnabled = false
+        activityIndicator?.isHidden = false
+        activityIndicator?.startAnimating()
         WebServices.sharedWebServices.delegate = self
         WebServices.sharedWebServices.uploadusingUrlSessionNormalData(webServiceParameters: parameters, methodType: .POST, webServiceType: .ADD_CUSTOMER_PROPERTY, token: tokenStr)
       }
@@ -151,6 +162,11 @@ extension CustomerAddPropertyVC:WebServiceDelegate
 {
   func successResponse(responseString: String, webServiceType: WebServiceType)
   {
+    DispatchQueue.main.async {
+      self.view.isUserInteractionEnabled = true
+      self.activityIndicator?.stopAnimating()
+      self.activityIndicator?.isHidden = true
+    }
     if  webServiceType == .PROPERTY_TYPE
     {
       if let jsonStr = try? JSON(parseJSON: responseString)
@@ -211,8 +227,11 @@ extension CustomerAddPropertyVC:WebServiceDelegate
   
   func failerResponse(responseData: Data, webServiceType: WebServiceType)
   {
-    
-  }
+    DispatchQueue.main.async {
+      self.view.isUserInteractionEnabled = true
+      self.activityIndicator?.stopAnimating()
+      self.activityIndicator?.isHidden = true
+    }  }
 }
 
 extension CustomerAddPropertyVC:UIPopoverPresentationControllerDelegate

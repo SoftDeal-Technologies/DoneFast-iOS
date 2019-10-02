@@ -43,10 +43,16 @@ class CustomerDetailJobHistoryVC: UIViewController {
   @IBOutlet weak var totalStackViewConstraint: NSLayoutConstraint!
   var delegate: CenterViewControllerDelegate?
   @IBOutlet weak var topSeparaterViewConstraint: NSLayoutConstraint!
+  var activityIndicator:UIActivityIndicatorView?
   
   override func viewDidLoad()
   {
-      super.viewDidLoad()
+    super.viewDidLoad()
+    activityIndicator = UIActivityIndicatorView(frame: CGRect(x: self.view.frame.size.width/2, y: self.view.frame.size.height/2, width: 37, height: 37))
+    activityIndicator?.style = .whiteLarge
+    activityIndicator?.hidesWhenStopped = true
+    activityIndicator?.isHidden = true
+    self.view.addSubview(activityIndicator!)
       // Do any additional setup after loading the view.
   }
     
@@ -85,6 +91,9 @@ class CustomerDetailJobHistoryVC: UIViewController {
     let parameters = ["customer_id": userId,"request_id":requestId,"status":status] //
     guard let tokenStr = UserLoginDetails.shared.token else { return }
     WebServices.sharedWebServices.delegate = self
+    self.view.isUserInteractionEnabled = false
+    activityIndicator?.isHidden = false
+    activityIndicator?.startAnimating()
     WebServices.sharedWebServices.uploadusingUrlSessionNormalData(webServiceParameters: parameters, methodType: .POST, webServiceType: .PRICE_REQUEST, token: tokenStr)
   }
   
@@ -95,6 +104,9 @@ class CustomerDetailJobHistoryVC: UIViewController {
     let parameters = ["customer_id": userId,"request_id":requestId]
     guard let tokenStr = UserLoginDetails.shared.token else { return }
     WebServices.sharedWebServices.delegate = self
+    self.view.isUserInteractionEnabled = false
+    activityIndicator?.isHidden = false
+    activityIndicator?.startAnimating()
     WebServices.sharedWebServices.uploadusingUrlSessionNormalData(webServiceParameters: parameters, methodType: .POST, webServiceType: .VIEW_PRICE_QUOTE, token: tokenStr)
   }
     /*
@@ -112,7 +124,11 @@ extension CustomerDetailJobHistoryVC:WebServiceDelegate
 {
   func successResponse(responseString: String, webServiceType: WebServiceType) {
     //List of Requests
-    
+    DispatchQueue.main.async {
+      self.view.isUserInteractionEnabled = true
+      self.activityIndicator?.stopAnimating()
+      self.activityIndicator?.isHidden = true
+    }
     if webServiceType == .VIEW_PRICE_QUOTE
     {
       if let jsonStr = try? JSON(parseJSON: responseString)
@@ -214,6 +230,10 @@ extension CustomerDetailJobHistoryVC:WebServiceDelegate
   }
   
   func failerResponse(responseData: Data, webServiceType: WebServiceType) {
-    
+    DispatchQueue.main.async {
+      self.view.isUserInteractionEnabled = true
+      self.activityIndicator?.stopAnimating()
+      self.activityIndicator?.isHidden = true
+    }
   }
 }

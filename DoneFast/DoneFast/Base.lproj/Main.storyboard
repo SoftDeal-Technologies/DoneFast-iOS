@@ -36,7 +36,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="pmA-A7-id6">
-                                <rect key="frame" x="25" y="386" width="364" height="110"/>
+                                <rect key="frame" x="25" y="376" width="364" height="110"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iW9-jT-kxZ">
                                         <rect key="frame" x="0.0" y="0.0" width="364" height="40"/>
@@ -70,7 +70,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9og-wE-6J7">
-                                <rect key="frame" x="25" y="516" width="364" height="50"/>
+                                <rect key="frame" x="25" y="506" width="364" height="50"/>
                                 <color key="backgroundColor" red="0.97647058823529409" green="0.54509803921568623" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="KOz-hU-YcH"/>
@@ -89,18 +89,18 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="94I-nz-uXp">
-                                <rect key="frame" x="25" y="329" width="151" height="32"/>
+                                <rect key="frame" x="25" y="329" width="127" height="22"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEL-BX-eS4">
-                                        <rect key="frame" x="0.0" y="0.0" width="24" height="32"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="16" height="22"/>
                                         <state key="normal" image="radio_btn_on"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNA-ZV-oEz">
-                                        <rect key="frame" x="34" y="0.0" width="32" height="32"/>
+                                        <rect key="frame" x="26" y="0.0" width="16" height="22"/>
                                         <state key="normal" image="person"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Customer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZP-7N-2qx">
-                                        <rect key="frame" x="76" y="0.0" width="75" height="32"/>
+                                        <rect key="frame" x="52" y="0.0" width="75" height="22"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -108,18 +108,18 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="v4q-DW-JFN">
-                                <rect key="frame" x="300" y="334" width="89" height="30"/>
+                                <rect key="frame" x="308" y="334" width="81" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a45-lr-Sg3">
-                                        <rect key="frame" x="0.0" y="0.0" width="24" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="16" height="30"/>
                                         <state key="normal" image="radio_btn_off"/>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avH-Pu-cvd">
-                                        <rect key="frame" x="29" y="0.0" width="0.0" height="30"/>
+                                        <rect key="frame" x="21" y="0.0" width="0.0" height="30"/>
                                         <state key="normal" title="V I"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vendor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l20-Bw-I8x">
-                                        <rect key="frame" x="34" y="0.0" width="55" height="30"/>
+                                        <rect key="frame" x="26" y="0.0" width="55" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -127,7 +127,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZuD-mg-Vfw">
-                                <rect key="frame" x="132.66666666666666" y="586" width="148.99999999999997" height="34"/>
+                                <rect key="frame" x="132.66666666666666" y="576" width="148.99999999999997" height="34"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="New Registration">
                                     <color key="titleColor" red="0.97647058819999999" green="0.5450980392" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -137,7 +137,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JvL-jO-SQF">
-                                <rect key="frame" x="145" y="625" width="124" height="29"/>
+                                <rect key="frame" x="145" y="615" width="124" height="29"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <state key="normal" title="Forgot password?">
                                     <color key="titleColor" red="0.97647058819999999" green="0.5450980392" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>

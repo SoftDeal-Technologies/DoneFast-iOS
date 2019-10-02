@@ -17,6 +17,8 @@ class LoginViewController: UIViewController,WebServiceDelegate,UITextFieldDelega
   @IBOutlet weak var userNameTxtField: UITextField!
   @IBOutlet weak var passwordTxtField: UITextField!
   var customerNavigationController:UINavigationController?
+  var activityIndicator:UIActivityIndicatorView?
+  
   
   var webServiceUrl = "http://rmisys.com/projects/globehome-app/ApiServices/Login"//ShareDataClass.shared.commonServiceUrl
   var Almgr = Alamofire.SessionManager()
@@ -26,6 +28,11 @@ class LoginViewController: UIViewController,WebServiceDelegate,UITextFieldDelega
     super.viewDidLoad()
     // Do any additional setup after loading the view.
     loginBtn.layer.cornerRadius = 5.0
+    activityIndicator = UIActivityIndicatorView(frame: CGRect(x: self.view.frame.size.width/2, y: self.view.frame.size.height/2, width: 37, height: 37))
+    activityIndicator?.style = .gray
+    activityIndicator?.hidesWhenStopped = true
+    activityIndicator?.isHidden = true
+    self.view.addSubview(activityIndicator!)
   }
 
   @IBAction func loginClicked(_ sender: Any)
@@ -39,6 +46,11 @@ class LoginViewController: UIViewController,WebServiceDelegate,UITextFieldDelega
 //      let loginParameters = ["userType": "Customer","userEmail": "sukruth@gmail.com","userPassword": "123456","deviceType": "Android","deviceToken": "APA91bFoi3lMMre9G3XzR1LrF4ZT82_15MsMdEICogXSLB8-MrdkRuRQFwNI5u8Dh0cI90ABD3BOKnxkEla8cGdisbDHl5cVIkZah5QUhSAxzx4Roa7b4xy9tvx9iNSYw-eXBYYd8k1XKf8Q_Qq1X9-x-U-Y79vdPq"]
       let loginParameters = ["userType": "Customer","userEmail": userName,"userPassword": password,"deviceType": "iOS","deviceToken": "APA91bFoi3lMMre9G3XzR1LrF4ZT82_15MsMdEICogXSLB8-MrdkRuRQFwNI5u8Dh0cI90ABD3BOKnxkEla8cGdisbDHl5cVIkZah5QUhSAxzx4Roa7b4xy9tvx9iNSYw-eXBYYd8k1XKf8Q_Qq1X9-x-U-Y79vdPq"]
       WebServices.sharedWebServices.delegate = self
+      self.view.isUserInteractionEnabled = false
+      activityIndicator?.isHidden = false
+      activityIndicator?.startAnimating()
+//      activityIndicator = UIActivityIndicatorView(frame: CGRect(x: (self.view.frame.size.width/2)-18, y: (self.view.frame.size.height/2)-18, width: 37, height: 37))
+      
       WebServices.sharedWebServices.uploadusingUrlSessionNormalData(webServiceParameters: loginParameters, methodType: .POST, webServiceType: .PCMS_LOGIN, token: "")
 //      WebServices.sharedWebServices.uploadusingUrlSession(webServiceParameters: loginParameters, methodType: .POST, webServiceType: .PCMS_LOGIN )
     }
@@ -53,18 +65,24 @@ class LoginViewController: UIViewController,WebServiceDelegate,UITextFieldDelega
   
   func successResponse(responseString: String, webServiceType:WebServiceType)
   {
+    DispatchQueue.main.async {
+      self.view.isUserInteractionEnabled = true
+      self.activityIndicator?.stopAnimating()
+      self.activityIndicator?.isHidden = true
+    }
     
 //    if let json = try? JSON(data: responseData)
 //  do {
       if let jsonStr = try? JSON(parseJSON: responseString)
       {
         let  tempErrorCode = jsonStr["status"].stringValue
-        
+        let userData = jsonStr["data"].dictionary
+        let message = userData!["message"]!.stringValue
         if tempErrorCode == "1"
         {
-          let userData = jsonStr["data"].dictionary
+          
           let userDetails = userData!["user"]!.arrayValue
-          let message = userData!["message"]!.stringValue
+          
 //          let tempUserDetails = UserLoginDetails()
           
           if userDetails.count > 0
@@ -94,11 +112,8 @@ class LoginViewController: UIViewController,WebServiceDelegate,UITextFieldDelega
             UserLoginDetails.shared.token = userData!["token"]!.stringValue
             UserDefaults.standard.set(userData!["token"]!.stringValue, forKey: "token")
             UserDefaults.standard.synchronize()
-//            self.userLoggedInDetails = tempUserDetails
             DispatchQueue.main.async {
-//              self.performSegue(withIdentifier: "CustomerListVC", sender: self)
               let containerViewController = ContainerViewController()
-//              self.customerNavigationController = UINavigationController(rootViewController: containerViewController)
               let appdelegate = UIApplication.shared.delegate as? AppDelegate
               appdelegate?.window?.rootViewController = containerViewController
             }
@@ -106,7 +121,11 @@ class LoginViewController: UIViewController,WebServiceDelegate,UITextFieldDelega
         }
         else if tempErrorCode == "0"
         {
-          
+          DispatchQueue.main.async {
+            let alertController:UIAlertController = UIAlertController(title: "", message: message, preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+          }
         }
       }
       
@@ -119,7 +138,11 @@ class LoginViewController: UIViewController,WebServiceDelegate,UITextFieldDelega
   
   func failerResponse(responseData: Data, webServiceType: WebServiceType)
   {
-    
+    DispatchQueue.main.async {
+      self.view.isUserInteractionEnabled = true
+      self.activityIndicator?.stopAnimating()
+      self.activityIndicator?.isHidden = true
+    }
   }
   
   @IBAction func newRegClicked(_ sender: Any)

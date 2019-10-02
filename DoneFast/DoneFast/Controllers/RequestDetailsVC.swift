@@ -16,6 +16,7 @@ protocol ServiceSubCategoryDelegate
 
 class RequestDetailsVC: UIViewController {
 
+  var activityIndicator:UIActivityIndicatorView?
   @IBOutlet var tapGestureOnImageSelect: UIGestureRecognizer!
   @IBOutlet weak var propertyImagesView: UIView!
   @IBOutlet weak var photoBtn1: UIButton!
@@ -44,6 +45,11 @@ class RequestDetailsVC: UIViewController {
       self.propertyImagesView.isHidden = true
       self.selectImageStackView.isHidden = false
       tapGestureOnImageSelect.delegate = self
+      activityIndicator = UIActivityIndicatorView(frame: CGRect(x: self.view.frame.size.width/2, y: self.view.frame.size.height/2, width: 37, height: 37))
+      activityIndicator?.style = .whiteLarge
+      activityIndicator?.hidesWhenStopped = true
+      activityIndicator?.isHidden = true
+      self.view.addSubview(activityIndicator!)
       // Do any additional setup after loading the view.
   }
   
@@ -153,11 +159,15 @@ class RequestDetailsVC: UIViewController {
       subCategoryId = ""
       
       let parameters = ["customer_id": userId,  "property_id": propertyId,"service_id": self.selectedService,"service_subid": subCategoryId,"service_notes": notes] as [String : Any]
+      self.view.isUserInteractionEnabled = false
+      activityIndicator?.isHidden = false
+      activityIndicator?.startAnimating()
       WebServices.sharedWebServices.uploadusingUrlSessionNormalDataWithImage(webServiceParameters: parameters as [String : Any], methodType: .POST, webServiceType: .JOB_REQUEST, token: tokenStr, imagesString: imageParameters, imageDataArray: imageDataParameters as! [UIImage])
     }
     else
     {
       let parameters = ["serviceId": self.selectedService]
+      self.view.isUserInteractionEnabled = false
       WebServices.sharedWebServices.uploadusingUrlSessionNormalData(webServiceParameters: parameters, methodType: .POST, webServiceType: .SERVICE_SUB_CATEGORY, token: tokenStr)
     }
   }
@@ -167,6 +177,11 @@ extension RequestDetailsVC:WebServiceDelegate
 {
   func successResponse(responseString: String, webServiceType: WebServiceType)
   {
+    DispatchQueue.main.async {
+      self.view.isUserInteractionEnabled = true
+      self.activityIndicator?.stopAnimating()
+      self.activityIndicator?.isHidden = true
+    }
     if webServiceType == .JOB_REQUEST
     {
       if let jsonStr = try? JSON(parseJSON: responseString)
@@ -220,8 +235,13 @@ extension RequestDetailsVC:WebServiceDelegate
     }
   }
   
-  func failerResponse(responseData: Data, webServiceType: WebServiceType) {
-    
+  func failerResponse(responseData: Data, webServiceType: WebServiceType)
+  {
+    DispatchQueue.main.async {
+      self.view.isUserInteractionEnabled = true
+      self.activityIndicator?.stopAnimating()
+      self.activityIndicator?.isHidden = true
+    }
   }
 }
 

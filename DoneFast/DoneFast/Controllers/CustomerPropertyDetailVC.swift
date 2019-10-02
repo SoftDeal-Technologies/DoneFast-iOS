@@ -26,11 +26,17 @@ class CustomerPropertyDetailVC: UIViewController {
   @IBOutlet weak var propertyAddressLabel:UILabel!
   @IBOutlet weak var propertyTypeImageView: UIImageView!
   @IBOutlet weak var editDeletePropertyBtn: UIButton!
+  var activityIndicator:UIActivityIndicatorView?
   
   override func viewDidLoad()
   {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
+    activityIndicator = UIActivityIndicatorView(frame: CGRect(x: self.view.frame.size.width/2, y: self.view.frame.size.height/2, width: 37, height: 37))
+    activityIndicator?.style = .whiteLarge
+    activityIndicator?.hidesWhenStopped = true
+    activityIndicator?.isHidden = true
+    self.view.addSubview(activityIndicator!)
     self.callWebService(webServiceType: .VIEW_CUSTOMER_PROPERTY)
   }
   
@@ -53,6 +59,9 @@ class CustomerPropertyDetailVC: UIViewController {
     guard let propertyId = self.propertyId else { return }
     let loginParameters = ["propertyID": propertyId]
     guard let tokenStr = UserLoginDetails.shared.token else { return }
+    self.view.isUserInteractionEnabled = false
+    activityIndicator?.isHidden = false
+    activityIndicator?.startAnimating()
     WebServices.sharedWebServices.delegate = self
     WebServices.sharedWebServices.uploadusingUrlSessionNormalData(webServiceParameters: loginParameters, methodType: .POST, webServiceType: webServiceType, token: tokenStr)
   }
@@ -121,6 +130,11 @@ extension CustomerPropertyDetailVC : WebServiceDelegate
 {
   func successResponse(responseString: String, webServiceType: WebServiceType)
   {
+    DispatchQueue.main.async {
+      self.view.isUserInteractionEnabled = true
+      self.activityIndicator?.stopAnimating()
+      self.activityIndicator?.isHidden = true
+    }
     if webServiceType == .VIEW_CUSTOMER_PROPERTY
     {
       if let jsonStr = try? JSON(parseJSON: responseString)
@@ -198,7 +212,11 @@ extension CustomerPropertyDetailVC : WebServiceDelegate
   
   func failerResponse(responseData: Data, webServiceType: WebServiceType)
   {
-    
+    DispatchQueue.main.async {
+      self.view.isUserInteractionEnabled = true
+      self.activityIndicator?.stopAnimating()
+      self.activityIndicator?.isHidden = true
+    }
   }
 }
 

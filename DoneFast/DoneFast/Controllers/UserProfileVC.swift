@@ -12,7 +12,7 @@ import SwiftyJSON
 class UserProfileVC: UIViewController
 {
   var customerLoginDetails:UserLoginDetails? = nil
-
+  var activityIndicator:UIActivityIndicatorView?
   @IBOutlet weak var cardCVVLabel: UILabel!
   @IBOutlet weak var cardExpLabel: UILabel!
   @IBOutlet weak var cardHolderName: UILabel!
@@ -39,8 +39,12 @@ class UserProfileVC: UIViewController
   
   override func viewDidLoad()
   {
-        super.viewDidLoad()
-
+    super.viewDidLoad()
+    activityIndicator = UIActivityIndicatorView(frame: CGRect(x: self.view.frame.size.width/2, y: self.view.frame.size.height/2, width: 37, height: 37))
+    activityIndicator?.style = .whiteLarge
+    activityIndicator?.hidesWhenStopped = true
+    activityIndicator?.isHidden = true
+    self.view.addSubview(activityIndicator!)
         // Do any additional setup after loading the view.
   }
   
@@ -107,6 +111,9 @@ class UserProfileVC: UIViewController
     guard let tokenStr = UserLoginDetails.shared.token else { return }
     WebServices.sharedWebServices.delegate = self
     let parameters = ["userID": userId]
+    self.view.isUserInteractionEnabled = false
+    activityIndicator?.isHidden = false
+    activityIndicator?.startAnimating()
     WebServices.sharedWebServices.uploadusingUrlSessionNormalData(webServiceParameters: parameters, methodType: .POST, webServiceType: .CUSTOMER_PROFILE, token: tokenStr)
   }
 }
@@ -115,6 +122,11 @@ extension UserProfileVC:WebServiceDelegate
 {
   func successResponse(responseString: String, webServiceType: WebServiceType)
   {
+    DispatchQueue.main.async {
+      self.view.isUserInteractionEnabled = true
+      self.activityIndicator?.stopAnimating()
+      self.activityIndicator?.isHidden = true
+    }
     if let jsonStr = try? JSON(parseJSON: responseString)
     {
       //        let  tempErrorCode = jsonStr["status"].stringValue
@@ -160,8 +172,10 @@ extension UserProfileVC:WebServiceDelegate
   
   func failerResponse(responseData: Data, webServiceType: WebServiceType)
   {
-    
+    DispatchQueue.main.async {
+      self.view.isUserInteractionEnabled = true
+      self.activityIndicator?.stopAnimating()
+      self.activityIndicator?.isHidden = true
+    }
   }
-  
-  
 }

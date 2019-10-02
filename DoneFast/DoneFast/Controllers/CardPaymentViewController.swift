@@ -10,7 +10,16 @@ import UIKit
 
 class CardPaymentViewController: UIViewController,WebServiceDelegate,SignatureDelegate{
  
-  func successResponse(responseString: String, webServiceType: WebServiceType) {
+  var activityIndicator:UIActivityIndicatorView?
+  
+  func successResponse(responseString: String, webServiceType: WebServiceType)
+  {
+    DispatchQueue.main.async
+      {
+      self.view.isUserInteractionEnabled = true
+      self.activityIndicator?.stopAnimating()
+      self.activityIndicator?.isHidden = true
+    }
     if let jsonStr = try? JSON(parseJSON: responseString)
     {
       let  tempErrorCode = jsonStr["status"].stringValue
@@ -41,8 +50,13 @@ class CardPaymentViewController: UIViewController,WebServiceDelegate,SignatureDe
     self.digitalSignImageView.image = signatureImage
   }
   
-  func failerResponse(responseData: Data, webServiceType: WebServiceType) {
-    
+  func failerResponse(responseData: Data, webServiceType: WebServiceType)
+  {
+    DispatchQueue.main.async {
+      self.view.isUserInteractionEnabled = true
+      self.activityIndicator?.stopAnimating()
+      self.activityIndicator?.isHidden = true
+    }
   }
   
   @IBOutlet weak var monthYearTxtField: UITextField!
@@ -56,8 +70,12 @@ class CardPaymentViewController: UIViewController,WebServiceDelegate,SignatureDe
   var signatureImage:UIImage!
   
   override func viewDidLoad() {
-        super.viewDidLoad()
-
+    super.viewDidLoad()
+    activityIndicator = UIActivityIndicatorView(frame: CGRect(x: self.view.frame.size.width/2, y: self.view.frame.size.height/2, width: 37, height: 37))
+    activityIndicator?.style = .whiteLarge
+    activityIndicator?.hidesWhenStopped = true
+    activityIndicator?.isHidden = true
+    self.view.addSubview(activityIndicator!)
         // Do any additional setup after loading the view.
     }
     
@@ -117,11 +135,13 @@ class CardPaymentViewController: UIViewController,WebServiceDelegate,SignatureDe
         
         WebServices.sharedWebServices.delegate = self
 //        customerSignature
-        
         let imageParameters = ["customerSignature"]
         let imageDataParameters = [signatureImage]
         
         let customerRegParameters = ["userType":"Customer","firstName":firstname,"lastName":lastName,"emailId":emailId,  "password":password,"phoneNumber":phone,"address":address,"city":city,"state":state,  "zipCode":zipCode,"billingAddress":billAddress,  "billingCity":billCity,  "billingState":billState,  "billingZipCode":billZipCode,"creditCardType":"Visa","creditCardNumber":cardNumber,"creditCardName":name,  "creditCardExp":expiryMonthYear,"creditCardCVV":cvv,"deviceType":"Android","deviceToken":"APA91bFoi3lMMre9G3XzR1LrF4ZT82_15MsMdEICogXSLB8-MrdkRuRQFwNI5u8Dh0cI90ABD3BOKnxkEla8cGdisbDHl5cVIkZah5QUhSAxzx4Roa7b4xy9tvx9iNSYw-eXBYYd8k1XKf8Q_Qq1X9-x-U-Y79vdPq"] //"billingAddress":"Aspen St",  "billingCity":"San Antonio",  "billingState":"TX",  "billingZipCode":"78006",
+        self.view.isUserInteractionEnabled = false
+        activityIndicator?.isHidden = false
+        activityIndicator?.startAnimating()
         WebServices.sharedWebServices.uploadusingUrlSessionNormalDataWithImage(webServiceParameters: customerRegParameters as [String : Any], methodType: .POST, webServiceType: .NEW_CUSTOMER_REGISTRATION, token: "",imagesString:imageParameters,imageDataArray:imageDataParameters as! [UIImage])
       }
       else
