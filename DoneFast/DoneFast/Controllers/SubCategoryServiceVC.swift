@@ -11,7 +11,7 @@ import SwiftyJSON
 
 enum PopOverType
 {
-  case PropertyDesign,ServiceSubCategory,EditOrDeleteProperty
+  case PropertyDesign,ServiceSubCategory,EditOrDeleteProperty,PropertyType
 }
 
 class SubCategoryServiceVC: UIViewController
@@ -61,7 +61,7 @@ extension SubCategoryServiceVC:UITableViewDelegate,UITableViewDataSource
         Cell.textLabel?.text = (name as! String)
       }
     }
-    else if self.popOverType == PopOverType.EditOrDeleteProperty
+    else if self.popOverType == PopOverType.EditOrDeleteProperty || self.popOverType == PopOverType.PropertyType
     {
       let serviceSubCategory = serviceListArray[indexPath.row]
       Cell.textLabel?.text = (serviceSubCategory as! String)
@@ -78,7 +78,7 @@ extension SubCategoryServiceVC:UITableViewDelegate,UITableViewDataSource
         let serviceSubCategory = (self.serviceListArray[indexPath.row] as? ServiceSubCatogary)!
         self.delegate?.selectedSubCategory(selectedSubCategory: serviceSubCategory)
       }
-      else if self.popOverType == PopOverType.PropertyDesign
+      else if self.popOverType == PopOverType.PropertyDesign || self.popOverType == PopOverType.PropertyType
       {
         //      let tempReqdict = serviceListArray[indexPath.row]
         self.delegate?.selectedSubCategory(selectedSubCategory: indexPath.row as AnyObject)

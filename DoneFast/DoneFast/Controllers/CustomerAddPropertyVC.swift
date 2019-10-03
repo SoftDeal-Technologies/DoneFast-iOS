@@ -21,6 +21,7 @@ class CustomerAddPropertyVC: UIViewController,UITextFieldDelegate {
   @IBOutlet weak var multiPropBtn: UIButton!
   @IBOutlet weak var commercialPropBtn: UIButton!
   @IBOutlet weak var propertyDesignTextField: UITextField!
+  @IBOutlet weak var propertyTypeTextField: UITextField!
   @IBOutlet weak var propertyEmailIdTextField: UITextField!
   @IBOutlet weak var propertyPhoneNumberTextField: UITextField!
   @IBOutlet weak var propertyAddressTextField: UITextField!
@@ -28,6 +29,8 @@ class CustomerAddPropertyVC: UIViewController,UITextFieldDelegate {
   @IBOutlet weak var propertyStateTextField: UITextField!
   @IBOutlet weak var propertyZipCodeTextField: UITextField!
   @IBOutlet weak var bgScrollView: UIScrollView!
+  var popOverType:PopOverType!
+  
 
   override func viewDidLoad()
   {
@@ -41,40 +44,19 @@ class CustomerAddPropertyVC: UIViewController,UITextFieldDelegate {
   
   @IBAction func propertyTypeClicked(_ sender: Any)
   {
-    let propertyTypeBtn = sender as? UIButton
-    switch propertyTypeBtn?.tag
-    {
-      case 1:
-        selectedProperty = "Single"
-        singlePropBtn.backgroundColor = UIColor.blue
-        multiPropBtn.backgroundColor = UIColor.clear
-        commercialPropBtn.backgroundColor = UIColor.clear
-      case 2:
-        selectedProperty = "Multi"
-        singlePropBtn.backgroundColor = UIColor.clear
-        multiPropBtn.backgroundColor = UIColor.blue
-        commercialPropBtn.backgroundColor = UIColor.clear
-      case 3:
-        selectedProperty = "Commercial"
-        singlePropBtn.backgroundColor = UIColor.clear
-        multiPropBtn.backgroundColor = UIColor.clear
-        commercialPropBtn.backgroundColor = UIColor.blue
-      default:
-        print("nothing")
-    }
-    let loginParameters = ["propertyType": selectedProperty]
-    guard let tokenStr = UserLoginDetails.shared.token else { return }
-    self.view.isUserInteractionEnabled = false
-    activityIndicator?.isHidden = false
-    activityIndicator?.startAnimating()
-    WebServices.sharedWebServices.delegate = self
-    WebServices.sharedWebServices.uploadusingUrlSessionNormalData(webServiceParameters: loginParameters, methodType: .POST, webServiceType: .PROPERTY_TYPE, token: tokenStr)
+    self.propertyTypePopOverClicked(sender: propertyTypeTextField)
   }
   
   @IBAction func backClicked(_ sender: Any)
   {
     self.navigationController?.popViewController(animated: true)
   }
+  
+  @IBAction func propertyDesignClicked(_ sender: Any)
+  {
+    self.openPropertyDesignPopOver(sender: propertyDesignTextField)
+  }
+  
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
     textField.resignFirstResponder()
     return true
@@ -103,6 +85,39 @@ class CustomerAddPropertyVC: UIViewController,UITextFieldDelegate {
     }
   }
   
+  func propertTypeSelect(selectedPropertyType:Int)
+  {
+    let tempPropertyType = selectedPropertyType + 1
+    
+    switch tempPropertyType
+    {
+    case 1:
+      selectedProperty = "Single"
+//      singlePropBtn.backgroundColor = UIColor.blue
+//      multiPropBtn.backgroundColor = UIColor.clear
+//      commercialPropBtn.backgroundColor = UIColor.clear
+    case 2:
+      selectedProperty = "Multi"
+//      singlePropBtn.backgroundColor = UIColor.clear
+//      multiPropBtn.backgroundColor = UIColor.blue
+//      commercialPropBtn.backgroundColor = UIColor.clear
+    case 3:
+      selectedProperty = "Commercial"
+//      singlePropBtn.backgroundColor = UIColor.clear
+//      multiPropBtn.backgroundColor = UIColor.clear
+//      commercialPropBtn.backgroundColor = UIColor.blue
+    default:
+      print("nothing")
+    }
+    propertyTypeTextField.text = selectedProperty
+    let loginParameters = ["propertyType": selectedProperty]
+    guard let tokenStr = UserLoginDetails.shared.token else { return }
+    self.view.isUserInteractionEnabled = false
+    activityIndicator?.isHidden = false
+    activityIndicator?.startAnimating()
+    WebServices.sharedWebServices.delegate = self
+    WebServices.sharedWebServices.uploadusingUrlSessionNormalData(webServiceParameters: loginParameters, methodType: .POST, webServiceType: .PROPERTY_TYPE, token: tokenStr)
+  }
   func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool
   {
     if textField == propertyDesignTextField
@@ -110,18 +125,25 @@ class CustomerAddPropertyVC: UIViewController,UITextFieldDelegate {
       self.openPropertyDesignPopOver(sender: propertyDesignTextField)
       return false
     }
+    else if textField == propertyTypeTextField
+    {
+      self.propertyTypePopOverClicked(sender: propertyTypeTextField)
+      return false
+    }
     
     return true
   }
   
-  func openPropertyDesignPopOver(sender:UITextField)
+  
+  func propertyTypePopOverClicked(sender:UITextField)
   {
     // get a reference to the view controller for the popover
     let popController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SubCategoryServiceVC") as? SubCategoryServiceVC
     // set the presentation style
     popController!.modalPresentationStyle = UIModalPresentationStyle.popover
-    popController?.popOverType = .PropertyDesign
-    popController?.serviceListArray = self.requestListArray as [AnyObject]
+    popController?.popOverType = .PropertyType
+    self.popOverType = .PropertyType
+    popController?.serviceListArray = ["Single","Multi","Commercial"] as [AnyObject]
     // set up the popover presentation controller
     popController?.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.up
     popController?.popoverPresentationController?.delegate = self
@@ -130,6 +152,34 @@ class CustomerAddPropertyVC: UIViewController,UITextFieldDelegate {
     popController?.popoverPresentationController?.sourceRect = (sender as AnyObject).bounds
     // present the popover
     self.present(popController!, animated: true, completion: nil)
+  }
+  
+  func openPropertyDesignPopOver(sender:UITextField)
+  {
+    // get a reference to the view controller for the popover
+    if self.requestListArray.count > 0
+    {
+      let popController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SubCategoryServiceVC") as? SubCategoryServiceVC
+      // set the presentation style
+      popController!.modalPresentationStyle = UIModalPresentationStyle.popover
+      popController?.popOverType = .PropertyDesign
+      self.popOverType = .PropertyDesign
+      popController?.serviceListArray = self.requestListArray as [AnyObject]
+      // set up the popover presentation controller
+      popController?.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.up
+      popController?.popoverPresentationController?.delegate = self
+      popController?.delegate = self
+      popController?.popoverPresentationController?.sourceView = (sender as UIView) // button
+      popController?.popoverPresentationController?.sourceRect = (sender as AnyObject).bounds
+      // present the popover
+      self.present(popController!, animated: true, completion: nil)
+    }
+    else
+    {
+      let alertController:UIAlertController = UIAlertController(title: "", message: "Please first select Property Type", preferredStyle: .alert)
+      alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+      self.present(alertController, animated: true, completion: nil)
+    }
   }
     /*
     // MARK: - Navigation
@@ -246,8 +296,15 @@ extension CustomerAddPropertyVC:ServiceSubCategoryDelegate
 {
   func selectedSubCategory(selectedSubCategory: AnyObject)
   {
-    selectedPropertyDesign = selectedSubCategory as? Int
-    let tempDesign = self.requestListArray[selectedPropertyDesign!]
-    self.propertyDesignTextField.text = (tempDesign["name"] as! String)
+    if self.popOverType ==  PopOverType.PropertyDesign
+    {
+      selectedPropertyDesign = selectedSubCategory as? Int
+      let tempDesign = self.requestListArray[selectedPropertyDesign!]
+      self.propertyDesignTextField.text = (tempDesign["name"] as! String)
+    }
+    else if self.popOverType == PopOverType.PropertyType
+    {
+      self.propertTypeSelect(selectedPropertyType: (selectedSubCategory as? Int)!)
+    }
   }
 }

@@ -35,6 +35,42 @@ class LoginViewController: UIViewController,WebServiceDelegate,UITextFieldDelega
     self.view.addSubview(activityIndicator!)
   }
 
+  override func viewWillAppear(_ animated: Bool)
+  {
+    super.viewWillAppear(true)
+    let tokenStr = UserDefaults.standard.value(forKey: "token") as? String
+    if let token = tokenStr
+    {
+      if token.count > 0
+      {
+        UserLoginDetails.shared.token = token
+        self.tokenExists()
+      }
+    }
+  }
+  
+  func tokenExists()
+  {
+    let loginType = UserDefaults.standard.value(forKey: "loginType") as? String
+    let userEmail = UserDefaults.standard.value(forKey: "userEmail") as? String
+    let userID = UserDefaults.standard.value(forKey: "userID") as? String
+    let userName = UserDefaults.standard.value(forKey: "userName") as? String
+    let userPermission = UserDefaults.standard.value(forKey: "userPermission") as? String
+    let userProfileImage = UserDefaults.standard.value(forKey: "userProfileImage") as? String
+    
+    UserLoginDetails.shared.loginType = loginType
+    UserLoginDetails.shared.userEmail = userEmail
+    UserLoginDetails.shared.userID = userID
+    UserLoginDetails.shared.userName = userName
+    UserLoginDetails.shared.userPermission = userPermission
+    UserLoginDetails.shared.userProfileImage = userProfileImage
+    
+    let containerViewController = ContainerViewController()
+    let appdelegate = UIApplication.shared.delegate as? AppDelegate
+    appdelegate?.window?.rootViewController = containerViewController
+    
+  }
+  
   @IBAction func loginClicked(_ sender: Any)
   {
    // self.performSegue(withIdentifier: "CustomerListVC", sender: self) //ToCustomerPropertyDetail

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		141290F723468DEB003F3CCB /* LogOutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141290F623468DEB003F3CCB /* LogOutVC.swift */; };
 		1418E18923009A4E005324A6 /* TermsConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1418E18823009A4E005324A6 /* TermsConditionsViewController.swift */; };
 		1418E18B23009A73005324A6 /* NewCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1418E18A23009A73005324A6 /* NewCustomerViewController.swift */; };
 		1418E18D23009A94005324A6 /* DigitalSignatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1418E18C23009A94005324A6 /* DigitalSignatureViewController.swift */; };
@@ -64,6 +65,7 @@
 
 /* Begin PBXFileReference section */
 		0512DDF2068100B4CC140D63 /* Pods_DoneFastTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoneFastTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		141290F623468DEB003F3CCB /* LogOutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutVC.swift; sourceTree = "<group>"; };
 		1418E18823009A4E005324A6 /* TermsConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsConditionsViewController.swift; sourceTree = "<group>"; };
 		1418E18A23009A73005324A6 /* NewCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCustomerViewController.swift; sourceTree = "<group>"; };
 		1418E18C23009A94005324A6 /* DigitalSignatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalSignatureViewController.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				14654330231EFC9D005D24A5 /* SubCategoryServiceVC.swift */,
 				14A7ABEB2323C79A00005E42 /* GoogleMapVC.swift */,
 				143166AB232D2DB4007A2098 /* EditCustomerPropertyVC.swift */,
+				141290F623468DEB003F3CCB /* LogOutVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -473,6 +476,7 @@
 				1495CC8D230825C800DBF067 /* YPDrawSignatureView.swift in Sources */,
 				1430C4A6230B29FE002FEBC2 /* CustomerAddPropertyVC.swift in Sources */,
 				14E25AFC22FCAA720045C908 /* LoginViewController.swift in Sources */,
+				141290F723468DEB003F3CCB /* LogOutVC.swift in Sources */,
 				1492283A230DE1B800BD747F /* RequestDetailsVC.swift in Sources */,
 				143166AC232D2DB4007A2098 /* EditCustomerPropertyVC.swift in Sources */,
 				14E25AFA22FCAA710045C908 /* AppDelegate.swift in Sources */,

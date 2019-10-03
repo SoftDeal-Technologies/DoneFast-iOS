@@ -217,22 +217,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "DoneFast/Controllers/UserProfileVC.swift"
-            timestampString = "591739372.578308"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "viewWillAppear(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "DoneFast/SlideInControllers/LeftSlideVC.swift"
             timestampString = "590446183.119674"
             startingColumnNumber = "9223372036854775807"
@@ -250,7 +234,7 @@
                   moduleName = "DoneFast"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ciber/Documents/DoneFast/GitCode/DoneFast-iOS/DoneFast/DoneFast/SlideInControllers/LeftSlideVC.swift"
-                  timestampString = "591739195.2030129"
+                  timestampString = "591826296.983806"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "145"
@@ -265,7 +249,7 @@
                   moduleName = "DoneFast"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ciber/Documents/DoneFast/GitCode/DoneFast-iOS/DoneFast/DoneFast/SlideInControllers/LeftSlideVC.swift"
-                  timestampString = "591739195.2044671"
+                  timestampString = "591826296.985219"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "147"
@@ -314,7 +298,7 @@
                   moduleName = "DoneFast"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ciber/Documents/DoneFast/GitCode/DoneFast-iOS/DoneFast/DoneFast/Controllers/EditUserProfileVC.swift"
-                  timestampString = "591739195.211485"
+                  timestampString = "591826296.992049"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "149"
@@ -329,7 +313,7 @@
                   moduleName = "DoneFast"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ciber/Documents/DoneFast/GitCode/DoneFast-iOS/DoneFast/DoneFast/Controllers/EditUserProfileVC.swift"
-                  timestampString = "591739195.212942"
+                  timestampString = "591826296.993479"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "150"
@@ -458,7 +442,7 @@
                   moduleName = "DoneFast"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ciber/Documents/DoneFast/GitCode/DoneFast-iOS/DoneFast/DoneFast/Models/WebServices.swift"
-                  timestampString = "591739195.23506"
+                  timestampString = "591826297.015205"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "89"
@@ -473,7 +457,7 @@
                   moduleName = "DoneFast"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ciber/Documents/DoneFast/GitCode/DoneFast-iOS/DoneFast/DoneFast/Models/WebServices.swift"
-                  timestampString = "591739195.23667"
+                  timestampString = "591826297.016672"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "91"
@@ -481,38 +465,6 @@
                   offsetFromSymbolStart = "272">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DoneFast/Controllers/EditCustomerPropertyVC.swift"
-            timestampString = "591739372.578703"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "propertyDesClicked(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DoneFast/Controllers/EditCustomerPropertyVC.swift"
-            timestampString = "591739372.5787441"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "viewWillAppear(_:)"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -544,6 +496,54 @@
             startingLineNumber = "55"
             endingLineNumber = "55"
             landmarkName = "textFieldShouldReturn(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DoneFast/Controllers/CustomerAddPropertyVC.swift"
+            timestampString = "591825286.87156"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "propertTypeSelect(selectedPropertyType:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DoneFast/Controllers/CustomerAddPropertyVC.swift"
+            timestampString = "591825286.871835"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "161"
+            endingLineNumber = "161"
+            landmarkName = "openPropertyDesignPopOver(sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DoneFast/Controllers/LoginViewController.swift"
+            timestampString = "591826296.747164"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "tokenExists()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
