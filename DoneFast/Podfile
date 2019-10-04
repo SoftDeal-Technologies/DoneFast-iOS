@@ -12,6 +12,7 @@ target 'DoneFast' do
 	pod 'SwiftyJSON', '~> 4.0'
 	pod 'GoogleMaps'
 	pod 'GooglePlaces'
+	pod "CCValidator"
 
   target 'DoneFastTests' do
     inherit! :search_paths

@@ -14,7 +14,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="DoneFast" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="DoneFast" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -187,7 +187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1225" y="-225"/>
+            <point key="canvasLocation" x="1225" y="-860"/>
         </scene>
         <!--Registration Option View Controller-->
         <scene sceneID="Mzb-zx-9xY">
@@ -3454,7 +3454,7 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qn4-1r-SMr">
-                                                <rect key="frame" x="15" y="1093.6666666666667" width="384" height="49.333333333333258"/>
+                                                <rect key="frame" x="15" y="1158" width="384" height="49.333333333333258"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fpq-VG-Alp">
                                                         <rect key="frame" x="0.0" y="0.0" width="384" height="14.333333333333334"/>
@@ -3474,7 +3474,7 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Bws-lQ-hbU">
-                                                <rect key="frame" x="15" y="1222.3333333333333" width="384" height="14.333333333333258"/>
+                                                <rect key="frame" x="15" y="1286.6666666666667" width="384" height="14.333333333333258"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card EXP Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAp-3a-f8X">
                                                         <rect key="frame" x="0.0" y="0.0" width="187" height="14.333333333333334"/>
@@ -3491,7 +3491,7 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="90m-Zl-Fyo">
-                                                <rect key="frame" x="15" y="1241.6666666666667" width="384" height="30"/>
+                                                <rect key="frame" x="15" y="1306" width="384" height="30"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ffq-C4-bWx">
                                                         <rect key="frame" x="0.0" y="0.0" width="187" height="30"/>
@@ -3514,7 +3514,7 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="170-Lb-akL">
-                                                <rect key="frame" x="15" y="1158" width="384" height="49.333333333333258"/>
+                                                <rect key="frame" x="15" y="1222.3333333333333" width="384" height="49.333333333333258"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Holder Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GxZ-br-MoI">
                                                         <rect key="frame" x="0.0" y="0.0" width="384" height="14.333333333333334"/>
@@ -3523,12 +3523,32 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ovm-g5-vWo">
-                                                        <rect key="frame" x="0.0" y="19.333333333333258" width="384" height="30"/>
+                                                        <rect key="frame" x="0.0" y="19.333333333333485" width="384" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
                                                             <outlet property="delegate" destination="fgJ-g2-EVx" id="Abx-0Q-eGs"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Go5-rG-t9b">
+                                                <rect key="frame" x="15" y="1093.6666666666667" width="384" height="49.333333333333258"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6f-3c-hgV">
+                                                        <rect key="frame" x="0.0" y="0.0" width="384" height="14.333333333333334"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RmG-zD-sHZ">
+                                                        <rect key="frame" x="0.0" y="19.333333333333258" width="384" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="fgJ-g2-EVx" id="bnQ-pW-of3"/>
                                                         </connections>
                                                     </textField>
                                                 </subviews>
@@ -3539,13 +3559,13 @@ If you have any questions about these Terms or the Services, please contact Glob
                                             <constraint firstItem="5BF-bz-UXl" firstAttribute="leading" secondItem="vPV-P7-lU9" secondAttribute="leading" constant="15" id="0fM-7f-ofH"/>
                                             <constraint firstItem="1sO-jg-ZjS" firstAttribute="leading" secondItem="5BF-bz-UXl" secondAttribute="leading" id="0j9-c7-GFl"/>
                                             <constraint firstItem="Vnp-6o-5Pt" firstAttribute="trailing" secondItem="5BF-bz-UXl" secondAttribute="trailing" id="0pD-ya-fnN"/>
+                                            <constraint firstItem="Go5-rG-t9b" firstAttribute="leading" secondItem="5W4-Ej-COh" secondAttribute="leading" id="1av-du-ejw"/>
                                             <constraint firstItem="YFP-UM-TYB" firstAttribute="leading" secondItem="5BF-bz-UXl" secondAttribute="leading" id="1mE-sO-Sf0"/>
                                             <constraint firstItem="QXd-Ze-8hm" firstAttribute="top" secondItem="vPV-P7-lU9" secondAttribute="top" id="2BM-gs-nYw"/>
                                             <constraint firstItem="OEN-Hl-cIz" firstAttribute="top" secondItem="Vnp-6o-5Pt" secondAttribute="bottom" constant="15" id="2GH-o2-hI5"/>
                                             <constraint firstItem="90m-Zl-Fyo" firstAttribute="trailing" secondItem="5BF-bz-UXl" secondAttribute="trailing" id="36j-4p-8c2"/>
                                             <constraint firstItem="Yue-7x-4fg" firstAttribute="leading" secondItem="5BF-bz-UXl" secondAttribute="leading" id="55O-Pe-uuj"/>
                                             <constraint firstItem="7Aj-2q-pOn" firstAttribute="leading" secondItem="5BF-bz-UXl" secondAttribute="leading" id="5bs-zZ-ZIX"/>
-                                            <constraint firstItem="qn4-1r-SMr" firstAttribute="top" secondItem="5W4-Ej-COh" secondAttribute="bottom" constant="15" id="5h5-OJ-emC"/>
                                             <constraint firstItem="2tM-dw-30j" firstAttribute="leading" secondItem="5BF-bz-UXl" secondAttribute="leading" id="5hT-Tz-AVP"/>
                                             <constraint firstItem="1N4-Ht-GA6" firstAttribute="trailing" secondItem="5BF-bz-UXl" secondAttribute="trailing" id="63h-sh-qrj"/>
                                             <constraint firstItem="MSe-Qq-2CZ" firstAttribute="leading" secondItem="5BF-bz-UXl" secondAttribute="leading" id="6MC-1u-z3O"/>
@@ -3578,6 +3598,7 @@ If you have any questions about these Terms or the Services, please contact Glob
                                             <constraint firstItem="tl3-Vh-Qsc" firstAttribute="trailing" secondItem="2tM-dw-30j" secondAttribute="trailing" id="X0G-Gd-Ub1"/>
                                             <constraint firstItem="5BF-bz-UXl" firstAttribute="top" secondItem="QXd-Ze-8hm" secondAttribute="bottom" constant="50" id="YRC-i7-KB6"/>
                                             <constraint firstItem="MSe-Qq-2CZ" firstAttribute="top" secondItem="YFP-UM-TYB" secondAttribute="bottom" constant="15" id="YUe-P9-Y6b"/>
+                                            <constraint firstItem="Go5-rG-t9b" firstAttribute="trailing" secondItem="5W4-Ej-COh" secondAttribute="trailing" id="Yz1-7C-Lpl"/>
                                             <constraint firstItem="1sO-jg-ZjS" firstAttribute="top" secondItem="5BF-bz-UXl" secondAttribute="bottom" constant="5" id="bg5-P1-HlC"/>
                                             <constraint firstItem="tl3-Vh-Qsc" firstAttribute="leading" secondItem="2tM-dw-30j" secondAttribute="leading" id="cbz-pg-fs5"/>
                                             <constraint firstItem="OEN-Hl-cIz" firstAttribute="leading" secondItem="5BF-bz-UXl" secondAttribute="leading" id="e2P-yp-K5I"/>
@@ -3588,12 +3609,14 @@ If you have any questions about these Terms or the Services, please contact Glob
                                             <constraint firstItem="5W4-Ej-COh" firstAttribute="top" secondItem="MSe-Qq-2CZ" secondAttribute="bottom" constant="15" id="i8Z-ns-KYu"/>
                                             <constraint firstItem="1N4-Ht-GA6" firstAttribute="top" secondItem="kHV-En-xDg" secondAttribute="bottom" constant="15" id="iH5-ob-md7"/>
                                             <constraint firstItem="90m-Zl-Fyo" firstAttribute="top" secondItem="Bws-lQ-hbU" secondAttribute="bottom" constant="5" id="jEP-h5-Guc"/>
+                                            <constraint firstItem="qn4-1r-SMr" firstAttribute="top" secondItem="Go5-rG-t9b" secondAttribute="bottom" constant="15" id="jqe-29-Mr4"/>
                                             <constraint firstItem="G1d-Uo-1OC" firstAttribute="trailing" secondItem="5BF-bz-UXl" secondAttribute="trailing" id="k2W-fX-Kfp"/>
                                             <constraint firstItem="ZHS-Cn-YpH" firstAttribute="trailing" secondItem="5BF-bz-UXl" secondAttribute="trailing" id="kIY-mB-lp4"/>
                                             <constraint firstItem="sUZ-tt-skt" firstAttribute="trailing" secondItem="5BF-bz-UXl" secondAttribute="trailing" id="kb6-og-oht"/>
                                             <constraint firstItem="H93-LE-SFB" firstAttribute="top" secondItem="1N4-Ht-GA6" secondAttribute="bottom" constant="5" id="lKO-OX-se9"/>
                                             <constraint firstItem="YFP-UM-TYB" firstAttribute="trailing" secondItem="5BF-bz-UXl" secondAttribute="trailing" id="liT-ux-HaY"/>
                                             <constraint firstItem="tl3-Vh-Qsc" firstAttribute="top" secondItem="2tM-dw-30j" secondAttribute="bottom" constant="15" id="m9w-ex-t8o"/>
+                                            <constraint firstItem="Go5-rG-t9b" firstAttribute="top" secondItem="5W4-Ej-COh" secondAttribute="bottom" constant="15" id="nbh-od-nng"/>
                                             <constraint firstItem="qn4-1r-SMr" firstAttribute="trailing" secondItem="5BF-bz-UXl" secondAttribute="trailing" id="pcL-Fs-wbt"/>
                                             <constraint firstItem="xbg-LZ-jgT" firstAttribute="top" secondItem="G1d-Uo-1OC" secondAttribute="bottom" constant="15" id="r1S-7k-bbq"/>
                                             <constraint firstItem="5W4-Ej-COh" firstAttribute="leading" secondItem="5BF-bz-UXl" secondAttribute="leading" id="s1z-6E-XZ1"/>
@@ -3639,6 +3662,7 @@ If you have any questions about these Terms or the Services, please contact Glob
                         <outlet property="cardExpTxtField" destination="Ffq-C4-bWx" id="ORv-yk-S6r"/>
                         <outlet property="cardHolderNameTxtField" destination="ovm-g5-vWo" id="x5t-8V-TKw"/>
                         <outlet property="cardNumberTxtField" destination="Agk-Y1-lCN" id="r6s-Cg-nsJ"/>
+                        <outlet property="cardTypeTxtField" destination="RmG-zD-sHZ" id="HH8-In-WIP"/>
                         <outlet property="cityTxtField" destination="hpy-iq-056" id="lU2-OC-GGm"/>
                         <outlet property="custIdValueLabel" destination="bQt-xB-uuh" id="CJ1-Do-L4B"/>
                         <outlet property="custProfilePicImageView" destination="ahO-Yk-CjK" id="ffY-cn-rfP"/>
@@ -5263,6 +5287,20 @@ If you have any questions about these Terms or the Services, please contact Glob
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1j4-YQ-9hE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="959" y="1432"/>
+        </scene>
+        <!--Log OutVC-->
+        <scene sceneID="UOT-Jx-BRh">
+            <objects>
+                <viewController storyboardIdentifier="LogOutVC" id="1Pv-IE-ogA" customClass="LogOutVC" customModule="DoneFast" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ER1-64-Bia">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="fOC-k9-fBZ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QLP-bD-6z1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>

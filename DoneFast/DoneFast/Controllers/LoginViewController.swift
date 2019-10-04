@@ -140,8 +140,6 @@ class LoginViewController: UIViewController,WebServiceDelegate,UITextFieldDelega
             UserDefaults.standard.set(userId["userPermission"].stringValue, forKey: "userPermission")
             UserDefaults.standard.set(userId["userProfileImage"].stringValue, forKey: "userProfileImage")
             UserDefaults.standard.synchronize()
-            
-            
           }
           if message == "You have successfully logged in."
           {

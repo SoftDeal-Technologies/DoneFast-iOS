@@ -11,7 +11,7 @@ import UIKit
 let check_box_blank_black = "baseline_check_box_outline_blank_black"
 let check_box_black = "baseline_check_box_black"
 
-class BillingAddressVC: UIViewController {
+class BillingAddressVC: UIViewController,UITextFieldDelegate {
 
   @IBOutlet weak var zipCodeTxtField: UITextField!
   @IBOutlet weak var addressTxtField: UITextField!

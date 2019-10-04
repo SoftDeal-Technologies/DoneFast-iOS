@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 
 enum WebServiceType {
-    case PCMS_LOGIN,NEW_CUSTOMER_REGISTRATION,LIST_CUSTOMER_PROPERTY,PROPERTY_TYPE,ADD_CUSTOMER_PROPERTY,VIEW_CUSTOMER_PROPERTY, DELETE_CUSTOMER_PROPERTY, UPDATE_CUSTOMER_PROPERTY,JOB_REQUEST,SERVICE_SUB_CATEGORY,CUSTOMER_PROFILE,CUSTOMER_UPDATE_PROFILE,CUSTOMER_REQUESTS,VIEW_PRICE_QUOTE,EDIT_CUSTOMER_PROPERTY,PRICE_REQUEST
+    case PCMS_LOGIN,NEW_CUSTOMER_REGISTRATION,LIST_CUSTOMER_PROPERTY,PROPERTY_TYPE,ADD_CUSTOMER_PROPERTY,VIEW_CUSTOMER_PROPERTY, DELETE_CUSTOMER_PROPERTY, UPDATE_CUSTOMER_PROPERTY,JOB_REQUEST,SERVICE_SUB_CATEGORY,CUSTOMER_PROFILE,CUSTOMER_UPDATE_PROFILE,CUSTOMER_REQUESTS,VIEW_PRICE_QUOTE,EDIT_CUSTOMER_PROPERTY,PRICE_REQUEST, LOG_OUT
 }
 enum MethodType {
     case GET,POST,PUT
@@ -73,7 +73,7 @@ class WebServices {
       let dataImage = imageDataArray[i]
       let imageName = imagesString[i]
       data.append("\r\n--\(boundary)\r\n".data(using: .utf8)!)
-      data.append("Content-Disposition: form-data; name=\"\(imageName))\"; filename=\"\(filename)\"\r\n".data(using: .utf8)!) //image1 , customerSignature
+      data.append("Content-Disposition: form-data; name=\"\(imageName))\";filename=\"\(filename)\"\r\n".data(using: .utf8)!) //image1 , customerSignature //
       data.append("Content-Type: image/png\r\n\r\n".data(using: .utf8)!)
       data.append(dataImage.pngData()!)
       i = i+1
@@ -222,6 +222,10 @@ class WebServices {
       case .PRICE_REQUEST:
         webServiceStr = "PriceRequest"
         break
+      case .LOG_OUT:
+        webServiceStr = "Logout"
+        break
+        
     }
     return webServiceStr
   }

@@ -44,3 +44,23 @@ class UserLoginDetails
   var token:String?
   var userProfileImage:String?
 }
+
+class ClearLoginDetails
+{
+    static let shared = ClearLoginDetails()
+    
+    //Initializer access level change now
+    private init(){}
+    
+    func clearAllLoginData()
+    {
+        UserDefaults.standard.set("", forKey: "loginType")
+        UserDefaults.standard.set("", forKey: "userEmail")
+        UserDefaults.standard.set("", forKey: "userID")
+        UserDefaults.standard.set("", forKey: "userName")
+        UserDefaults.standard.set("", forKey: "userPermission")
+        UserDefaults.standard.set("", forKey: "userProfileImage")
+        UserDefaults.standard.set("", forKey: "token")
+        UserDefaults.standard.synchronize()
+    }
+}

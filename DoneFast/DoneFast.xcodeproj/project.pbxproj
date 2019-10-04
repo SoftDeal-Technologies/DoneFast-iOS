@@ -51,6 +51,7 @@
 		14E25B0422FCAA730045C908 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14E25B0222FCAA730045C908 /* LaunchScreen.storyboard */; };
 		14E25B0F22FCAA730045C908 /* DoneFastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E25B0E22FCAA730045C908 /* DoneFastTests.swift */; };
 		477647087DD2E761BF8A5226 /* Pods_DoneFastTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0512DDF2068100B4CC140D63 /* Pods_DoneFastTests.framework */; };
+		9DC42E50257D5D54418CC8FC /* Pods_DoneFast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA29979A4DBE18E67DBCA75 /* Pods_DoneFast.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				146BAFC9232435CA00A894DA /* CoreLocation.framework in Frameworks */,
+				9DC42E50257D5D54418CC8FC /* Pods_DoneFast.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,11 +409,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DoneFast/Pods-DoneFast-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CCValidator/CCValidator.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CCValidator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

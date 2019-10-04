@@ -11,7 +11,8 @@ import SwiftyJSON
 
 class EditUserProfileVC: UIViewController,UITextFieldDelegate {
 
-  var activityIndicator:UIActivityIndicatorView?
+    @IBOutlet weak var cardTypeTxtField: UITextField!
+    var activityIndicator:UIActivityIndicatorView?
   var loggedInUserDetails:LoggedInUserDetails?
   var customerLoginDetails:UserLoginDetails? = nil
   @IBOutlet weak var custIdValueLabel: UILabel!
@@ -20,7 +21,7 @@ class EditUserProfileVC: UIViewController,UITextFieldDelegate {
   @IBOutlet weak var cardExpTxtField: UITextField!
   @IBOutlet weak var cardHolderNameTxtField: UITextField!
   @IBOutlet weak var cardNumberTxtField: UITextField!
-  @IBOutlet weak var cardTypeLabel: UILabel!
+  @IBOutlet weak var cardTypeLabel: UITextField!
   @IBOutlet weak var billingStateTxtField: UITextField!
   @IBOutlet weak var billingCityTxtField: UITextField!
   @IBOutlet weak var billingAddressTxtField: UITextField!
@@ -83,7 +84,7 @@ class EditUserProfileVC: UIViewController,UITextFieldDelegate {
     cardExpTxtField.text = loggedInUserDetails?.customerCardExp
      cardHolderNameTxtField.text = loggedInUserDetails?.customerCardName
      cardNumberTxtField.text = loggedInUserDetails?.customerCardNumber
-//     cardTypeLabel.text = loggedInUserDetails?.customerCardType
+     cardTypeTxtField.text = loggedInUserDetails?.customerCardType
      billingStateTxtField.text = loggedInUserDetails?.customerBillState
      billingCityTxtField.text = loggedInUserDetails?.customerBillCity
      billingAddressTxtField.text = loggedInUserDetails?.customerBillAddress

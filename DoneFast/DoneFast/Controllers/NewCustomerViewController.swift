@@ -71,6 +71,13 @@ class NewCustomerViewController: UIViewController,UITextFieldDelegate {
     
     if checkMarkPrivacyPolicy == true
     {
+        if password != confirmPassword
+        {
+            let alertController:UIAlertController = UIAlertController(title: "", message: "Both password should match", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
       if firstName.count > 0 && lastName.count > 0 && emailId.count > 0 && state.count > 0 && address.count > 0 && city.count > 0 && password.count > 0 && confirmPassword.count > 0
       {
         customerDetail = CustomerDetails(firstName: firstName, lastName: lastName, emailId: emailId, state: state, address:address, city: city, password: password, confirmPassword: confirmPassword, phone: phone, zipCode: zipCode)

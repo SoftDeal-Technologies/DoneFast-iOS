@@ -157,9 +157,9 @@ extension CustomerPropertyListVC:WebServiceDelegate
     {
       let  tempErrorCode = jsonStr["status"].stringValue
       
+      let propertyData = jsonStr["data"].dictionary
       if tempErrorCode == "1"
       {
-        let propertyData = jsonStr["data"].dictionary
         let propertyList = propertyData!["propertyList"]!.arrayValue
         if self.propertyListArray.count > 0
         {
@@ -183,6 +183,27 @@ extension CustomerPropertyListVC:WebServiceDelegate
           self.customerListTableView.reloadData()
         }
       }
+      else if tempErrorCode == "2"
+      {
+        if  propertyData!["message"]?.stringValue == "Your token is not valid. Please logout and login again."
+        {
+            DispatchQueue.main.async {
+                let alertController:UIAlertController = UIAlertController(title: "", message: propertyData!["message"]?.stringValue, preferredStyle: .alert)
+//                alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                    guard let loginViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController
+                        else
+                    {
+                        return
+                    }
+                    ClearLoginDetails.shared.clearAllLoginData()
+                    let appdelegate = UIApplication.shared.delegate as? AppDelegate
+                    appdelegate?.window?.rootViewController = loginViewController
+                }))
+                self.present(alertController, animated: true, completion: nil)
+            }
+        }
+    }
     }
   }
   

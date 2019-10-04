@@ -67,6 +67,13 @@ extension CenterViewController: SidePanelViewControllerDelegate
       }
       customerJobHistoryVC.delegate = self.delegate
       self.navigationController!.pushViewController(customerJobHistoryVC, animated: false)
+    case 3:
+        guard let logOutVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LogOutVC") as? LogOutVC
+            else
+        {
+            return
+        }
+        self.navigationController!.pushViewController(logOutVC, animated: false)
     case 4:
       guard let userProfileVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "UserProfileVC") as? UserProfileVC
         else

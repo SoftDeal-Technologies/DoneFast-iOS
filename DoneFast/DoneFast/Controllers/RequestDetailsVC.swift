@@ -14,7 +14,7 @@ protocol ServiceSubCategoryDelegate
   func selectedSubCategory(selectedSubCategory:AnyObject)
 }
 
-class RequestDetailsVC: UIViewController {
+class RequestDetailsVC: UIViewController,UITextFieldDelegate {
 
   var activityIndicator:UIActivityIndicatorView?
   @IBOutlet var tapGestureOnImageSelect: UIGestureRecognizer!

@@ -7,8 +7,9 @@
 //
 import SwiftyJSON
 import UIKit
+import CCValidator
 
-class CardPaymentViewController: UIViewController,WebServiceDelegate,SignatureDelegate{
+class CardPaymentViewController: UIViewController,WebServiceDelegate,SignatureDelegate,UITextFieldDelegate{
  
   var activityIndicator:UIActivityIndicatorView?
   
@@ -116,6 +117,16 @@ class CardPaymentViewController: UIViewController,WebServiceDelegate,SignatureDe
 //            "userType":"Customer",   "firstName":"Sukruth",  "lastName":"Kudige Harish",  "emailId":"sukruth@gmail.com",  "password":"123456",  "phoneNumber":"9874859685",  "address":"Aspen St",  "city":"San Antonio",  "state":"TX",  "zipCode":"78006",  "creditCardType":"Visa",  "creditCardNumber":"4111111111111111",  "creditCardName":"Sukruth Kudige Harish",  "creditCardExp":"11/22",  "creditCardCVV":"111",   "customerSignature":"This will upload raw image data.",  "deviceType":"Android",
 //            "deviceToken":"APA91bFoi3lMMre9G3XzR1LrF4ZT82_15MsMdEICogXSLB8-MrdkRuRQFwNI5u8Dh0cI90ABD3BOKnxkEla8cGdisbDHl5cVIkZah5QUhSAxzx4Roa7b4xy9tvx9iNSYw-eXBYYd8k1XKf8Q_Qq1X9-x-U-Y79vdPq"
 //        }
+        
+        let isFullCardDataOK = CCValidator.validate(creditCardNumber: cardNumber)
+        if isFullCardDataOK == false
+        {
+            let alertController:UIAlertController = UIAlertController(title: "", message: "Please enter vaid credit card number.", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
+
         guard let firstname = customerDetails?.firstName else {return}
         guard let lastName = customerDetails?.lastName else {return}
         guard let emailId = customerDetails?.emailId else {return}
@@ -138,7 +149,40 @@ class CardPaymentViewController: UIViewController,WebServiceDelegate,SignatureDe
         let imageParameters = ["customerSignature"]
         let imageDataParameters = [signatureImage]
         
-        let customerRegParameters = ["userType":"Customer","firstName":firstname,"lastName":lastName,"emailId":emailId,  "password":password,"phoneNumber":phone,"address":address,"city":city,"state":state,  "zipCode":zipCode,"billingAddress":billAddress,  "billingCity":billCity,  "billingState":billState,  "billingZipCode":billZipCode,"creditCardType":"Visa","creditCardNumber":cardNumber,"creditCardName":name,  "creditCardExp":expiryMonthYear,"creditCardCVV":cvv,"deviceType":"Android","deviceToken":"APA91bFoi3lMMre9G3XzR1LrF4ZT82_15MsMdEICogXSLB8-MrdkRuRQFwNI5u8Dh0cI90ABD3BOKnxkEla8cGdisbDHl5cVIkZah5QUhSAxzx4Roa7b4xy9tvx9iNSYw-eXBYYd8k1XKf8Q_Qq1X9-x-U-Y79vdPq"] //"billingAddress":"Aspen St",  "billingCity":"San Antonio",  "billingState":"TX",  "billingZipCode":"78006",
+//        let numberAsString = cardNumber.text
+        let recognizedType = CCValidator.typeCheckingPrefixOnly(creditCardNumber: cardNumber)
+        print(recognizedType.rawValue)
+        var creditCardType = ""
+        switch (recognizedType.rawValue)
+        {
+        case 0:
+            creditCardType = "AmericanExpress"
+        case 1:
+            creditCardType = "Dankort"
+        case 2:
+            creditCardType = "DinersClub"
+        case 3:
+            creditCardType = "Discover"
+        case 4:
+            creditCardType = "JCB"
+        case 5:
+            creditCardType = "Maestro"
+        case 6:
+            creditCardType = "MasterCard"
+        case 7:
+            creditCardType = "UnionPay"
+        case 8:
+            creditCardType = "VisaElectron"
+        case 9:
+            creditCardType = "Visa"
+        case 10:
+            creditCardType = "NotRecognized"
+        default:
+            creditCardType = "NotRecognized"
+        }
+        //check if type is e.g. .Visa, .MasterCard or .NotRecognized
+        
+        let customerRegParameters = ["userType":"Customer","firstName":firstname,"lastName":lastName,"emailId":emailId,  "password":password,"phoneNumber":phone,"address":address,"city":city,"state":state,  "zipCode":zipCode,"billingAddress":billAddress,  "billingCity":billCity,  "billingState":billState,  "billingZipCode":billZipCode,"creditCardType":creditCardType,"creditCardNumber":cardNumber,"creditCardName":name,  "creditCardExp":expiryMonthYear,"creditCardCVV":cvv,"deviceType":"iOS","deviceToken":"APA91bFoi3lMMre9G3XzR1LrF4ZT82_15MsMdEICogXSLB8-MrdkRuRQFwNI5u8Dh0cI90ABD3BOKnxkEla8cGdisbDHl5cVIkZah5QUhSAxzx4Roa7b4xy9tvx9iNSYw-eXBYYd8k1XKf8Q_Qq1X9-x-U-Y79vdPq"] as [String : Any] //"billingAddress":"Aspen St",  "billingCity":"San Antonio",  "billingState":"TX",  "billingZipCode":"78006",
         self.view.isUserInteractionEnabled = false
         activityIndicator?.isHidden = false
         activityIndicator?.startAnimating()
@@ -146,12 +190,11 @@ class CardPaymentViewController: UIViewController,WebServiceDelegate,SignatureDe
       }
       else
       {
-        let alertController:UIAlertController = UIAlertController(title: "", message: "Please credit card details.", preferredStyle: .alert)
+        let alertController:UIAlertController = UIAlertController(title: "", message: "Please enter credit card details.", preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alertController, animated: true, completion: nil)
       }
     }
-//    self.performSegue(withIdentifier: "ToDigitalSignatureView", sender: self)
   }
 
 }
