@@ -1314,6 +1314,7 @@ If you have any questions about these Terms or the Services, please contact Glob
                         <outlet property="propertyStateTextField" destination="VvT-kM-nIK" id="feX-Y3-Qj3"/>
                         <outlet property="propertyTypeTextField" destination="oUh-l2-Bd5" id="1tW-mY-zy1"/>
                         <outlet property="propertyZipCodeTextField" destination="Ec8-pF-eKt" id="AAq-kS-wAD"/>
+                        <segue destination="0zS-li-zfO" kind="show" identifier="ToGoogleMapView" id="zZt-Un-wc7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FDd-HJ-G7B" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -5326,4 +5327,7 @@ If you have any questions about these Terms or the Services, please contact Glob
         <image name="regcustomericon" width="512" height="512"/>
         <image name="regvendoricon" width="512" height="512"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="zZt-Un-wc7"/>
+    </inferredMetricsTieBreakers>
 </document>
