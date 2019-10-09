@@ -18,6 +18,8 @@
 		143166AA232CF7E7007A2098 /* CustomerRequestPriceQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143166A9232CF7E7007A2098 /* CustomerRequestPriceQuote.swift */; };
 		143166AC232D2DB4007A2098 /* EditCustomerPropertyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143166AB232D2DB4007A2098 /* EditCustomerPropertyVC.swift */; };
 		143166B1232D797B007A2098 /* LeftSlideVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143166B0232D797B007A2098 /* LeftSlideVC.swift */; };
+		1436474B234D1033008720ED /* CustomerAddProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1436474A234D1033008720ED /* CustomerAddProperty.swift */; };
+		1436474D234D1615008720ED /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1436474C234D1615008720ED /* MapViewController.swift */; };
 		14472DE7230F2B35004D9D5B /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14472DE6230F2B35004D9D5B /* UserProfileVC.swift */; };
 		144923902334DD840061EAB8 /* CustomerDetailJobHistoryComleted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1449238F2334DD840061EAB8 /* CustomerDetailJobHistoryComleted.swift */; };
 		1453343B2312E99A0036AB28 /* EditUserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1453343A2312E99A0036AB28 /* EditUserProfileVC.swift */; };
@@ -77,6 +79,8 @@
 		143166A9232CF7E7007A2098 /* CustomerRequestPriceQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerRequestPriceQuote.swift; sourceTree = "<group>"; };
 		143166AB232D2DB4007A2098 /* EditCustomerPropertyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCustomerPropertyVC.swift; sourceTree = "<group>"; };
 		143166B0232D797B007A2098 /* LeftSlideVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftSlideVC.swift; sourceTree = "<group>"; };
+		1436474A234D1033008720ED /* CustomerAddProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerAddProperty.swift; sourceTree = "<group>"; };
+		1436474C234D1615008720ED /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		14472DE6230F2B35004D9D5B /* UserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVC.swift; sourceTree = "<group>"; };
 		1449238F2334DD840061EAB8 /* CustomerDetailJobHistoryComleted.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerDetailJobHistoryComleted.swift; sourceTree = "<group>"; };
 		1453343A2312E99A0036AB28 /* EditUserProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserProfileVC.swift; sourceTree = "<group>"; };
@@ -163,6 +167,7 @@
 				1472187923204BE900439EF8 /* LoggedInUserDetails.swift */,
 				148C25DA232C1CAD008EB3D5 /* CustomerRequest.swift */,
 				143166A9232CF7E7007A2098 /* CustomerRequestPriceQuote.swift */,
+				1436474A234D1033008720ED /* CustomerAddProperty.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -220,6 +225,7 @@
 				14A7ABEB2323C79A00005E42 /* GoogleMapVC.swift */,
 				143166AB232D2DB4007A2098 /* EditCustomerPropertyVC.swift */,
 				141290F623468DEB003F3CCB /* LogOutVC.swift */,
+				1436474C234D1615008720ED /* MapViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -475,6 +481,7 @@
 				144923902334DD840061EAB8 /* CustomerDetailJobHistoryComleted.swift in Sources */,
 				14922837230DDB3800BD747F /* CustomerPropertyTableCell.swift in Sources */,
 				142AE0632308949600493AA2 /* CustomerDetails.swift in Sources */,
+				1436474D234D1615008720ED /* MapViewController.swift in Sources */,
 				1495F5B623145D80006022F4 /* CustomerJobHistoryTableCell.swift in Sources */,
 				14CB9E8D230C50E100540B87 /* CustomerPropertyListVC.swift in Sources */,
 				1495CC8D230825C800DBF067 /* YPDrawSignatureView.swift in Sources */,
@@ -500,6 +507,7 @@
 				14B820CC232E462900CE13D6 /* ContainerViewController.swift in Sources */,
 				148C25DB232C1CAD008EB3D5 /* CustomerRequest.swift in Sources */,
 				14A7ABEC2323C79A00005E42 /* GoogleMapVC.swift in Sources */,
+				1436474B234D1033008720ED /* CustomerAddProperty.swift in Sources */,
 				14DDBECF22FE02A60040FF21 /* RegistrationOptionViewController.swift in Sources */,
 				14DF0FBB232E933B0024AF6D /* CenterViewController.swift in Sources */,
 				1472187A23204BE900439EF8 /* LoggedInUserDetails.swift in Sources */,
@@ -666,9 +674,9 @@
 			baseConfigurationReference = 87B465E697770997D9B97D1A /* Pods-DoneFast.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Fred Peyton (3YZP59G735)";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = N25GLHQFH7;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4Y35S3JRRV;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = DoneFast/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -676,11 +684,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.homeprotection.donefast;
+				PRODUCT_BUNDLE_IDENTIFIER = com.homeprotection.testdonefast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = DoneFastDevProfile;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -689,9 +697,9 @@
 			baseConfigurationReference = 181D8BE6606C56639388AC9E /* Pods-DoneFast.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Fred Peyton (3YZP59G735)";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = N25GLHQFH7;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4Y35S3JRRV;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = DoneFast/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -699,11 +707,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.homeprotection.donefast;
+				PRODUCT_BUNDLE_IDENTIFIER = com.homeprotection.testdonefast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = DoneFastDevProfile;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

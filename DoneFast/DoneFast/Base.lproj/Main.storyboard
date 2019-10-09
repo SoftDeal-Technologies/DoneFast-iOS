@@ -44,7 +44,6 @@
                                             <constraint firstAttribute="height" constant="40" id="0hz-Yu-oxb"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="awf-hM-P6t"/>
                                         </constraints>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
@@ -56,7 +55,6 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="z2a-4I-ozO"/>
                                         </constraints>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         <connections>
@@ -545,7 +543,6 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="4rP-21-SQV"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
@@ -560,7 +557,6 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="n0i-bb-ILy"/>
                                                         </constraints>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
@@ -572,7 +568,6 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="7NK-BF-c0E"/>
                                                         </constraints>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
@@ -586,7 +581,6 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="pq5-hg-Beo"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
@@ -601,7 +595,6 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="Qfb-iS-zPv"/>
                                                         </constraints>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
@@ -613,7 +606,6 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="63h-hS-pqU"/>
                                                         </constraints>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
@@ -630,7 +622,6 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="aiH-jt-GAP"/>
                                                         </constraints>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                         <connections>
@@ -642,7 +633,6 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="A1q-9K-oXz"/>
                                                         </constraints>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                         <connections>
@@ -659,7 +649,6 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="FGh-N2-AnO"/>
                                                         </constraints>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
@@ -671,7 +660,6 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="G8C-Z1-U60"/>
                                                         </constraints>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
@@ -1019,7 +1007,6 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="40" id="AMG-yc-ZFL"/>
                                                                 </constraints>
-                                                                <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <connections>
@@ -1067,7 +1054,6 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="40" id="Vru-jw-OEg"/>
                                                                 </constraints>
-                                                                <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <connections>
@@ -1099,7 +1085,6 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="40" id="xP6-6E-JCr"/>
                                                                 </constraints>
-                                                                <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <connections>
@@ -1111,7 +1096,6 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="40" id="HLZ-J4-T4E"/>
                                                                 </constraints>
-                                                                <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <connections>
@@ -1140,7 +1124,6 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="JWY-lc-4er"/>
                                                         </constraints>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
@@ -1155,7 +1138,6 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="40" id="gIj-SR-moU"/>
                                                                 </constraints>
-                                                                <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <connections>
@@ -1167,7 +1149,6 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="40" id="Vqx-oS-pMn"/>
                                                                 </constraints>
-                                                                <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <connections>
@@ -1181,7 +1162,6 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="4rS-7E-Fnw"/>
                                                         </constraints>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
@@ -1224,7 +1204,7 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="propertyTypeClicked:" destination="G2t-6Q-cQS" eventType="touchUpInside" id="1bZ-8U-QFC"/>
+                                                    <action selector="propertyDesignClicked:" destination="G2t-6Q-cQS" eventType="touchUpInside" id="YTu-pQ-wag"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofS-YL-syK" userLabel="Prop Type Drop Down Button">
@@ -1833,7 +1813,6 @@ If you have any questions about these Terms or the Services, please contact Glob
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="c6o-I3-iP8"/>
                                         </constraints>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
@@ -1846,7 +1825,6 @@ If you have any questions about these Terms or the Services, please contact Glob
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="wGZ-l2-sT6"/>
                                         </constraints>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
@@ -1862,7 +1840,6 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="P9o-sV-JQx"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
@@ -1875,7 +1852,6 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="Ng4-E7-BeO"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
@@ -2378,7 +2354,6 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="222-jh-R91"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
@@ -3203,7 +3178,6 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WCl-aY-zb0">
                                                         <rect key="frame" x="0.0" y="0.0" width="187" height="30"/>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
@@ -3212,7 +3186,6 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Od-M3-34p">
                                                         <rect key="frame" x="197" y="0.0" width="187" height="30"/>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
@@ -3270,7 +3243,6 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sFJ-FW-gfm">
                                                         <rect key="frame" x="0.0" y="19.333333333333371" width="384" height="30"/>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
@@ -3295,7 +3267,6 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nam-33-2Br">
                                                         <rect key="frame" x="0.0" y="19.333333333333371" width="384" height="30"/>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
@@ -3326,7 +3297,6 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hpy-iq-056">
                                                         <rect key="frame" x="0.0" y="0.0" width="187" height="30"/>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
@@ -3335,7 +3305,6 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nXN-sC-1lz">
                                                         <rect key="frame" x="197" y="0.0" width="187" height="30"/>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
@@ -3355,7 +3324,6 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aoB-CP-XIS">
                                                         <rect key="frame" x="0.0" y="30" width="384" height="30"/>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
@@ -3380,7 +3348,6 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i44-5b-YYA">
                                                         <rect key="frame" x="0.0" y="19.333333333333371" width="384" height="30"/>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
@@ -3411,7 +3378,6 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k8h-zb-807">
                                                         <rect key="frame" x="0.0" y="0.0" width="187" height="30"/>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
@@ -3420,7 +3386,6 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="awE-zf-V6I">
                                                         <rect key="frame" x="197" y="0.0" width="187" height="30"/>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
@@ -3440,7 +3405,6 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AW2-SG-dtX">
                                                         <rect key="frame" x="0.0" y="19.333333333333485" width="384" height="30"/>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
@@ -3465,7 +3429,6 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Agk-Y1-lCN">
                                                         <rect key="frame" x="0.0" y="19.333333333333258" width="384" height="30"/>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
@@ -3496,7 +3459,6 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ffq-C4-bWx">
                                                         <rect key="frame" x="0.0" y="0.0" width="187" height="30"/>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
@@ -3505,7 +3467,6 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xn0-WD-eZa">
                                                         <rect key="frame" x="197" y="0.0" width="187" height="30"/>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
@@ -3525,7 +3486,6 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ovm-g5-vWo">
                                                         <rect key="frame" x="0.0" y="19.333333333333485" width="384" height="30"/>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
@@ -3545,7 +3505,6 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                     </label>
                                                     <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RmG-zD-sHZ">
                                                         <rect key="frame" x="0.0" y="19.333333333333258" width="384" height="30"/>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
@@ -4230,6 +4189,7 @@ If you have any questions about these Terms or the Services, please contact Glob
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bP6-tP-JcH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="668" y="138"/>
         </scene>
         <!--Google MapVC-->
         <scene sceneID="Pbn-3B-zJM">
@@ -4238,9 +4198,65 @@ If you have any questions about these Terms or the Services, please contact Glob
                     <view key="view" contentMode="scaleToFill" id="h89-N5-i1o">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6fX-Gc-yTW">
+                                <rect key="frame" x="0.0" y="44" width="414" height="598"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm location on map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAr-Ll-uF4">
+                                <rect key="frame" x="81" y="662" width="252" height="27"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LNU-Ml-DDs">
+                                <rect key="frame" x="15" y="719" width="384" height="50"/>
+                                <color key="backgroundColor" red="0.21176470589999999" green="0.25882352939999997" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Pcr-AU-6dX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="SUBMIT"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="submitClicked:" destination="0zS-li-zfO" eventType="touchUpInside" id="Nh2-qn-BK7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZHw-vi-HLU">
+                                <rect key="frame" x="70.666666666666686" y="799" width="273" height="33"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="GO BACK TO PROPERTY DETAILS">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="goBackClicked:" destination="0zS-li-zfO" eventType="touchUpInside" id="1nK-Zd-Mlx"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LNU-Ml-DDs" firstAttribute="top" secondItem="NAr-Ll-uF4" secondAttribute="bottom" constant="30" id="5mu-FF-MoZ"/>
+                            <constraint firstItem="NhU-f0-ULm" firstAttribute="trailing" secondItem="6fX-Gc-yTW" secondAttribute="trailing" id="BSw-vR-zXo"/>
+                            <constraint firstItem="6fX-Gc-yTW" firstAttribute="leading" secondItem="NhU-f0-ULm" secondAttribute="leading" id="JP7-AZ-Ux0"/>
+                            <constraint firstItem="NAr-Ll-uF4" firstAttribute="centerX" secondItem="h89-N5-i1o" secondAttribute="centerX" id="PEO-jZ-dEd"/>
+                            <constraint firstItem="6fX-Gc-yTW" firstAttribute="top" secondItem="NhU-f0-ULm" secondAttribute="top" id="PZ2-gC-cKu"/>
+                            <constraint firstItem="NAr-Ll-uF4" firstAttribute="top" secondItem="6fX-Gc-yTW" secondAttribute="bottom" constant="20" id="ZC9-4L-WaY"/>
+                            <constraint firstItem="ZHw-vi-HLU" firstAttribute="centerX" secondItem="h89-N5-i1o" secondAttribute="centerX" id="fCf-0L-9IK"/>
+                            <constraint firstItem="ZHw-vi-HLU" firstAttribute="top" secondItem="LNU-Ml-DDs" secondAttribute="bottom" constant="30" id="kwb-4g-yvu"/>
+                            <constraint firstItem="NhU-f0-ULm" firstAttribute="bottom" secondItem="ZHw-vi-HLU" secondAttribute="bottom" constant="30" id="o4C-Vf-V55"/>
+                            <constraint firstItem="NhU-f0-ULm" firstAttribute="trailing" secondItem="LNU-Ml-DDs" secondAttribute="trailing" constant="15" id="oAD-8j-rn3"/>
+                            <constraint firstItem="LNU-Ml-DDs" firstAttribute="leading" secondItem="NhU-f0-ULm" secondAttribute="leading" constant="15" id="vJ4-ww-Bjh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="NhU-f0-ULm"/>
                     </view>
+                    <connections>
+                        <outlet property="googleMapView" destination="6fX-Gc-yTW" id="dyO-dI-YRz"/>
+                        <segue destination="gt3-p5-aMF" kind="show" identifier="ToMapView" id="dg5-xn-HGR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kjM-8y-aZB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -4387,7 +4403,6 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rAm-wX-GdH">
                                                         <rect key="frame" x="0.0" y="22" width="394" height="30"/>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
@@ -4418,7 +4433,6 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KZq-f4-8cq">
                                                         <rect key="frame" x="0.0" y="0.0" width="194.66666666666666" height="30"/>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
@@ -4427,7 +4441,6 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B5G-VE-S1Q">
                                                         <rect key="frame" x="199.66666666666663" y="0.0" width="194.33333333333337" height="30"/>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
@@ -4637,6 +4650,7 @@ If you have any questions about these Terms or the Services, please contact Glob
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KkJ-nw-vOS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="668" y="138"/>
         </scene>
         <!--Center View Controller-->
         <scene sceneID="Sx3-nK-fJa">
@@ -4651,6 +4665,7 @@ If you have any questions about these Terms or the Services, please contact Glob
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yvx-Gf-sQx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="668" y="138"/>
         </scene>
         <!--Customer Detail Job History Completed-->
         <scene sceneID="qqr-mZ-ceq">
@@ -5134,7 +5149,6 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="rl7-jY-A5b"/>
                                                         </constraints>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
@@ -5146,7 +5160,6 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="MED-gx-rHp"/>
                                                         </constraints>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
@@ -5201,7 +5214,6 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="9Ou-hD-pW2"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
@@ -5213,7 +5225,6 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="xPq-Cx-HSa"/>
                                                 </constraints>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
@@ -5302,6 +5313,22 @@ If you have any questions about these Terms or the Services, please contact Glob
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QLP-bD-6z1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="Yvw-0W-16f">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" id="gt3-p5-aMF" customClass="MapViewController" customModule="DoneFast" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vCK-OC-95V">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="K66-6r-7PK"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PvD-oQ-dET" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-620" y="-181"/>
         </scene>
     </scenes>
     <resources>

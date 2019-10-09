@@ -191,12 +191,13 @@ extension CustomerPropertyListVC:WebServiceDelegate
                 let alertController:UIAlertController = UIAlertController(title: "", message: propertyData!["message"]?.stringValue, preferredStyle: .alert)
 //                alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                 alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                    ClearLoginDetails.shared.clearAllLoginData()
                     guard let loginViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController
                         else
                     {
                         return
                     }
-                    ClearLoginDetails.shared.clearAllLoginData()
+                    
                     let appdelegate = UIApplication.shared.delegate as? AppDelegate
                     appdelegate?.window?.rootViewController = loginViewController
                 }))

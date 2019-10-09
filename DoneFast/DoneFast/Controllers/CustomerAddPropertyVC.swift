@@ -16,6 +16,8 @@ class CustomerAddPropertyVC: UIViewController,UITextFieldDelegate {
   var selectedProperty = ""
   var selectedPropertyDesign:Int?
   var activityIndicator:UIActivityIndicatorView?
+    var customerAddProperty:CustomerAddProperty?
+    
   
   @IBOutlet weak var singlePropBtn: UIButton!
   @IBOutlet weak var multiPropBtn: UIButton!
@@ -63,12 +65,24 @@ class CustomerAddPropertyVC: UIViewController,UITextFieldDelegate {
   }
   @IBAction func submitClicked(_ sender: Any)
   {
-    guard let userId =  UserLoginDetails.shared.userID else { return }
+//    self.performSegue(withIdentifier: "ToGoogleMapView", sender: self)
+//    guard let userId =  UserLoginDetails.shared.userID else { return }
     if let propertyDesign = propertyDesignTextField.text, let propertyEmailId = propertyEmailIdTextField.text,let propertyPhoneNumber = propertyPhoneNumberTextField.text,let propertyAddress = propertyAddressTextField.text,let propertyCity = propertyCityTextField.text,let propertyState = propertyStateTextField.text,let propertyZipCode = propertyZipCodeTextField.text
     {
       if (propertyDesign.count > 0 && propertyEmailId.count > 0 && propertyPhoneNumber.count > 0 && propertyAddress.count > 0 && propertyCity.count > 0 && propertyState.count > 0 && propertyZipCode.count > 0)
       {
+        customerAddProperty = CustomerAddProperty()
+        customerAddProperty?.propertyDesign = propertyDesign
+        customerAddProperty?.propertyEmailId = propertyEmailId
+        customerAddProperty?.propertyPhoneNumber = propertyPhoneNumber
+        customerAddProperty?.propertyAddress = propertyAddress
+        customerAddProperty?.propertyCity = propertyCity
+        customerAddProperty?.propertyState = propertyState
+        customerAddProperty?.propertyZipCode = propertyZipCode
+        customerAddProperty?.selectedProperty = selectedProperty
+        
         self.performSegue(withIdentifier: "ToGoogleMapView", sender: self)
+        
 //        let parameters = ["userID":userId,"propertyType":selectedProperty,"propertyDesign":propertyDesign,"propertyEmailId":propertyEmailId, "propertyPhoneNumber":propertyPhoneNumber,"propertyAddress":propertyAddress,"propertyCity":propertyCity,"propertyState":propertyState, "propertyZipCode":propertyZipCode,"propertyLocation":"44.968046,-94.420307"]
 //        guard let tokenStr = UserLoginDetails.shared.token else { return }
 //        self.view.isUserInteractionEnabled = false
@@ -87,6 +101,12 @@ class CustomerAddPropertyVC: UIViewController,UITextFieldDelegate {
     }
   }
   
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        let googleMapVC = segue.destination as? GoogleMapVC
+        googleMapVC?.customerAddProperty = self.customerAddProperty
+    }
+    
   func propertTypeSelect(selectedPropertyType:Int)
   {
     let tempPropertyType = selectedPropertyType + 1
