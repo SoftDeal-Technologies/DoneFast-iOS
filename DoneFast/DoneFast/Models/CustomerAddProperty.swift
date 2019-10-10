@@ -18,4 +18,5 @@ class CustomerAddProperty: NSObject
     var propertyState = ""
     var propertyZipCode = ""
     var selectedProperty = ""
+    var name = ""
 }

@@ -66,12 +66,13 @@ class GoogleMapVC: UIViewController {
         guard let propertyState = customerAddProperty?.propertyState else { return}
         guard let propertyZipCode = customerAddProperty?.propertyZipCode else { return}
         guard let selectedProperty = customerAddProperty?.selectedProperty else { return }
+        guard let propertyCustomerName = customerAddProperty?.name else { return }
 //        guard let tempLocation =  propertyLocation else {
 //            return
 //        }
        
         let tempPropertyLocation = String(format: "%0.2f,%0.2f",propertyLocation.latitude, propertyLocation.longitude)
-        let parameters = ["userID":userId,"propertyType":selectedProperty,"propertyDesign":propertyDesign,"propertyEmailId":propertyEmailId, "propertyPhoneNumber":propertyPhoneNumber,"propertyAddress":propertyAddress,"propertyCity":propertyCity,"propertyState":propertyState, "propertyZipCode":propertyZipCode,"propertyLocation":tempPropertyLocation]
+        let parameters = ["userID":userId,"propertyType":selectedProperty,"propertyDesign":propertyDesign,"propertyCustomerName":propertyCustomerName,"propertyEmailId":propertyEmailId, "propertyPhoneNumber":propertyPhoneNumber,"propertyAddress":propertyAddress,"propertyCity":propertyCity,"propertyState":propertyState, "propertyZipCode":propertyZipCode,"propertyLocation":tempPropertyLocation]
         guard let tokenStr = UserLoginDetails.shared.token else { return }
         self.view.isUserInteractionEnabled = false
         activityIndicator?.isHidden = false

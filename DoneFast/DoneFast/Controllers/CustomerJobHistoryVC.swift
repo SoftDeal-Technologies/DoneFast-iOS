@@ -15,7 +15,8 @@ class CustomerJobHistoryVC: UIViewController {
   var selectedCustomerRequest:CustomerRequest? = nil
   var delegate: CenterViewControllerDelegate?
   var activityIndicator:UIActivityIndicatorView?
-  
+  var refreshControl = UIRefreshControl()
+    
   @IBOutlet weak var jobRequestTableView: UITableView!
   
   override func viewDidLoad()
@@ -27,9 +28,18 @@ class CustomerJobHistoryVC: UIViewController {
     activityIndicator?.isHidden = true
     self.view.addSubview(activityIndicator!)
       // Do any additional setup after loading the view.
+    refreshControl.addTarget(self, action: #selector(refresh(sender:)), for: UIControl.Event.valueChanged)
+    jobRequestTableView.addSubview(refreshControl) // not required when using UITableViewController
   }
+
+    @objc func refresh(sender:AnyObject)
+    {
+    // Code to refresh table view
+        self.callWebService()
+    }
   
-  override func viewWillAppear(_ animated: Bool) {
+  override func viewWillAppear(_ animated: Bool)
+  {
     super.viewWillAppear(animated)
     self.callWebService()
   }
@@ -140,6 +150,10 @@ extension CustomerJobHistoryVC:WebServiceDelegate
       self.view.isUserInteractionEnabled = true
       self.activityIndicator?.stopAnimating()
       self.activityIndicator?.isHidden = true
+        if self.refreshControl.isRefreshing
+        {
+            self.refreshControl.endRefreshing()
+        }
     }
     if let jsonStr = try? JSON(parseJSON: responseString)
     {
@@ -181,6 +195,10 @@ extension CustomerJobHistoryVC:WebServiceDelegate
       self.view.isUserInteractionEnabled = true
       self.activityIndicator?.stopAnimating()
       self.activityIndicator?.isHidden = true
+        if self.refreshControl.isRefreshing
+        {
+            self.refreshControl.endRefreshing()
+        }
     }
   }
 }

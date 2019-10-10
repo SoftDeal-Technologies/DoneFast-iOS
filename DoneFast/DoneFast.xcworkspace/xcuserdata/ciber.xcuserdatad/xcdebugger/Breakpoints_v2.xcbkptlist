@@ -233,7 +233,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DoneFast/SlideInControllers/LeftSlideVC.swift"
-            timestampString = "590446183.119674"
+            timestampString = "592342856.156263"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "145"
@@ -242,6 +242,7 @@
             landmarkType = "7">
             <Locations>
                <Location
+                  uuid = "C69D3DA8-0842-44A5-9F21-E920BBD7626B - 4d26ae9207da8544"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -249,14 +250,14 @@
                   moduleName = "DoneFast"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ciber/Documents/DoneFast/GitCode/DoneFast-iOS/DoneFast/DoneFast/SlideInControllers/LeftSlideVC.swift"
-                  timestampString = "592342392.7276"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "145"
                   endingLineNumber = "145"
-                  offsetFromSymbolStart = "6">
+                  offsetFromSymbolStart = "0">
                </Location>
                <Location
+                  uuid = "C69D3DA8-0842-44A5-9F21-E920BBD7626B - 3f4d228c96e2a3c4"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -264,12 +265,11 @@
                   moduleName = "DoneFast"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ciber/Documents/DoneFast/GitCode/DoneFast-iOS/DoneFast/DoneFast/SlideInControllers/LeftSlideVC.swift"
-                  timestampString = "592342392.72911"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "147"
                   endingLineNumber = "147"
-                  offsetFromSymbolStart = "196">
+                  offsetFromSymbolStart = "208">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -282,7 +282,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DoneFast/Controllers/EditUserProfileVC.swift"
-            timestampString = "591908285.579317"
+            timestampString = "592342856.156577"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "114"
@@ -299,7 +299,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DoneFast/Controllers/EditUserProfileVC.swift"
-            timestampString = "591908285.580196"
+            timestampString = "592342856.15662"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "142"
@@ -316,7 +316,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DoneFast/Controllers/EditUserProfileVC.swift"
-            timestampString = "591908285.580811"
+            timestampString = "592342856.156657"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "119"
@@ -393,6 +393,7 @@
             landmarkType = "7">
             <Locations>
                <Location
+                  uuid = "9783F8AA-6C0A-4FC8-8C76-EC5E5557DEA1 - d4528b731ca48bd7"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -400,14 +401,14 @@
                   moduleName = "DoneFast"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ciber/Documents/DoneFast/GitCode/DoneFast-iOS/DoneFast/DoneFast/Models/WebServices.swift"
-                  timestampString = "592342392.753336"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "89"
                   endingLineNumber = "89"
-                  offsetFromSymbolStart = "10214">
+                  offsetFromSymbolStart = "7852">
                </Location>
                <Location
+                  uuid = "9783F8AA-6C0A-4FC8-8C76-EC5E5557DEA1 - 99255c8e34a43cc4"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -415,31 +416,13 @@
                   moduleName = "DoneFast"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ciber/Documents/DoneFast/GitCode/DoneFast-iOS/DoneFast/DoneFast/Models/WebServices.swift"
-                  timestampString = "592342392.755242"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "91"
                   endingLineNumber = "91"
-                  offsetFromSymbolStart = "272">
+                  offsetFromSymbolStart = "284">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "000D7D3C-18F1-4584-BACE-CC84D27AFBD3"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DoneFast/Controllers/EditCustomerPropertyVC.swift"
-            timestampString = "591999218.985518"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
-            landmarkName = "updateClicked(_:)"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -450,7 +433,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DoneFast/Controllers/EditCustomerPropertyVC.swift"
-            timestampString = "591999218.9859"
+            timestampString = "592414667.554347"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "55"
@@ -501,7 +484,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DoneFast/Controllers/EditUserProfileVC.swift"
-            timestampString = "592000680.802755"
+            timestampString = "592342856.156767"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "73"
@@ -513,11 +496,12 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "2B71F67A-208B-4C0D-B147-82E2CA21BBE0"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DoneFast/Controllers/GoogleMapVC.swift"
-            timestampString = "592342392.482075"
+            timestampString = "592414667.554453"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "36"
@@ -529,11 +513,12 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "72349F45-784F-4723-8772-6F71710513D0"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DoneFast/Controllers/GoogleMapVC.swift"
-            timestampString = "592342392.482134"
+            timestampString = "592414667.554502"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "49"
@@ -545,17 +530,35 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "5DA6F40B-09A0-4C4D-A986-C451580E10E8"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DoneFast/Controllers/GoogleMapVC.swift"
-            timestampString = "592342392.482178"
+            timestampString = "592414667.554545"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "submitClicked(_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2443EC49-7749-4BCB-ABC9-A703A28F6537"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DoneFast/Controllers/LoginViewController.swift"
+            timestampString = "592414667.5545861"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

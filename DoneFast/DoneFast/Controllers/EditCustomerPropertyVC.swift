@@ -96,7 +96,9 @@ class EditCustomerPropertyVC: UIViewController,UITextFieldDelegate
       }
       else
       {
-        
+        let alertController:UIAlertController = UIAlertController(title: "", message: "Please enter all fields.", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alertController, animated: true, completion: nil)
       }
     }
   }

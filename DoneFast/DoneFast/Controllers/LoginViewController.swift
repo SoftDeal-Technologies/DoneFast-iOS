@@ -37,13 +37,15 @@ class LoginViewController: UIViewController,WebServiceDelegate,UITextFieldDelega
 
   override func viewWillAppear(_ animated: Bool)
   {
-//    let url = URL(string: "https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyBeqBI1WW17EbDivgy0FmLuxXxCTUkG93s")!//AIzaSyA6ckXaeZUVzdyl_FXyELN-hOtTfVk7xUc    AIzaSyCKbenjADh3LkCm7-JdiKQHvK4XEBmdeWg
-//    let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
-//        guard let data = data else { return }
-//        print(String(data: data, encoding: .utf8)!)
-//    }
+    let url = URL(string: "https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyBeqBI1WW17EbDivgy0FmLuxXxCTUkG93s")!//AIzaSyA6ckXaeZUVzdyl_FXyELN-hOtTfVk7xUc    AIzaSyCKbenjADh3LkCm7-JdiKQHvK4XEBmdeWg
+    let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
+        guard let data = data else { return }
+        print(String(data: data, encoding: .utf8)!)
+        
+//https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=YOUR_API_KEY
+    }
     
-//    task.resume()
+    task.resume()
     
     super.viewWillAppear(true)
     let tokenStr = UserDefaults.standard.value(forKey: "token") as? String

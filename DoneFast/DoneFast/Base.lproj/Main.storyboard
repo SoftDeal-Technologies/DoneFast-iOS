@@ -1069,7 +1069,7 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="D5j-0R-Yuh">
-                                                <rect key="frame" x="15" y="387" width="384" height="88"/>
+                                                <rect key="frame" x="15" y="387" width="384" height="153"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KLP-uI-JdO">
                                                         <rect key="frame" x="0.0" y="0.0" width="145.66666666666666" height="23"/>
@@ -1077,8 +1077,17 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="mUW-Il-fQ9">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WWd-np-hfp">
                                                         <rect key="frame" x="0.0" y="48" width="384" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="QTK-NS-EfG"/>
+                                                        </constraints>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="mUW-Il-fQ9">
+                                                        <rect key="frame" x="0.0" y="113" width="384" height="40"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k50-FX-QRB">
                                                                 <rect key="frame" x="0.0" y="0.0" width="182" height="40"/>
@@ -1106,12 +1115,14 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                     </stackView>
                                                 </subviews>
                                                 <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="WWd-np-hfp" secondAttribute="trailing" id="5GW-TD-Xgf"/>
+                                                    <constraint firstItem="WWd-np-hfp" firstAttribute="leading" secondItem="D5j-0R-Yuh" secondAttribute="leading" id="CaQ-vw-XGY"/>
                                                     <constraint firstItem="mUW-Il-fQ9" firstAttribute="leading" secondItem="D5j-0R-Yuh" secondAttribute="leading" id="Rob-0Y-vu4"/>
                                                     <constraint firstAttribute="trailing" secondItem="mUW-Il-fQ9" secondAttribute="trailing" id="cJh-H3-DLW"/>
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="WrC-KU-1DF">
-                                                <rect key="frame" x="15" y="500" width="384" height="218"/>
+                                                <rect key="frame" x="15" y="565" width="384" height="218"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4s-Xe-6c5">
                                                         <rect key="frame" x="0.0" y="0.0" width="151.33333333333334" height="23"/>
@@ -1144,7 +1155,7 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                                     <outlet property="delegate" destination="G2t-6Q-cQS" id="TXD-Wt-D20"/>
                                                                 </connections>
                                                             </textField>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="State" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VvT-kM-nIK">
+                                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Florida" borderStyle="roundedRect" placeholder="State" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VvT-kM-nIK">
                                                                 <rect key="frame" x="202" y="0.0" width="182" height="40"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="40" id="Vqx-oS-pMn"/>
@@ -1179,7 +1190,7 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                 </constraints>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGT-cj-k8n">
-                                                <rect key="frame" x="15" y="743" width="384" height="50"/>
+                                                <rect key="frame" x="15" y="808" width="384" height="50"/>
                                                 <color key="backgroundColor" red="0.21176470589999999" green="0.25882352939999997" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="ILc-p2-c0b"/>
@@ -1286,6 +1297,7 @@ If you have any questions about these Terms or the Services, please contact Glob
                     </view>
                     <connections>
                         <outlet property="bgScrollView" destination="0eP-hv-9hR" id="yLk-Ya-zfQ"/>
+                        <outlet property="nameTextField" destination="WWd-np-hfp" id="zC0-Vw-Cqd"/>
                         <outlet property="propertyAddressTextField" destination="reG-Qe-ftG" id="bbu-ik-sCQ"/>
                         <outlet property="propertyCityTextField" destination="Dz2-y8-kj7" id="mS6-7b-BtD"/>
                         <outlet property="propertyDesignTextField" destination="jM1-Op-uVO" id="dTc-xT-fz6"/>
@@ -1537,8 +1549,24 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                     </label>
                                                 </subviews>
                                             </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="zrI-3l-jRp">
+                                                <rect key="frame" x="15" y="272.66666666666669" width="384" height="40.666666666666686"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXz-vu-iyB">
+                                                        <rect key="frame" x="0.0" y="0.0" width="384" height="19.333333333333332"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hardik Nimavat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KUG-iM-Nk8">
+                                                        <rect key="frame" x="0.0" y="21.333333333333314" width="384" height="19.333333333333329"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="F82-c3-hZs">
-                                                <rect key="frame" x="15" y="338.33333333333331" width="384" height="40.666666666666686"/>
+                                                <rect key="frame" x="15" y="389" width="384" height="40.666666666666686"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="6z6-RC-3G2">
                                                         <rect key="frame" x="0.0" y="0.0" width="187" height="40.666666666666664"/>
@@ -1575,7 +1603,7 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9Uv-fk-Fih">
-                                                <rect key="frame" x="15" y="277.66666666666669" width="384" height="40.666666666666686"/>
+                                                <rect key="frame" x="15" y="328.33333333333331" width="384" height="40.666666666666686"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="lEk-8L-wZW">
                                                         <rect key="frame" x="0.0" y="0.0" width="187" height="40.666666666666664"/>
@@ -1587,7 +1615,7 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hnimavat@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9eu-zn-Xxx">
-                                                                <rect key="frame" x="0.0" y="21.333333333333314" width="187" height="19.333333333333329"/>
+                                                                <rect key="frame" x="0.0" y="21.333333333333371" width="187" height="19.333333333333329"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -1603,7 +1631,7 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="98988989898" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58E-Zn-rHx">
-                                                                <rect key="frame" x="0.0" y="21.333333333333314" width="187" height="19.333333333333329"/>
+                                                                <rect key="frame" x="0.0" y="21.333333333333371" width="187" height="19.333333333333329"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -1612,7 +1640,7 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="4TO-2q-b8c">
-                                                <rect key="frame" x="15" y="399" width="384" height="40.666666666666686"/>
+                                                <rect key="frame" x="15" y="449.66666666666663" width="384" height="40.666666666666686"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zip Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mc0-QG-X0x">
                                                         <rect key="frame" x="0.0" y="0.0" width="384" height="19.333333333333332"/>
@@ -1628,7 +1656,7 @@ If you have any questions about these Terms or the Services, please contact Glob
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfS-rA-2Sr">
-                                                <rect key="frame" x="15" y="479.66666666666663" width="384" height="50"/>
+                                                <rect key="frame" x="15" y="530.33333333333337" width="384" height="50"/>
                                                 <color key="backgroundColor" red="0.21176470589999999" green="0.25882352939999997" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="fMP-Z0-OOp"/>
@@ -1655,6 +1683,7 @@ If you have any questions about these Terms or the Services, please contact Glob
                                             <constraint firstItem="hWW-rU-6mT" firstAttribute="top" secondItem="qrD-of-Cys" secondAttribute="top" constant="30" id="61n-AF-ocp"/>
                                             <constraint firstItem="Y7P-Ve-HFK" firstAttribute="top" secondItem="qrD-of-Cys" secondAttribute="top" constant="20" id="771-EW-PYq"/>
                                             <constraint firstAttribute="height" constant="610" id="9Fp-fH-Tm3"/>
+                                            <constraint firstItem="zrI-3l-jRp" firstAttribute="leading" secondItem="aaZ-c8-uXm" secondAttribute="leading" id="BWn-d8-LFE"/>
                                             <constraint firstItem="nhM-Ie-vv0" firstAttribute="leading" secondItem="qrD-of-Cys" secondAttribute="leading" constant="15" id="EPq-0E-SS1"/>
                                             <constraint firstItem="q6N-SZ-ny0" firstAttribute="top" secondItem="nhM-Ie-vv0" secondAttribute="bottom" constant="15" id="EWC-kJ-nrQ"/>
                                             <constraint firstItem="9Uv-fk-Fih" firstAttribute="trailing" secondItem="nhM-Ie-vv0" secondAttribute="trailing" id="Eaa-JH-kPn"/>
@@ -1663,7 +1692,7 @@ If you have any questions about these Terms or the Services, please contact Glob
                                             <constraint firstAttribute="trailing" secondItem="hWW-rU-6mT" secondAttribute="trailing" constant="15" id="JaR-wH-Yva"/>
                                             <constraint firstItem="aaZ-c8-uXm" firstAttribute="top" secondItem="Xwx-Xr-fVf" secondAttribute="bottom" constant="15" id="K7T-bn-qnz"/>
                                             <constraint firstItem="7Fr-KX-wuf" firstAttribute="top" secondItem="gKc-KN-KrZ" secondAttribute="top" id="LjV-Pf-i2n"/>
-                                            <constraint firstItem="9Uv-fk-Fih" firstAttribute="top" secondItem="aaZ-c8-uXm" secondAttribute="bottom" constant="20" id="PGk-93-fds"/>
+                                            <constraint firstItem="zrI-3l-jRp" firstAttribute="top" secondItem="aaZ-c8-uXm" secondAttribute="bottom" constant="15" id="LzU-tZ-bAO"/>
                                             <constraint firstItem="7Fr-KX-wuf" firstAttribute="leading" secondItem="gKc-KN-KrZ" secondAttribute="trailing" constant="15" id="QG6-H6-wMf"/>
                                             <constraint firstItem="7Fr-KX-wuf" firstAttribute="leading" secondItem="gKc-KN-KrZ" secondAttribute="trailing" constant="15" id="QNc-zN-pV4"/>
                                             <constraint firstItem="4TO-2q-b8c" firstAttribute="top" secondItem="F82-c3-hZs" secondAttribute="bottom" constant="20" id="QnX-L8-7UE"/>
@@ -1671,6 +1700,7 @@ If you have any questions about these Terms or the Services, please contact Glob
                                             <constraint firstItem="lfS-rA-2Sr" firstAttribute="top" secondItem="4TO-2q-b8c" secondAttribute="bottom" constant="40" id="RtL-k4-rdl"/>
                                             <constraint firstItem="gKc-KN-KrZ" firstAttribute="top" secondItem="hWW-rU-6mT" secondAttribute="bottom" constant="10" id="WIV-cm-yms"/>
                                             <constraint firstItem="hWW-rU-6mT" firstAttribute="leading" secondItem="Y7P-Ve-HFK" secondAttribute="trailing" constant="25" id="Xds-Se-Hug"/>
+                                            <constraint firstItem="zrI-3l-jRp" firstAttribute="trailing" secondItem="aaZ-c8-uXm" secondAttribute="trailing" id="Zuh-6Y-TrD"/>
                                             <constraint firstItem="4TO-2q-b8c" firstAttribute="trailing" secondItem="nhM-Ie-vv0" secondAttribute="trailing" id="alM-n3-ysc"/>
                                             <constraint firstItem="lfS-rA-2Sr" firstAttribute="trailing" secondItem="nhM-Ie-vv0" secondAttribute="trailing" id="azq-q7-w5t"/>
                                             <constraint firstAttribute="trailing" secondItem="q6N-SZ-ny0" secondAttribute="trailing" constant="15" id="dRb-e6-aoB"/>
@@ -1680,6 +1710,7 @@ If you have any questions about these Terms or the Services, please contact Glob
                                             <constraint firstItem="nhM-Ie-vv0" firstAttribute="top" secondItem="7Fr-KX-wuf" secondAttribute="bottom" constant="15" id="hlJ-RP-WjP"/>
                                             <constraint firstItem="Xwx-Xr-fVf" firstAttribute="trailing" secondItem="nhM-Ie-vv0" secondAttribute="trailing" id="oIa-MI-nYQ"/>
                                             <constraint firstItem="9Uv-fk-Fih" firstAttribute="leading" secondItem="nhM-Ie-vv0" secondAttribute="leading" id="rIB-xY-da1"/>
+                                            <constraint firstItem="9Uv-fk-Fih" firstAttribute="top" secondItem="zrI-3l-jRp" secondAttribute="bottom" constant="15" id="wRk-eq-KZt"/>
                                             <constraint firstItem="lfS-rA-2Sr" firstAttribute="leading" secondItem="nhM-Ie-vv0" secondAttribute="leading" id="xj4-Xa-RuL"/>
                                             <constraint firstItem="Xwx-Xr-fVf" firstAttribute="top" secondItem="q6N-SZ-ny0" secondAttribute="bottom" constant="10" id="zs9-US-xLx"/>
                                         </constraints>
@@ -1715,6 +1746,7 @@ If you have any questions about these Terms or the Services, please contact Glob
                         <outlet property="cityLabel" destination="NzF-7q-MW7" id="cuJ-ao-DSK"/>
                         <outlet property="editDeletePropertyBtn" destination="wOP-uc-VHh" id="VOo-46-KUR"/>
                         <outlet property="emailLabel" destination="9eu-zn-Xxx" id="YWM-JD-PPg"/>
+                        <outlet property="nameLabel" destination="KUG-iM-Nk8" id="doA-Rd-Dth"/>
                         <outlet property="phoneNoLabel" destination="58E-Zn-rHx" id="LL6-mL-JqW"/>
                         <outlet property="propertyAddressLabel" destination="7Fr-KX-wuf" id="h65-Uf-f0r"/>
                         <outlet property="propertyDesignLabel" destination="khN-8h-jKl" id="IcA-Ua-pcf"/>
@@ -3024,6 +3056,7 @@ If you have any questions about these Terms or the Services, please contact Glob
                         <outlet property="nameLabel" destination="QbL-VO-5QK" id="DFu-NC-zGc"/>
                         <outlet property="phoneNoLabel" destination="4vS-Dk-Hbh" id="Bcd-WI-qci"/>
                         <outlet property="stateLabel" destination="ZLX-v0-2Mo" id="Kgy-7R-ZaE"/>
+                        <outlet property="topScrollView" destination="FiJ-Xj-4yF" id="ch0-Rp-z9l"/>
                         <outlet property="zipCodeBillingLabel" destination="ltA-4v-Ggs" id="yTz-o0-dPd"/>
                         <outlet property="zipCodeLabel" destination="S15-xK-cSx" id="Sjl-26-U8L"/>
                         <segue destination="fgJ-g2-EVx" kind="show" identifier="ToEditUserProfile" id="akm-E3-zN3"/>

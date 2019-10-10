@@ -19,7 +19,8 @@ class CustomerAddPropertyVC: UIViewController,UITextFieldDelegate {
     var customerAddProperty:CustomerAddProperty?
     
   
-  @IBOutlet weak var singlePropBtn: UIButton!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var singlePropBtn: UIButton!
   @IBOutlet weak var multiPropBtn: UIButton!
   @IBOutlet weak var commercialPropBtn: UIButton!
   @IBOutlet weak var propertyDesignTextField: UITextField!
@@ -67,9 +68,9 @@ class CustomerAddPropertyVC: UIViewController,UITextFieldDelegate {
   {
 //    self.performSegue(withIdentifier: "ToGoogleMapView", sender: self)
 //    guard let userId =  UserLoginDetails.shared.userID else { return }
-    if let propertyDesign = propertyDesignTextField.text, let propertyEmailId = propertyEmailIdTextField.text,let propertyPhoneNumber = propertyPhoneNumberTextField.text,let propertyAddress = propertyAddressTextField.text,let propertyCity = propertyCityTextField.text,let propertyState = propertyStateTextField.text,let propertyZipCode = propertyZipCodeTextField.text
+    if let propertyDesign = propertyDesignTextField.text, let propertyEmailId = propertyEmailIdTextField.text,let propertyPhoneNumber = propertyPhoneNumberTextField.text,let propertyAddress = propertyAddressTextField.text,let propertyCity = propertyCityTextField.text,let propertyState = propertyStateTextField.text,let propertyZipCode = propertyZipCodeTextField.text, let name = nameTextField.text
     {
-      if (propertyDesign.count > 0 && propertyEmailId.count > 0 && propertyPhoneNumber.count > 0 && propertyAddress.count > 0 && propertyCity.count > 0 && propertyState.count > 0 && propertyZipCode.count > 0)
+      if (propertyDesign.count > 0 && propertyEmailId.count > 0 && propertyPhoneNumber.count > 0 && propertyAddress.count > 0 && propertyCity.count > 0 && propertyState.count > 0 && propertyZipCode.count > 0 && name.count > 0)
       {
         customerAddProperty = CustomerAddProperty()
         customerAddProperty?.propertyDesign = propertyDesign
@@ -80,7 +81,7 @@ class CustomerAddPropertyVC: UIViewController,UITextFieldDelegate {
         customerAddProperty?.propertyState = propertyState
         customerAddProperty?.propertyZipCode = propertyZipCode
         customerAddProperty?.selectedProperty = selectedProperty
-        
+        customerAddProperty?.name = name
         self.performSegue(withIdentifier: "ToGoogleMapView", sender: self)
         
 //        let parameters = ["userID":userId,"propertyType":selectedProperty,"propertyDesign":propertyDesign,"propertyEmailId":propertyEmailId, "propertyPhoneNumber":propertyPhoneNumber,"propertyAddress":propertyAddress,"propertyCity":propertyCity,"propertyState":propertyState, "propertyZipCode":propertyZipCode,"propertyLocation":"44.968046,-94.420307"]

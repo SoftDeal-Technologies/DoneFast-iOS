@@ -28,7 +28,8 @@ class CustomerPropertyDetailVC: UIViewController {
   @IBOutlet weak var editDeletePropertyBtn: UIButton!
   var activityIndicator:UIActivityIndicatorView?
   
-  override func viewDidLoad()
+    @IBOutlet weak var nameLabel: UILabel!
+    override func viewDidLoad()
   {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
@@ -37,11 +38,12 @@ class CustomerPropertyDetailVC: UIViewController {
     activityIndicator?.hidesWhenStopped = true
     activityIndicator?.isHidden = true
     self.view.addSubview(activityIndicator!)
-    self.callWebService(webServiceType: .VIEW_CUSTOMER_PROPERTY)
+    
   }
   
   override func viewWillAppear(_ animated: Bool)
   {
+    self.callWebService(webServiceType: .VIEW_CUSTOMER_PROPERTY)
     super.viewWillAppear(animated)
   }
   /*
@@ -160,6 +162,7 @@ extension CustomerPropertyDetailVC : WebServiceDelegate
               self.cityLabel.text =  tempProperty["propertyCity"].stringValue
               self.propertyAddressLabel.text =  tempProperty["propertyAddress"].stringValue
               let propertyType = tempProperty["propertyType"].stringValue
+                self.nameLabel.text = tempProperty["propertyCustomerName"].stringValue
               
               self.propertyList = PropertyList()
               
@@ -175,6 +178,8 @@ extension CustomerPropertyDetailVC : WebServiceDelegate
               self.propertyList!.propertyCustomerName = tempProperty["propertyCustomerName"].stringValue
               self.propertyList!.propertyPhoneNumber = tempProperty["propertyPhoneNumber"].stringValue
               self.propertyList!.propertyEmailId = tempProperty["propertyEmailId"].stringValue
+                self.propertyList!.name = tempProperty["propertyCustomerName"].stringValue
+                
               if propertyType == "Single"
               {
                 self.propertyTypeImageView.image = UIImage(named: "ic_single")

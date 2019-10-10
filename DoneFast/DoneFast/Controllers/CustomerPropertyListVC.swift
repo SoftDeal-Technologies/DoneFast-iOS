@@ -19,7 +19,8 @@ class CustomerPropertyListVC: UIViewController {
   var propertyListArray:[PropertyList] = []
   var selectedPropertyId:String?
   var activityIndicator:UIActivityIndicatorView?
-  
+  var refreshControl = UIRefreshControl()
+    
   override func viewDidLoad()
   {
       super.viewDidLoad()
@@ -29,11 +30,21 @@ class CustomerPropertyListVC: UIViewController {
     activityIndicator?.hidesWhenStopped = true
     activityIndicator?.isHidden = true
     self.view.addSubview(activityIndicator!)
+    
+    refreshControl.addTarget(self, action: #selector(refresh(sender:)), for: UIControl.Event.valueChanged)
+    customerListTableView.addSubview(refreshControl) // not required when using UITableViewController
+    
   }
-  override func viewWillAppear(_ animated: Bool) {
+  override func viewWillAppear(_ animated: Bool)
+  {
     super.viewWillAppear(animated)
     self.callWebService()
   }
+    
+    @objc func refresh(sender:AnyObject) {
+       // Code to refresh table view
+        self.callWebService()
+    }
   
   func callWebService()
   {
@@ -151,6 +162,10 @@ extension CustomerPropertyListVC:WebServiceDelegate
       self.view.isUserInteractionEnabled = true
       self.activityIndicator?.stopAnimating()
       self.activityIndicator?.isHidden = true
+        if self.refreshControl.isRefreshing
+        {
+            self.refreshControl.endRefreshing()
+        }
     }
     
     if let jsonStr = try? JSON(parseJSON: responseString)
@@ -214,6 +229,10 @@ extension CustomerPropertyListVC:WebServiceDelegate
       self.view.isUserInteractionEnabled = true
       self.activityIndicator?.stopAnimating()
       self.activityIndicator?.isHidden = true
+        if self.refreshControl.isRefreshing
+        {
+            self.refreshControl.endRefreshing()
+        }
     }
   }
 }

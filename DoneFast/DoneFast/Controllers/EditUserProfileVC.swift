@@ -153,7 +153,6 @@ extension EditUserProfileVC:WebServiceDelegate
             self.navigationController?.popViewController(animated: true)
           }))
           self.present(alertController, animated: true, completion: nil)
-          
         }
       }
     }
@@ -175,6 +174,7 @@ extension EditUserProfileVC: UIImagePickerControllerDelegate,UINavigationControl
     if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
     {
       custProfilePicImageView.image = pickedImage
+        custProfilePicImageView.layer.cornerRadius = (custProfilePicImageView.frame.size.width/2)
     }
     dismiss(animated: true, completion: nil)
   }

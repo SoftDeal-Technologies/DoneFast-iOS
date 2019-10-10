@@ -22,6 +22,7 @@ class PropertyList: NSObject {
   var propertyCustomerName:String?
   var propertyEmailId:String?
   var propertyPhoneNumber:String?
+    var name:String?
 }
 
 
