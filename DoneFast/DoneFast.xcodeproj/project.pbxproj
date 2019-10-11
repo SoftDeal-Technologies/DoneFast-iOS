@@ -41,6 +41,7 @@
 		1495F5B623145D80006022F4 /* CustomerJobHistoryTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1495F5B423145D80006022F4 /* CustomerJobHistoryTableCell.swift */; };
 		1495F5B8231464BB006022F4 /* CustomerDetailJobHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1495F5B7231464BB006022F4 /* CustomerDetailJobHistoryVC.swift */; };
 		14A7ABEC2323C79A00005E42 /* GoogleMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A7ABEB2323C79A00005E42 /* GoogleMapVC.swift */; };
+		14B56B8B235113DD001376E6 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B56B8A235113DD001376E6 /* Utility.swift */; };
 		14B820CC232E462900CE13D6 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B820CB232E462900CE13D6 /* ContainerViewController.swift */; };
 		14CB9E8D230C50E100540B87 /* CustomerPropertyListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CB9E8C230C50E100540B87 /* CustomerPropertyListVC.swift */; };
 		14CB9E90230C56A700540B87 /* CustomerPropertyDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CB9E8F230C56A700540B87 /* CustomerPropertyDetailVC.swift */; };
@@ -102,6 +103,7 @@
 		1495F5B423145D80006022F4 /* CustomerJobHistoryTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerJobHistoryTableCell.swift; sourceTree = "<group>"; };
 		1495F5B7231464BB006022F4 /* CustomerDetailJobHistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerDetailJobHistoryVC.swift; sourceTree = "<group>"; };
 		14A7ABEB2323C79A00005E42 /* GoogleMapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapVC.swift; sourceTree = "<group>"; };
+		14B56B8A235113DD001376E6 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		14B820CB232E462900CE13D6 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		14CB9E8C230C50E100540B87 /* CustomerPropertyListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerPropertyListVC.swift; sourceTree = "<group>"; };
 		14CB9E8F230C56A700540B87 /* CustomerPropertyDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerPropertyDetailVC.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				148C25DA232C1CAD008EB3D5 /* CustomerRequest.swift */,
 				143166A9232CF7E7007A2098 /* CustomerRequestPriceQuote.swift */,
 				1436474A234D1033008720ED /* CustomerAddProperty.swift */,
+				14B56B8A235113DD001376E6 /* Utility.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 				146DD96B2336B88900A2EC59 /* BillingAddressVC.swift in Sources */,
 				143166AA232CF7E7007A2098 /* CustomerRequestPriceQuote.swift in Sources */,
 				1495F5B8231464BB006022F4 /* CustomerDetailJobHistoryVC.swift in Sources */,
+				14B56B8B235113DD001376E6 /* Utility.swift in Sources */,
 				14CB9E90230C56A700540B87 /* CustomerPropertyDetailVC.swift in Sources */,
 				14654333231F02E3005D24A5 /* ServiceSubCatogary.swift in Sources */,
 				1418E18923009A4E005324A6 /* TermsConditionsViewController.swift in Sources */,

@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Done Fast</string>
+	<string>Done Fast New</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -13,7 +13,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>Done Fast</string>
+	<string>Done Fast New</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
@@ -33,15 +33,15 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>This App takes the photo&apos;s of customer property</string>
+	<string>This App takes the photo's of customer property</string>
 	<key>NSLocationUsageDescription</key>
-	<string>App requires customer&apos;s property location</string>
+	<string>App requires customer's property location</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>App requires customer&apos;s property location</string>
+	<string>App requires customer's property location</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>App Uses Customer&apos;s Digital Signature </string>
+	<string>App Uses Customer's Digital Signature </string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>This App takes the photo&apos;s of customer property from photo library</string>
+	<string>This App takes the photo's of customer property from photo library</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

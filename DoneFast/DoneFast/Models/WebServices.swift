@@ -33,7 +33,7 @@ class WebServices {
     // the image in UIImage type
     //    let image = signatureImage
     //
-        let filename = "image.png"
+    let filename = "image.png"
     
     // generate boundary string using a unique per-app string
     let boundary = UUID().uuidString
@@ -71,11 +71,13 @@ class WebServices {
     for var i in (0..<imageDataArray.count)
     {
       let dataImage = imageDataArray[i]
+//        let dataImage = UIImage(named: filename)
+        
       let imageName = imagesString[i]
       data.append("\r\n--\(boundary)\r\n".data(using: .utf8)!)
       data.append("Content-Disposition: form-data; name=\"\(imageName))\";filename=\"\(filename)\"\r\n".data(using: .utf8)!) //image1 , customerSignature //
       data.append("Content-Type: image/png\r\n\r\n".data(using: .utf8)!)
-      data.append(dataImage.pngData()!)
+        data.append(dataImage.pngData()!)
       i = i+1
     }
 

@@ -37,16 +37,10 @@ class LoginViewController: UIViewController,WebServiceDelegate,UITextFieldDelega
 
   override func viewWillAppear(_ animated: Bool)
   {
-    let url = URL(string: "https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyBeqBI1WW17EbDivgy0FmLuxXxCTUkG93s")!//AIzaSyA6ckXaeZUVzdyl_FXyELN-hOtTfVk7xUc    AIzaSyCKbenjADh3LkCm7-JdiKQHvK4XEBmdeWg
-    let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
-        guard let data = data else { return }
-        print(String(data: data, encoding: .utf8)!)
-        
-//https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=YOUR_API_KEY
-    }
     
-    task.resume()
     
+//    self.performGoogleSearch(for: "Btm layout, 1st stage, Banglore")
+//    self.getLatLong()
     super.viewWillAppear(true)
     let tokenStr = UserDefaults.standard.value(forKey: "token") as? String
     if let token = tokenStr
@@ -59,6 +53,62 @@ class LoginViewController: UIViewController,WebServiceDelegate,UITextFieldDelega
     }
   }
   
+    func getLatLong()
+    {
+        let url = URL(string: "https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyBeqBI1WW17EbDivgy0FmLuxXxCTUkG93s")!//AIzaSyA6ckXaeZUVzdyl_FXyELN-hOtTfVk7xUc    AIzaSyCKbenjADh3LkCm7-JdiKQHvK4XEBmdeWg
+        //https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyBeqBI1WW17EbDivgy0FmLuxXxCTUkG93s
+        //https://maps.googleapis.com/maps/api/geocode/json?latlng=\(-33.86),\(151.20)&key=AIzaSyBeqBI1WW17EbDivgy0FmLuxXxCTUkG93s
+        
+        let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
+            guard let data = data else { return }
+            print(String(data: data, encoding: .utf8)!)
+            
+            //https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=YOUR_API_KEY
+        }
+        
+        task.resume()
+//
+    }
+    func performGoogleSearch(for string: String)
+    {
+//        strings = nil
+        
+        var components = URLComponents(string: "https://maps.googleapis.com/maps/api/geocode/json")!
+        let key = URLQueryItem(name: "key", value: "AIzaSyBeqBI1WW17EbDivgy0FmLuxXxCTUkG93s") // use your key
+        let address = URLQueryItem(name: "address", value: string)
+        components.queryItems = [key, address]
+        
+        let task = URLSession.shared.dataTask(with: components.url!) { data, response, error in
+            guard let data = data, let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200, error == nil else {
+                print(String(describing: response))
+                print(String(describing: error))
+                return
+            }
+            
+            guard let json = (try? JSONSerialization.jsonObject(with: data)) as? [String: Any] else {
+                print("not JSON format expected")
+                print(String(data: data, encoding: .utf8) ?? "Not string?!?")
+                return
+            }
+            
+            guard let results = json["results"] as? [[String: Any]],
+                let status = json["status"] as? String,
+                status == "OK" else {
+                    print("no results")
+                    print(String(describing: json))
+                    return
+            }
+            
+            DispatchQueue.main.async {
+                // now do something with the results, e.g. grab `formatted_address`:
+                let strings = results.compactMap { $0["formatted_address"] as? String }
+             print(strings)
+            }
+        }
+        
+        task.resume()
+    }
+    
   func tokenExists()
   {
     let loginType = UserDefaults.standard.value(forKey: "loginType") as? String

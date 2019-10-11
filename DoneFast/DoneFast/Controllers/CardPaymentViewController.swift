@@ -81,6 +81,17 @@ class CardPaymentViewController: UIViewController,WebServiceDelegate,SignatureDe
     }
     
 
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool
+    {
+        let allowedCharacters = CharacterSet(charactersIn:"0123456789 ")//Here change this characters based on your requirement
+        let characterSet = CharacterSet(charactersIn: string)
+        if textField == self.cardNumberTxtField || textField == self.cvvTxtField
+        {
+            return allowedCharacters.isSuperset(of: characterSet)
+        }
+        return true
+    }
+    
   @IBAction func signatureClicked(_ sender: Any)
   {
     self.performSegue(withIdentifier: "ToDigitalSignatureView", sender: self)
@@ -109,15 +120,7 @@ class CardPaymentViewController: UIViewController,WebServiceDelegate,SignatureDe
     if self.signatureImage != nil
     {
       if (cardNumber.count > 0 && expiryMonthYear.count > 0 && name.count > 0 && cvv.count > 0)
-      {
-        
-//              let customerRegParameters = ["userType":"Customer","firstName":"Hnimavat","lastName":"Harish","emailId":"hardiknimavat@yahoo.com",  "password":"12345678","phoneNumber":"9874859685","address":"AspenSt",  "city":"SanAntonio",  "state":"TX",  "zipCode":"78006",  "creditCardType":"VISA","creditCardNumber":"41111111111111111","creditCardName":"Nimavat","creditCardExp":"12/21",  "creditCardCVV":"123",  "deviceType":"iOS","deviceToken":"APA91bFoi3lMMre9G3XzR1LrF4ZT82_15MsMdEICogXSLB8-MrdkRuRQFwNI5u8Dh0cI90ABD3BOKnxkEla8cGdisbDHl5cVIkZah5QUhSAxzx4Roa7b4xy9tvx9iNSYw-eXBYYd8k1XKf8Q_Qq1X9-x-U-Y79vdPq"]
-//
-//          {
-//            "userType":"Customer",   "firstName":"Sukruth",  "lastName":"Kudige Harish",  "emailId":"sukruth@gmail.com",  "password":"123456",  "phoneNumber":"9874859685",  "address":"Aspen St",  "city":"San Antonio",  "state":"TX",  "zipCode":"78006",  "creditCardType":"Visa",  "creditCardNumber":"4111111111111111",  "creditCardName":"Sukruth Kudige Harish",  "creditCardExp":"11/22",  "creditCardCVV":"111",   "customerSignature":"This will upload raw image data.",  "deviceType":"Android",
-//            "deviceToken":"APA91bFoi3lMMre9G3XzR1LrF4ZT82_15MsMdEICogXSLB8-MrdkRuRQFwNI5u8Dh0cI90ABD3BOKnxkEla8cGdisbDHl5cVIkZah5QUhSAxzx4Roa7b4xy9tvx9iNSYw-eXBYYd8k1XKf8Q_Qq1X9-x-U-Y79vdPq"
-//        }
-        
+      { 
         let isFullCardDataOK = CCValidator.validate(creditCardNumber: cardNumber)
         if isFullCardDataOK == false
         {

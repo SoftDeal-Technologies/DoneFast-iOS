@@ -80,6 +80,17 @@ class BillingAddressVC: UIViewController,UITextFieldDelegate {
     return true
   }
   
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool
+    {
+        let allowedCharacters = CharacterSet(charactersIn:"0123456789 ")//Here change this characters based on your requirement
+        let characterSet = CharacterSet(charactersIn: string)
+        if textField == self.zipCodeTxtField
+        {
+            return allowedCharacters.isSuperset(of: characterSet)
+        }
+        return true
+    }
+    
   override func prepare(for segue: UIStoryboardSegue, sender: Any?)
   {
     if segue.identifier == "ToCardPaymentView"

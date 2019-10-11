@@ -22,6 +22,7 @@ class DigitalSignatureViewController: UIViewController {
     
   @IBAction func cancelClicked(_ sender: Any)
   {
+    self.navigationController?.popViewController(animated: true)
 //    self.performSegue(withIdentifier: "ToCardPaymentView", sender: self)
     
   }

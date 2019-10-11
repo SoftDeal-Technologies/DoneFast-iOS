@@ -72,26 +72,28 @@ class CustomerAddPropertyVC: UIViewController,UITextFieldDelegate {
     {
       if (propertyDesign.count > 0 && propertyEmailId.count > 0 && propertyPhoneNumber.count > 0 && propertyAddress.count > 0 && propertyCity.count > 0 && propertyState.count > 0 && propertyZipCode.count > 0 && name.count > 0)
       {
-        customerAddProperty = CustomerAddProperty()
-        customerAddProperty?.propertyDesign = propertyDesign
-        customerAddProperty?.propertyEmailId = propertyEmailId
-        customerAddProperty?.propertyPhoneNumber = propertyPhoneNumber
-        customerAddProperty?.propertyAddress = propertyAddress
-        customerAddProperty?.propertyCity = propertyCity
-        customerAddProperty?.propertyState = propertyState
-        customerAddProperty?.propertyZipCode = propertyZipCode
-        customerAddProperty?.selectedProperty = selectedProperty
-        customerAddProperty?.name = name
-        self.performSegue(withIdentifier: "ToGoogleMapView", sender: self)
+        let validEmail = isValidEmail(emailStr: propertyEmailId)
         
-//        let parameters = ["userID":userId,"propertyType":selectedProperty,"propertyDesign":propertyDesign,"propertyEmailId":propertyEmailId, "propertyPhoneNumber":propertyPhoneNumber,"propertyAddress":propertyAddress,"propertyCity":propertyCity,"propertyState":propertyState, "propertyZipCode":propertyZipCode,"propertyLocation":"44.968046,-94.420307"]
-//        guard let tokenStr = UserLoginDetails.shared.token else { return }
-//        self.view.isUserInteractionEnabled = false
-//        activityIndicator?.isHidden = false
-//        activityIndicator?.startAnimating()
-//        WebServices.sharedWebServices.delegate = self
-//        WebServices.sharedWebServices.uploadusingUrlSessionNormalData(webServiceParameters: parameters, methodType: .POST, webServiceType: .ADD_CUSTOMER_PROPERTY, token: tokenStr)
-        
+        if validEmail
+        {
+            customerAddProperty = CustomerAddProperty()
+            customerAddProperty?.propertyDesign = propertyDesign
+            customerAddProperty?.propertyEmailId = propertyEmailId
+            customerAddProperty?.propertyPhoneNumber = propertyPhoneNumber
+            customerAddProperty?.propertyAddress = propertyAddress
+            customerAddProperty?.propertyCity = propertyCity
+            customerAddProperty?.propertyState = propertyState
+            customerAddProperty?.propertyZipCode = propertyZipCode
+            customerAddProperty?.selectedProperty = selectedProperty
+            customerAddProperty?.name = name
+            self.performSegue(withIdentifier: "ToGoogleMapView", sender: self)
+        }
+        else
+        {
+            let alertController:UIAlertController = UIAlertController(title: "", message: "Please enter valid email Id.", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+        }
       }
       else
       {
@@ -153,10 +155,19 @@ class CustomerAddPropertyVC: UIViewController,UITextFieldDelegate {
       self.propertyTypePopOverClicked(sender: propertyTypeTextField)
       return false
     }
-    
     return true
   }
   
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool
+    {
+        let allowedCharacters = CharacterSet(charactersIn:"+0123456789 ")//Here change this characters based on your requirement
+        let characterSet = CharacterSet(charactersIn: string)
+        if textField == propertyPhoneNumberTextField || textField == propertyZipCodeTextField
+        {
+            return allowedCharacters.isSuperset(of: characterSet)
+        }
+        return true
+    }
   
   func propertyTypePopOverClicked(sender:UITextField)
   {

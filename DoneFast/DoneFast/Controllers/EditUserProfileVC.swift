@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import CCValidator
 
 class EditUserProfileVC: UIViewController,UITextFieldDelegate {
 
@@ -38,7 +39,7 @@ class EditUserProfileVC: UIViewController,UITextFieldDelegate {
   @IBOutlet weak var custProfilePicImageView: UIImageView!
   @IBOutlet weak var custProfilePicBtn: UIButton!
   var imagePickerController = UIImagePickerController()
-
+  var fromImagePickerController = false
   override func viewDidLoad()
   {
     super.viewDidLoad()
@@ -53,10 +54,19 @@ class EditUserProfileVC: UIViewController,UITextFieldDelegate {
   override func viewWillAppear(_ animated: Bool)
   {
     super.viewWillAppear(animated)
-    self.populateData()
+    if fromImagePickerController == false
+    {
+       self.populateData()
+    }
+    else
+    {
+        fromImagePickerController = false
+    }
+    
   }
   @IBAction func profileImageClicked(_ sender: Any)
   {
+    fromImagePickerController = true
     imagePickerController.delegate = self
     imagePickerController.allowsEditing = false
     imagePickerController.sourceType = .photoLibrary
@@ -76,6 +86,24 @@ class EditUserProfileVC: UIViewController,UITextFieldDelegate {
   {
     self.navigationController?.popViewController(animated: true)
   }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool
+    {
+        if textField == phoneNoTxtField
+        {
+            let allowedCharacters = CharacterSet(charactersIn:"+0123456789 ")//Here change this characters based on your requirement
+            let characterSet = CharacterSet(charactersIn: string)
+            return allowedCharacters.isSuperset(of: characterSet)
+        }
+        else if textField == zipCodeTxtField || textField == zipCodeBillingTxtField || textField == cardNumberTxtField || textField == cardCVVTxtField
+        {
+            let allowedCharacters = CharacterSet(charactersIn:"0123456789 ")//Here change this characters based on your requirement
+            let characterSet = CharacterSet(charactersIn: string)
+            return allowedCharacters.isSuperset(of: characterSet)
+        }
+        return true
+    }
+    
   func populateData()
   {
     custIdValueLabel.text = loggedInUserDetails?.userID
@@ -103,6 +131,7 @@ class EditUserProfileVC: UIViewController,UITextFieldDelegate {
       if customerPhoto.count > 0
       {
         custProfilePicImageView.downloaded(from: URL(string: customerPhoto)!)
+//        custProfilePicImageView.load(url: URL(string: customerPhoto)!)
         custProfilePicImageView.layer.cornerRadius = (custProfilePicImageView.frame.size.width/2)
       }
     }
@@ -116,7 +145,50 @@ class EditUserProfileVC: UIViewController,UITextFieldDelegate {
     WebServices.sharedWebServices.delegate = self
     if let firstName = firstNameTxtField.text,let lastName = lastNameTxtField.text,let phoneNumber = phoneNoTxtField.text,let address = addressTxtField.text,let city = cityTxtField.text,let state = stateTxtField.text,let zipCode = zipCodeTxtField.text,let billingAddress = billingAddressTxtField.text,let billingCity = billingCityTxtField.text,let billingState = billingStateTxtField.text,let billingZipCode = zipCodeBillingTxtField.text,let creditCardNumber = cardNumberTxtField.text,let creditCardExp = cardExpTxtField.text,let creditCardCVV = cardCVVTxtField.text, let cardHolderName = cardHolderNameTxtField.text
     {
-      let parameters = ["userID": userId,"firstName":firstName,"lastName":lastName,"phoneNumber":phoneNumber,"address":address,"city":city,"state":state,"zipCode":zipCode,"billingAddress":billingAddress,"billingCity":billingCity,"billingState":billingState,"billingZipCode":billingZipCode,"creditCardType":"VISA",  "creditCardNumber":creditCardNumber,"creditCardName":cardHolderName,"creditCardExp":creditCardExp,"creditCardCVV":creditCardCVV]
+        let isFullCardDataOK = CCValidator.validate(creditCardNumber: creditCardNumber)
+        if isFullCardDataOK == false
+        {
+            let alertController:UIAlertController = UIAlertController(title: "", message: "Please enter vaid credit card number.", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
+        
+        
+        
+        //        let numberAsString = cardNumber.text
+        let recognizedType = CCValidator.typeCheckingPrefixOnly(creditCardNumber: creditCardNumber)
+        print(recognizedType.rawValue)
+        var creditCardType = ""
+        switch (recognizedType.rawValue)
+        {
+        case 0:
+            creditCardType = "AmericanExpress"
+        case 1:
+            creditCardType = "Dankort"
+        case 2:
+            creditCardType = "DinersClub"
+        case 3:
+            creditCardType = "Discover"
+        case 4:
+            creditCardType = "JCB"
+        case 5:
+            creditCardType = "Maestro"
+        case 6:
+            creditCardType = "MasterCard"
+        case 7:
+            creditCardType = "UnionPay"
+        case 8:
+            creditCardType = "VisaElectron"
+        case 9:
+            creditCardType = "Visa"
+        case 10:
+            creditCardType = "NotRecognized"
+        default:
+            creditCardType = "NotRecognized"
+        }
+        
+        let parameters = ["userID": userId,"firstName":firstName,"lastName":lastName,"phoneNumber":phoneNumber,"address":address,"city":city,"state":state,"zipCode":zipCode,"billingAddress":billingAddress,"billingCity":billingCity,"billingState":billingState,"billingZipCode":billingZipCode,"creditCardType":creditCardType,  "creditCardNumber":creditCardNumber,"creditCardName":cardHolderName,"creditCardExp":creditCardExp,"creditCardCVV":creditCardCVV]//,"customerPhoto":"image.png"
       let imageStringArray = ["customerPhoto"]
       let imageDataArray = [custProfilePicImageView.image]
       self.view.isUserInteractionEnabled = false
@@ -170,10 +242,11 @@ extension EditUserProfileVC:WebServiceDelegate
 
 extension EditUserProfileVC: UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIGestureRecognizerDelegate
 {
-  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])
+  {
     if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
     {
-      custProfilePicImageView.image = pickedImage
+        custProfilePicImageView.image = pickedImage
         custProfilePicImageView.layer.cornerRadius = (custProfilePicImageView.frame.size.width/2)
     }
     dismiss(animated: true, completion: nil)

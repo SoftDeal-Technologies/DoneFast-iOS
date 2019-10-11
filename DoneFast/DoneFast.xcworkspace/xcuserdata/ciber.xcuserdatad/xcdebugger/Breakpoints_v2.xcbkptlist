@@ -194,33 +194,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "74970FA6-42AD-4F15-934E-5CD7C3BF833E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DoneFast/Models/WebServices.swift"
-            timestampString = "591913538.087821"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "uploadusingUrlSessionNormalDataWithImage(webServiceParameters:methodType:webServiceType:token:imagesString:imageDataArray:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "BFAA3694-1C51-4587-9B68-99252BF79D8B"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DoneFast/Models/WebServices.swift"
-            timestampString = "591913538.087914"
+            timestampString = "592517343.56357"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "uploadusingUrlSessionNormalDataWithImage(webServiceParameters:methodType:webServiceType:token:imagesString:imageDataArray:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -242,7 +225,6 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "C69D3DA8-0842-44A5-9F21-E920BBD7626B - 4d26ae9207da8544"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -250,14 +232,14 @@
                   moduleName = "DoneFast"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ciber/Documents/DoneFast/GitCode/DoneFast-iOS/DoneFast/DoneFast/SlideInControllers/LeftSlideVC.swift"
+                  timestampString = "592517343.777903"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "145"
                   endingLineNumber = "145"
-                  offsetFromSymbolStart = "0">
+                  offsetFromSymbolStart = "6">
                </Location>
                <Location
-                  uuid = "C69D3DA8-0842-44A5-9F21-E920BBD7626B - 3f4d228c96e2a3c4"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -265,64 +247,14 @@
                   moduleName = "DoneFast"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ciber/Documents/DoneFast/GitCode/DoneFast-iOS/DoneFast/DoneFast/SlideInControllers/LeftSlideVC.swift"
+                  timestampString = "592517343.780027"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "147"
                   endingLineNumber = "147"
-                  offsetFromSymbolStart = "208">
+                  offsetFromSymbolStart = "196">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5DEDAFC1-D9EF-4EF4-83A2-79A69A3317F6"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DoneFast/Controllers/EditUserProfileVC.swift"
-            timestampString = "592342856.156577"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
-            landmarkName = "callWebService()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "75B59ED9-40A1-471B-A47A-22B6AFBCB947"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DoneFast/Controllers/EditUserProfileVC.swift"
-            timestampString = "592342856.15662"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "142"
-            endingLineNumber = "142"
-            landmarkName = "successResponse(responseString:webServiceType:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "FCA1C9B7-458D-4865-80EB-7E5BD28871BF"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DoneFast/Controllers/EditUserProfileVC.swift"
-            timestampString = "592342856.156657"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
-            landmarkName = "callWebService()"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -384,16 +316,15 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DoneFast/Models/WebServices.swift"
-            timestampString = "591913538.088052"
+            timestampString = "592517343.5636851"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "uploadusingUrlSessionNormalDataWithImage(webServiceParameters:methodType:webServiceType:token:imagesString:imageDataArray:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "9783F8AA-6C0A-4FC8-8C76-EC5E5557DEA1 - d4528b731ca48bd7"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -401,14 +332,14 @@
                   moduleName = "DoneFast"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ciber/Documents/DoneFast/GitCode/DoneFast-iOS/DoneFast/DoneFast/Models/WebServices.swift"
+                  timestampString = "592517343.79238"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "89"
-                  endingLineNumber = "89"
-                  offsetFromSymbolStart = "7852">
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "10214">
                </Location>
                <Location
-                  uuid = "9783F8AA-6C0A-4FC8-8C76-EC5E5557DEA1 - 99255c8e34a43cc4"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -416,11 +347,12 @@
                   moduleName = "DoneFast"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ciber/Documents/DoneFast/GitCode/DoneFast-iOS/DoneFast/DoneFast/Models/WebServices.swift"
+                  timestampString = "592517343.793823"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "91"
-                  endingLineNumber = "91"
-                  offsetFromSymbolStart = "284">
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "272">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -433,7 +365,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DoneFast/Controllers/EditCustomerPropertyVC.swift"
-            timestampString = "592414667.554347"
+            timestampString = "592517343.563735"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "55"
@@ -450,11 +382,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DoneFast/Controllers/CardPaymentViewController.swift"
-            timestampString = "591913538.0881799"
+            timestampString = "592517343.563776"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
             landmarkName = "submitClicked(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -467,11 +399,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DoneFast/Controllers/DigitalSignatureViewController.swift"
-            timestampString = "591913538.0882829"
+            timestampString = "592517343.563818"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "saveClicked(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -484,46 +416,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DoneFast/Controllers/EditUserProfileVC.swift"
-            timestampString = "592342856.156767"
+            timestampString = "592517343.563859"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "saveClicked(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "2B71F67A-208B-4C0D-B147-82E2CA21BBE0"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DoneFast/Controllers/GoogleMapVC.swift"
-            timestampString = "592414667.554453"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "loadGoogleMap()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "72349F45-784F-4723-8772-6F71710513D0"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DoneFast/Controllers/GoogleMapVC.swift"
-            timestampString = "592414667.554502"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "loadGoogleMap()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -535,7 +433,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DoneFast/Controllers/GoogleMapVC.swift"
-            timestampString = "592414667.554545"
+            timestampString = "592429471.484507"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "74"
@@ -547,18 +445,225 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2443EC49-7749-4BCB-ABC9-A703A28F6537"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DoneFast/Controllers/LoginViewController.swift"
-            timestampString = "592414667.5545861"
+            timestampString = "592517343.564291"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "performGoogleSearch(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DoneFast/Controllers/LoginViewController.swift"
+            timestampString = "592517343.564339"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "performGoogleSearch(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DoneFast/Controllers/LoginViewController.swift"
+            timestampString = "592517343.564376"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "performGoogleSearch(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DoneFast/Controllers/LoginViewController.swift"
+            timestampString = "592517343.564413"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "performGoogleSearch(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DoneFast/Controllers/LoginViewController.swift"
+            timestampString = "592517343.5644571"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "performGoogleSearch(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DoneFast/Controllers/LoginViewController.swift"
+            timestampString = "592517343.5644929"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "performGoogleSearch(for:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in DoneFast.LoginViewController.performGoogleSearch(for: Swift.String) -&gt; ()"
+                  moduleName = "DoneFast"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ciber/Documents/DoneFast/GitCode/DoneFast-iOS/DoneFast/DoneFast/Controllers/LoginViewController.swift"
+                  timestampString = "592517343.828685"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "39">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; Swift.Optional&lt;Swift.String&gt; in closure #1 () -&gt; () in closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in DoneFast.LoginViewController.performGoogleSearch(for: Swift.String) -&gt; ()"
+                  moduleName = "DoneFast"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ciber/Documents/DoneFast/GitCode/DoneFast-iOS/DoneFast/DoneFast/Controllers/LoginViewController.swift"
+                  timestampString = "592517343.8301491"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "57">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DoneFast/Controllers/LoginViewController.swift"
+            timestampString = "592517343.564528"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "getLatLong()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DoneFast/Controllers/LoginViewController.swift"
+            timestampString = "592517343.564562"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "getLatLong()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DoneFast/Models/WebServices.swift"
+            timestampString = "592517343.564599"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "uploadusingUrlSessionNormalDataWithImage(webServiceParameters:methodType:webServiceType:token:imagesString:imageDataArray:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DoneFast/Controllers/DigitalSignatureViewController.swift"
+            timestampString = "592517343.564636"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "clearClicked(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DoneFast/Controllers/EditUserProfileVC.swift"
+            timestampString = "592517343.564679"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
+            landmarkName = "callWebService()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DoneFast/Models/WebServices.swift"
+            timestampString = "592517493.1089799"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "uploadusingUrlSessionNormalDataWithImage(webServiceParameters:methodType:webServiceType:token:imagesString:imageDataArray:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
