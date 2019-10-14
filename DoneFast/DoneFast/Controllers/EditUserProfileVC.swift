@@ -230,7 +230,7 @@ extension EditUserProfileVC:WebServiceDelegate
     }
   }
   
-  func failerResponse(responseData: Data, webServiceType: WebServiceType)
+  func failerResponse(responseData: String, webServiceType: WebServiceType)
   {
     DispatchQueue.main.async {
       self.view.isUserInteractionEnabled = true

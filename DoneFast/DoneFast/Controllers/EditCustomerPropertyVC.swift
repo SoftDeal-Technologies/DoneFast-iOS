@@ -87,11 +87,20 @@ class EditCustomerPropertyVC: UIViewController,UITextFieldDelegate
       {
         if let propertyId = propertyList?.propertyID, let propertyDesign = propertyDesBtn.titleLabel?.text
         {
-          let parameters = ["propertyID":propertyId,"propertyDesign":propertyDesign,"propertyEmailId":emailId, "propertyPhoneNumber":phoneNo,"propertyCustomerName":propertyName]
-            guard let tokenStr = UserLoginDetails.shared.token else { return }
-            WebServices.sharedWebServices.delegate = self
-            self.view.isUserInteractionEnabled = false
-            WebServices.sharedWebServices.uploadusingUrlSessionNormalData(webServiceParameters: parameters as [String : Any], methodType: .POST, webServiceType: .EDIT_CUSTOMER_PROPERTY, token: tokenStr)
+            if isValidEmail(emailStr: emailId)
+            {
+                let parameters = ["propertyID":propertyId,"propertyDesign":propertyDesign,"propertyEmailId":emailId, "propertyPhoneNumber":phoneNo,"propertyCustomerName":propertyName]
+                guard let tokenStr = UserLoginDetails.shared.token else { return }
+                WebServices.sharedWebServices.delegate = self
+                self.view.isUserInteractionEnabled = false
+                WebServices.sharedWebServices.uploadusingUrlSessionNormalData(webServiceParameters: parameters as [String : Any], methodType: .POST, webServiceType: .EDIT_CUSTOMER_PROPERTY, token: tokenStr)
+            }
+            else
+            {
+                let alertController:UIAlertController = UIAlertController(title: "", message: "Please enter valid email Id.", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                self.present(alertController, animated: true, completion: nil)
+            }
         }
       }
       else
@@ -165,7 +174,7 @@ extension EditCustomerPropertyVC:WebServiceDelegate
     }
   }
   
-  func failerResponse(responseData: Data, webServiceType: WebServiceType)
+  func failerResponse(responseData: String, webServiceType: WebServiceType)
   {
     DispatchQueue.main.async {
       self.view.isUserInteractionEnabled = true

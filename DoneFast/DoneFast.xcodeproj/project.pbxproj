@@ -29,6 +29,7 @@
 		146BAFC9232435CA00A894DA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 146BAFC8232435CA00A894DA /* CoreLocation.framework */; };
 		146DD96B2336B88900A2EC59 /* BillingAddressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146DD96A2336B88900A2EC59 /* BillingAddressVC.swift */; };
 		1472187A23204BE900439EF8 /* LoggedInUserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1472187923204BE900439EF8 /* LoggedInUserDetails.swift */; };
+		147DFB08235227040086E466 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 147DFB07235227040086E466 /* 3.png */; };
 		1486EC172318542900954243 /* PropertyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1486EC162318542900954243 /* PropertyList.swift */; };
 		1486EC192318550B00954243 /* UserLoginDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1486EC182318550B00954243 /* UserLoginDetails.swift */; };
 		148C25DB232C1CAD008EB3D5 /* CustomerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148C25DA232C1CAD008EB3D5 /* CustomerRequest.swift */; };
@@ -91,6 +92,7 @@
 		146BAFC8232435CA00A894DA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		146DD96A2336B88900A2EC59 /* BillingAddressVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingAddressVC.swift; sourceTree = "<group>"; };
 		1472187923204BE900439EF8 /* LoggedInUserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInUserDetails.swift; sourceTree = "<group>"; };
+		147DFB07235227040086E466 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
 		1486EC162318542900954243 /* PropertyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyList.swift; sourceTree = "<group>"; };
 		1486EC182318550B00954243 /* UserLoginDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginDetails.swift; sourceTree = "<group>"; };
 		148C25DA232C1CAD008EB3D5 /* CustomerRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerRequest.swift; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 				14E25AF922FCAA710045C908 /* AppDelegate.swift */,
 				14CB9E8E230C50FA00540B87 /* Controllers */,
 				14E25AFD22FCAA720045C908 /* Main.storyboard */,
+				147DFB07235227040086E466 /* 3.png */,
 				14E25B0022FCAA730045C908 /* Assets.xcassets */,
 				14E25B0222FCAA730045C908 /* LaunchScreen.storyboard */,
 				14E25B0522FCAA730045C908 /* Info.plist */,
@@ -377,6 +380,7 @@
 				14E25B0422FCAA730045C908 /* LaunchScreen.storyboard in Resources */,
 				14922838230DDB3800BD747F /* CustomerPropertyTableCell.xib in Resources */,
 				1495F5B523145D80006022F4 /* CustomerJobHistoryTableCell.xib in Resources */,
+				147DFB08235227040086E466 /* 3.png in Resources */,
 				14E25B0122FCAA730045C908 /* Assets.xcassets in Resources */,
 				14E25AFF22FCAA720045C908 /* Main.storyboard in Resources */,
 			);

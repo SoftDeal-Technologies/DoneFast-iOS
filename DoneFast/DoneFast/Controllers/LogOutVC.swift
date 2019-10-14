@@ -80,7 +80,7 @@ extension LogOutVC:WebServiceDelegate
     }
   }
   
-  func failerResponse(responseData: Data, webServiceType: WebServiceType) {
+  func failerResponse(responseData: String, webServiceType: WebServiceType) {
     
   }
   

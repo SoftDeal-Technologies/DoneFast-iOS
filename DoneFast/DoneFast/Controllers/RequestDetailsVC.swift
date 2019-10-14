@@ -157,8 +157,9 @@ class RequestDetailsVC: UIViewController,UITextFieldDelegate {
         }
       }
       subCategoryId = ""
-      
-      let parameters = ["customer_id": userId,  "property_id": propertyId,"service_id": self.selectedService,"service_subid": subCategoryId,"service_notes": notes] as [String : Any]
+        let tempSelectedService = String(self.selectedService)
+        
+      let parameters = ["customer_id": userId,  "property_id": propertyId,"service_id": tempSelectedService,"service_subid": subCategoryId,"service_notes": notes] as [String : Any]
       self.view.isUserInteractionEnabled = false
       activityIndicator?.isHidden = false
       activityIndicator?.startAnimating()
@@ -235,7 +236,7 @@ extension RequestDetailsVC:WebServiceDelegate
     }
   }
   
-  func failerResponse(responseData: Data, webServiceType: WebServiceType)
+  func failerResponse(responseData: String, webServiceType: WebServiceType)
   {
     DispatchQueue.main.async {
       self.view.isUserInteractionEnabled = true

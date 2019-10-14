@@ -51,7 +51,7 @@ class CardPaymentViewController: UIViewController,WebServiceDelegate,SignatureDe
     self.digitalSignImageView.image = signatureImage
   }
   
-  func failerResponse(responseData: Data, webServiceType: WebServiceType)
+  func failerResponse(responseData: String, webServiceType: WebServiceType)
   {
     DispatchQueue.main.async {
       self.view.isUserInteractionEnabled = true

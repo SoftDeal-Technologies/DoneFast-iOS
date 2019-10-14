@@ -38,7 +38,7 @@ class LoginViewController: UIViewController,WebServiceDelegate,UITextFieldDelega
   override func viewWillAppear(_ animated: Bool)
   {
     
-    
+//    WebServices.sharedWebServices.btnSavedClicked()
 //    self.performGoogleSearch(for: "Btm layout, 1st stage, Banglore")
 //    self.getLatLong()
     super.viewWillAppear(true)
@@ -230,7 +230,7 @@ class LoginViewController: UIViewController,WebServiceDelegate,UITextFieldDelega
 
   }
   
-  func failerResponse(responseData: Data, webServiceType: WebServiceType)
+  func failerResponse(responseData: String, webServiceType: WebServiceType)
   {
     DispatchQueue.main.async {
       self.view.isUserInteractionEnabled = true
