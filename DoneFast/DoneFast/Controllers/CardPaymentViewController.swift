@@ -94,7 +94,7 @@ class CardPaymentViewController: UIViewController,WebServiceDelegate,SignatureDe
     
   @IBAction func signatureClicked(_ sender: Any)
   {
-    self.performSegue(withIdentifier: "ToDigitalSignatureView", sender: self)
+    self.performSegue(withIdentifier: "ToDigitalSignatureView", sender: self) //ToDigitalSignatureView
   }
   
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {

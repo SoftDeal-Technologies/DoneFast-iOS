@@ -46,6 +46,8 @@ class DigitalSignatureViewController: UIViewController {
       // Since the Signature is now saved to the Photo Roll, the View can be cleared anyway.
       self.signatureView.clear()
       self.delegate?.sendSignatureImage(signatureImage: signatureImage)
+//        let controller = self.navigationController?.viewControllers
+//        print(controller?.count)
       self.navigationController?.popViewController(animated: true)
     }
   }
